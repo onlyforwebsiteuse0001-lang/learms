@@ -1,6 +1,6 @@
 # Agent 6 Session State
 
-**Last updated:** 2026-09-30T23:30:00Z
+**Last updated:** 2026-09-30 (Area 2 checkpoint)
 **Branch:** `arena/01a0f474-learms` (Arena-fixed; requested branch name cannot be used)  
 **Mode:** medical research only; Markdown/JSON/CSV/YAML deliverables; no application code.
 
@@ -20,8 +20,12 @@
 - Area 1.1 program taxonomy complete in `medical-research/taxonomy/PROGRAMS_COMPLETE.md`: 30 official sources, regulator map, degree/diploma distinctions, BDS contradiction, gaps, and implementation guidance.
 - Area 1 complete: program taxonomy plus MBBS, BDS, Pharm.D, nursing, allied-health, veterinary, and emerging-field specialization files.
 - `CPSP_SPECIALTY_GRAPH.json` validates with 48 first, 44 second, and 19 MCPS labels; unresolved official count/directory conflicts are retained.
-- `medical-research/MASTER_INDEX.md` created; source register now has 50 official sources.
-- Next: Area 2 college/accreditation/fee evidence from current regulator directories.
+- `medical-research/MASTER_INDEX.md` created.
+- Area 2 complete for reviewed official evidence: seven college/accreditation/fee/admission files under `medical-research/colleges/`.
+- PM&DC's four live directories reported 178 program-sector entries (50 public medical, 71 private medical, 17 public dental, 40 private dental); the row capture is intentionally marked incomplete because only the first ten rows per category were exposed.
+- March and August 2026 institution-specific fee-cap observations are preserved in `PRIVATE_FEE_CAPS_2026.csv`; older records are not overwritten.
+- Source register now has 63 unique sources: 60 regulator/law/guideline/directory records and 3 official admitting-authority portals.
+- Next: Area 3 entry, licensing, NRE, FCPS, and other examination pathways.
 
 ## Non-negotiable cautions
 

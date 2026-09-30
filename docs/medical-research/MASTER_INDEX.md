@@ -21,7 +21,7 @@
 | `DECISIONS-6.md` | Research and modeling decisions | Current |
 | `MORNING_REPORT-6.md` | Honest cumulative report | In progress |
 | `../SESSION-STATE-6.md` | Recovery state | Current |
-| `sources/SOURCE_REGISTER.csv` | Source-level evidence register | 50 records at Area 1 completion |
+| `sources/SOURCE_REGISTER.csv` | Source-level evidence register | 63 unique records through Area 2 |
 
 ## Area 1 — Program and specialization taxonomy
 
@@ -37,11 +37,22 @@
 | `specializations/EMERGING_FIELDS.md` | Informatics, bioinformatics, precision medicine, AI, HPE, management | Complete for official sources reviewed |
 | `specializations/CPSP_SPECIALTY_GRAPH.json` | Machine-readable CPSP evidence snapshot | Valid JSON; 48 first, 44 second, 19 MCPS labels |
 
+## Area 2 — Colleges, accreditation, fees, and admission evidence
+
+| File | Coverage | Status |
+|---|---|---|
+| `colleges/ALL_RECOGNIZED_COLLEGES.md` | Four PM&DC directory totals, recognition workflow, hospital/status distinctions, verification checklist | Complete for reviewed official evidence; row-export gap explicit |
+| `colleges/PMDC_COLLEGE_REGISTER_2026-09-30.json` | Dated machine-readable category totals and 40 directly visible rows | Valid JSON; deliberately marked incomplete |
+| `colleges/TOP_MEDICAL_COLLEGES.md` | No-current-official-ranking finding and source-separated comparison method | Complete |
+| `colleges/FEE_STRUCTURES.md` | 2025 baseline and March/August 2026 fee notifications, payment rules, gaps | Complete for reviewed PM&DC rules |
+| `colleges/PRIVATE_FEE_CAPS_2026.csv` | 35 append-only dated fee-cap observations from two PM&DC notifications | Structurally valid; exact source wording retained |
+| `colleges/ADMISSION_CHANCES.md` | Eligibility, aggregate formula, segmentation, historical comparison, privacy boundary | Complete without unsupported probability |
+| `colleges/COLLEGE_COMPARISON_SCHEMA.yaml` | Claim-specific comparison/evidence schema and prohibited inferences | Complete |
+
 ## Remaining research areas
 
 | Area | Planned outputs | Status |
 |---|---|---|
-| 2. Colleges, accreditation, fees | College lists, recognition workflow, fee evidence, rankings caveat | Not started |
 | 3. Entry, licensing, postgraduate exams | MDCAT, university admissions, NRE, FCPS, licensing | Not started |
 | 4. Student problems | Burnout, depression/anxiety, workload, barriers, Pakistan evidence | Not started |
 | 5. Evidence-based solutions | Study science, wellbeing, mentoring, institutional support | Not started |
@@ -63,6 +74,9 @@
 3. CPSP program pages and accredited-institution selectors expose different specialty-label sets.
 4. AHPC lists 30 discipline groups while HEC's February 2026 allied-health booklet standardizes ten named BS curricula.
 5. Provincial paramedical diploma catalogs differ and must not be promoted to a national taxonomy.
+6. PM&DC's paginated college directories reported 178 entries, but the reviewed rendering exposed only the first ten rows per category; indexed snippets showed older/different dental values.
+7. The March and August 2026 PM&DC fee notifications contain dated institution-specific observations; Al Aleem's later August value differs from its March value and must not be destructively merged.
+8. HEC's official ranking page exposes archives through 2015; no current official national medical-college league table was found.
 
 ## Current integration assets
 
@@ -71,14 +85,19 @@
 - Program/regulator/qualification axes in `taxonomy/PROGRAMS_COMPLETE.md`
 - CPSP labels and unresolved counts in `specializations/CPSP_SPECIALTY_GRAPH.json`
 - Prohibited equivalence/inference edges in each specialty file
+- Claim-specific college model and prohibited inference edges in `colleges/COLLEGE_COMPARISON_SCHEMA.yaml`
+- Versioned recognition, seat, fee, hospital, and admission observations
 
 ### Agent 2
 
 - Recognition banners, dated evidence, conflict states, pathway timelines, and `not found` UX guidance
+- Evidence-separated college comparison with no default composite rank
+- Admission aggregate and historical-comparison UX without false probability
 
 ### Agent 3
 
 - Patient-data boundaries for portfolios, images, radiographs, case logs, laboratory/imaging artifacts, and learning simulations
+- Do not ingest applicant-level names, parent names, dates of birth, roll/form numbers, or identity numbers from merit-list PDFs when aggregate observations suffice
 
 ### Agent 4
 

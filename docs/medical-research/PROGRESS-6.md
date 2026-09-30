@@ -1,7 +1,7 @@
 # Agent 6 Progress
 
 **Started:** 2026-09-30T22:35:37Z  
-**Last updated:** 2026-09-30T23:30:00Z
+**Last updated:** 2026-09-30 (Area 2 checkpoint)
 
 ## Checkpoints
 
@@ -11,12 +11,12 @@
 | 1 — program taxonomy | 2026-09-30 22:40 | Complete | 607-line regulator-aware Pakistan program map; 30 official sources; conflicts/gaps and Agent 1–3 guidance |
 | 2A — medical/dental specialties | 2026-09-30 23:05 | Complete | MBBS and BDS pathways; machine-readable 48 first/44 second/19 MCPS snapshot; recognition and source conflicts |
 | 2B — other professions | 2026-09-30 23:30 | Complete | Pharmacy, nursing/CNS, allied-health, veterinary, and emerging-field pathways; master index |
-| 3 — colleges/accreditation | — | In progress | Regulator directories, recognition workflow, and fee evidence |
+| 3 — colleges/accreditation | 2026-09-30 | Complete for reviewed official evidence | Four PM&DC directory totals; transparent partial row snapshot; accreditation workflow; 2025–26 fee versions; ranking caveat; admission-chance model |
 
 ## Area status
 
 - [x] Area 1: Medical taxonomy — program map and all seven requested specialty-family files complete for reviewed official evidence
-- [ ] Area 2: Medical colleges
+- [x] Area 2: Medical colleges — complete for reviewed official sources; incomplete row-level PM&DC export and national historical closing-merit dataset explicitly retained as gaps
 - [ ] Area 3: Medical exams
 - [ ] Area 4: Student problems
 - [ ] Area 5: Solutions
@@ -37,15 +37,15 @@ Counts are updated only after sources are entered in the source register.
 
 | Type | Unique sources reviewed |
 |---|---:|
-| Official law/regulator/guideline | 50 |
+| Official law/regulator/guideline/directory | 60 |
 | Peer-reviewed paper/systematic review | 0 |
 | Book | 0 |
-| Institutional website | 0 |
+| Official institutional/admissions website | 3 |
 | Other secondary source | 0 |
-| **Total** | **50** |
+| **Total** | **63** |
 
 ## Immediate queue
 
-1. Build the college/accreditation evidence model from current regulator directories.
-2. Map MDCAT, NRE, licensing, FCPS, and other high-stakes exam pathways.
-3. Research wellbeing with systematic reviews plus Pakistan-specific primary studies.
+1. Map MDCAT, NRE, licensing, FCPS, and other high-stakes exam pathways.
+2. Research wellbeing with systematic reviews plus Pakistan-specific primary studies.
+3. Return to the college register only if PM&DC exposes a complete authoritative row export; do not fill pagination gaps from stale search snippets.

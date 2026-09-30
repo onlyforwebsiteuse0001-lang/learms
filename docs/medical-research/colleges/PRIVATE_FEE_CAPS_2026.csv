@@ -1,0 +1,36 @@
+notification_date,notification_number,record_order,institution_name_as_notified,fee_cap_pkr,source_id,interpretation_note
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,1,"HITEC-(Medical Section), Taxila",2000000,MED-057,Exact notification row; program section explicit
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,2,"HITEC-(Dental Section), Taxila",2000000,MED-057,Exact notification row; program section explicit
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,3,"CMH Medical College, Kharian",1800000,MED-057,Exact notification row
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,4,"Shahida Islam Medical & Dental College, Lodhran",2014452,MED-057,Combined institution wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,5,"Akhter Saeed Medical & Dental College, Lahore/RWP",2139197,MED-057,Combined location and program wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,6,"Central Park Medical College, Lahore",2021844,MED-057,Exact notification row
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,7,"Niazi Medical & Dental College, Sargodha",1978083,MED-057,Combined institution wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,8,"University Medical & Dental College, Faisalabad",2026341,MED-057,Combined institution wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,9,"Al Aleem Medical College, Lahore",1720000,MED-057,Superseded by newer dated observation for same named institution in MED-058
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,10,"FMH College of Medicine & Dentistry, Lahore",2052099,MED-057,Combined institution wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,11,"Multan Medical & Dental College, Multan",1968293,MED-057,Combined institution wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,12,"Rehman Medical & Dental College Peshawar",2118971,MED-057,Combined institution wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,13,"Suleman Roshan Medical College, Tando Adam",2017450,MED-057,Exact notification row
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,14,"HBS Medical & Dental College, Islamabad",2057348,MED-057,Combined institution wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,15,"Abbottabad Int. Medical Institute, Abbottabad",2104102,MED-057,Exact notification wording retained; identity reconciliation requires review
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,16,"Independent Medical College, Faisalabad",1837587,MED-057,Exact notification row
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,17,"Islamabad Medical & Dental College, Islamabad",2147483,MED-057,Combined institution wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,18,"University College Medicine & Dentistry, Lahore",1833257,MED-057,Exact notification wording retained
+2026-03-11,PF.I-A(B&A)(Tuition Fee)-2026/60,19,"Azra Naheed Medical & Dental College, Lahore",2069022,MED-057,Combined institution wording retained
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,1,"Rahbar Medical & Dental College, Lahore",2107421,MED-058,Combined institution wording retained
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,2,"NUST School of Health Sciences, Islamabad",2160000,MED-058,Exact notification row
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,3,"Abu Umara Medical & Dental Lahore",2026341,MED-058,Exact notification wording retained
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,4,"Muhammad Medical College, Mirpurkhas",2120930,MED-058,Exact notification row
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,5,"Lahore Medical & Dental College Lahore",1937926,MED-058,Combined institution wording retained
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,6,"Rashid Latif Medical and Dental College, Lahore",2121765,MED-058,Combined institution wording retained
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,7,"Faryal Dental College, Sheikhupura",2085790,MED-058,Exact notification row; dental explicit
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,8,"Amna Inayat Medical College, Lahore",2085790,MED-058,Exact notification row
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,9,"Al Aleem Medical College, Lahore",1800000,MED-058,Newer dated observation than MED-057
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,10,"Peshawar Medical and Dental College, Peshawar",2116552,MED-058,Combined institution wording retained
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,11,"Aziz Fatima Medical College, Faisalabad",1945341,MED-058,Exact notification row
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,12,"Bahria University College of Medicine, Islamabad",2160000,MED-058,Exact notification row
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,13,"Pak International Medical College, Peshawar",1928812,MED-058,Exact notification row
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,14,"RLKU Medical College, Lahore",2121765,MED-058,Exact notification wording retained; identity reconciliation requires review
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,15,"Indus Medical College, Tando Muhammad Khan",2023390,MED-058,Exact notification row
+2026-08-04,PF.I-A(B&A)(Tuition Fee)-2026/100,16,"Shalamar Medical & Dental College, Lahore",2160000,MED-058,Combined institution wording retained

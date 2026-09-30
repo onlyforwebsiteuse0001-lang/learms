@@ -1,6 +1,6 @@
 # Agent 6 Blockers and Constraints
 
-**Last updated:** 2026-09-30T23:05:00Z
+**Last updated:** 2026-09-30 (Area 2 checkpoint)
 
 | ID | Constraint | Impact | Response |
 |---|---|---|---|
@@ -11,3 +11,5 @@
 | B-005 | Pakistan regulator pages and notices are mutable; some search results expose PDFs with OCR errors. | Risk of stale or misread requirements. | Prefer official PDFs, retain title/year/access date, and flag current-status checks. |
 | B-006 | Requested statistics (for example “70%+ doctors leaving”) arrive without citations. | High hallucination/generalization risk. | Treat each as an unverified hypothesis until an original source is found; write “not verified” otherwise. |
 | B-007 | CPSP's current fellowship page states 98 programs but enumerates 92; its program and accreditation directories also expose different label sets. | A definitive specialty count or active-offering inference would be unsafe. | Preserve each official representation with retrieval date; flag conflict; verify the exact program/site directly. |
+| B-008 | PM&DC's four college directories are paginated; the reviewed rendering exposed category totals but only ten rows per page. Search-index snippets contain older/different dental seat and status values. | A repository copy presented as a complete live row register would be misleading. | Preserve the four totals and 40 directly captured rows with `complete_row_capture=false`; link all canonical live directories; do not merge stale snippets. |
+| B-009 | No current official national medical-college league table or consolidated final closing-merit dataset was found. | A “Top 10” list or individual admission probability would be unsupported. | Use evidence-separated filters and exact session/category final-list observations; report probability and national ranking as `not found`. |

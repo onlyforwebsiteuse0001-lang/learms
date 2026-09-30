@@ -1,6 +1,6 @@
 # Agent 6 Research Decisions
 
-**Last updated:** 2026-09-30T23:05:00Z
+**Last updated:** 2026-09-30 (Area 2 checkpoint)
 
 ## D-001 — Evidence hierarchy
 
@@ -41,3 +41,23 @@ Model specialty, qualification route, program offering, awarding body, training 
 ## D-010 — Preserve official-source count conflicts
 
 Store an authority's stated total and the count enumerated on its page as separate facts when they disagree. The current CPSP page states 98 fellowships but visibly lists 48 first plus 44 second fellowships; neither will be silently selected as the definitive total.
+
+## D-011 — College evidence is claim-specific
+
+A PM&DC directory entry, seat allocation, teaching-hospital relationship, university affiliation, session intake permission, fee cap, admission outcome, and quality rank are separate dated claims. No one field implies another.
+
+## D-012 — No fabricated completeness from paginated registers
+
+When an official page reports a total but the retrieval path exposes only part of the table, store the reported total and captured rows with an explicit incomplete flag. Do not fill missing rows from stale search snippets or memory.
+
+## D-013 — No opaque college league table
+
+Until a current official or independently validated comparable dataset exists, Learms will provide source-separated college filters rather than an ordinal “best college” score. User preferences are not objective quality weights.
+
+## D-014 — Admission chance requires matched dimensions
+
+Eligibility, calculated aggregate, and historical selection are separate outputs. Historical comparison requires the same session, authority, program, college, category/quota, domicile scope, and final list type. A probability is withheld unless a calibrated validated dataset exists.
+
+## D-015 — Fee records are append-only dated observations
+
+Later PM&DC fee notifications do not erase older values. Store notification date, exact institution wording, cap, and source; select the applicable record only after resolving session and institution/program identity.

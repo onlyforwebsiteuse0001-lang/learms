@@ -1,0 +1,95 @@
+schema_version: "1.0"
+title: "Evidence model for Pakistan medical and dental college comparison"
+evidence_cutoff: "2026-09-30"
+principles:
+  - "A college, program, directory entry, seat observation, intake permission, hospital relationship, fee cap, and rank are separate entities or observations."
+  - "Mutable facts require a source, access or issue date, and review status."
+  - "Missing evidence is null plus not_found; it is never zero or false by assumption."
+  - "No composite rank is generated without a published methodology and complete comparable inputs."
+college_entity:
+  stable_internal_id: null
+  official_name: null
+  aliases: []
+  city: null
+  province_or_region: null
+program_observation:
+  program: null
+  sector: null
+  directory_source_id: null
+  directory_url: null
+  accessed_date: null
+  directory_entry_present: null
+  seat_allocation: null
+  complete_capture: false
+  recognition_interpretation: "directory appearance only; not current intake permission"
+status_events:
+  - event_type: null
+    status_text_verbatim: null
+    issued_date: null
+    source_id: null
+    source_url: null
+    valid_from: null
+    valid_to: null
+    review_status: "not_found"
+teaching_hospitals:
+  - hospital_name: null
+    relationship_as_published: null
+    source_document_date: null
+    source_id: null
+    inspection_context: null
+    review_status: "not_found"
+affiliation:
+  awarding_or_affiliating_body: null
+  program: null
+  session: null
+  source_id: null
+  review_status: "not_found"
+admissions:
+  session: null
+  admitting_authority: null
+  domicile_scope: null
+  category_or_quota: null
+  list_type: null
+  list_round: null
+  historical_lowest_selected_aggregate: null
+  source_id: null
+  review_status: "not_found"
+fees:
+  session: null
+  tuition_cap_pkr: null
+  cap_notification_date: null
+  cap_source_id: null
+  college_published_tuition_pkr: null
+  ancillary_charges_pkr: null
+  total_cost_completeness: "not_found"
+rankings:
+  rank_value: null
+  ranking_body: null
+  methodology: null
+  ranking_year: null
+  program_specific: null
+  source_id: null
+  review_status: "not_found"
+prohibited_inferences:
+  - "directory_entry => current admission permission"
+  - "seat_count => educational quality"
+  - "hospital_count => clinical exposure quality"
+  - "historical_cutoff => future guarantee"
+  - "university_rank => MBBS_or_BDS_program_rank"
+  - "fee => quality"
+  - "missing_status_notice => no_legal_or_regulatory_issue"
+source_ids:
+  - MED-002
+  - MED-051
+  - MED-052
+  - MED-053
+  - MED-054
+  - MED-055
+  - MED-056
+  - MED-057
+  - MED-058
+  - MED-059
+  - MED-060
+  - MED-061
+  - MED-062
+  - MED-063
