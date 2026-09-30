@@ -1,0 +1,416 @@
+{
+  "$comment": "Agent 7 curriculum seed for Agent 1. Data only - no loader is provided (see DECISIONS-7.md D-006). Every fee and course name is from ICMAP primary sources listed under 'sources'.",
+  "schema_version": "1.0.0",
+  "generated_by": "agent7_accounting_research",
+  "generated_utc": "2026-09-30",
+  "qualification": {
+    "body_names": [
+      "Institute of Cost and Management Accountants of Pakistan",
+      "ICMAP",
+      "ICMA International"
+    ],
+    "scheme_title": "Study Scheme-2025",
+    "effective_date": "2025-07-16",
+    "country": "PK",
+    "designations": [
+      {
+        "code": "AFA",
+        "name": "Affiliate Financial Accountant",
+        "requires_levels": ["OL1", "OL2", "ML1", "ML2", "PTM_L1"],
+        "indicative_years_from_12yr_entry": 2.5
+      },
+      {
+        "code": "CMA",
+        "name": "Chartered Management Accountant",
+        "requires_levels": ["OL1", "OL2", "ML1", "ML2", "PTM_L1", "SL1", "SL2", "PTM_L2"],
+        "indicative_years_from_12yr_entry": 4.0
+      }
+    ],
+    "level_duration_months": 6,
+    "testing_methodology": "Computer Based Examination (CBE)",
+    "max_courses_per_sitting": 6,
+    "credit_hours_per_module": 6,
+    "total_credit_hours": 144,
+    "lecture_hours_per_course_stated": 90,
+    "lecture_hours_total_stated": 1260,
+    "lecture_hours_total_reconciles": false,
+    "lecture_hours_note": "144 credit hours implies 24 modules x 6. 1260 lecture hours reconciles with neither 18 nor 24 modules at 90h. Treat 1260 as unreliable. See BLOCKERS-7.md B-004."
+  },
+  "phase_mapping": {
+    "OL1": "foundation",
+    "OL2": "foundation",
+    "ML1": "intermediate",
+    "ML2": "intermediate",
+    "SL1": "advanced",
+    "SL2": "advanced",
+    "PTM_L1": "applied",
+    "PTM_L2": "applied"
+  },
+  "courses": [
+    {
+      "course_key": "icmap.cma2025.O1",
+      "code": "O1",
+      "name": "Fundamentals of Financial Accounting",
+      "level": "OL1",
+      "phase": "foundation",
+      "difficulty": 1,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "O1 - Fundamentals of Financial Accounting",
+      "waivable_for": ["Intermediate Commerce", "A-Levels"]
+    },
+    {
+      "course_key": "icmap.cma2025.O2",
+      "code": "O2",
+      "name": "Gen. AI & Business Productivity",
+      "level": "OL1",
+      "phase": "foundation",
+      "difficulty": 1,
+      "is_new_in_2025": true,
+      "maps_from_2018_scheme": null,
+      "exemption_note": "Exempted for students who passed/were exempted from all six Operational Level courses under Study Scheme-2018."
+    },
+    {
+      "course_key": "icmap.cma2025.O3",
+      "code": "O3",
+      "name": "Business & Commercial Laws",
+      "level": "OL1",
+      "phase": "foundation",
+      "difficulty": 2,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "O6 - Commercial Laws and Business Ethics"
+    },
+    {
+      "course_key": "icmap.cma2025.O4",
+      "code": "O4",
+      "name": "Business Economics",
+      "level": "OL2",
+      "phase": "foundation",
+      "difficulty": 2,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "O2 - Business Economics",
+      "waivable_for": ["A-Levels"]
+    },
+    {
+      "course_key": "icmap.cma2025.O5",
+      "code": "O5",
+      "name": "Business Mathematics and Statistics",
+      "level": "OL2",
+      "phase": "foundation",
+      "difficulty": 2,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "O5 - Business Mathematics & Statistical Inference",
+      "waivable_for": ["A-Levels"]
+    },
+    {
+      "course_key": "icmap.cma2025.O6",
+      "code": "O6",
+      "name": "Fundamentals of Cost & Management Accounting",
+      "level": "OL2",
+      "phase": "foundation",
+      "difficulty": 2,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "M1 - Fundamentals of Cost & Management Accounting",
+      "structural_change": "Moved down from Managerial to Operational level."
+    },
+    {
+      "course_key": "icmap.cma2025.M1",
+      "code": "M1",
+      "name": "Financial Accounting & Corporate Reporting",
+      "level": "ML1",
+      "phase": "intermediate",
+      "difficulty": 3,
+      "is_new_in_2025": false
+    },
+    {
+      "course_key": "icmap.cma2025.M2",
+      "code": "M2",
+      "name": "Business Taxation",
+      "level": "ML1",
+      "phase": "intermediate",
+      "difficulty": 3,
+      "is_new_in_2025": false,
+      "naming_warning": "Frequently mis-cited as 'Tax Planning & Reporting'. See CONTRADICTIONS.md C-002."
+    },
+    {
+      "course_key": "icmap.cma2025.M3",
+      "code": "M3",
+      "name": "Organizational Management",
+      "level": "ML1",
+      "phase": "intermediate",
+      "difficulty": 2,
+      "is_new_in_2025": false
+    },
+    {
+      "course_key": "icmap.cma2025.M4",
+      "code": "M4",
+      "name": "Digital Accounting & Financial Modelling",
+      "level": "ML2",
+      "phase": "intermediate",
+      "difficulty": 3,
+      "is_new_in_2025": true,
+      "maps_from_2018_scheme": null,
+      "exemption_note": "Exempted for students who passed M3 - Management Information Systems under Study Scheme-2018."
+    },
+    {
+      "course_key": "icmap.cma2025.M5",
+      "code": "M5",
+      "name": "Advanced Management Accounting",
+      "level": "ML2",
+      "phase": "intermediate",
+      "difficulty": 4,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "M5 - Advanced Management Accounting"
+    },
+    {
+      "course_key": "icmap.cma2025.M6",
+      "code": "M6",
+      "name": "Corporate Framework & Reporting",
+      "level": "ML2",
+      "phase": "intermediate",
+      "difficulty": 4,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "M6 - Corporate Governance and Business Laws + S1 - Advanced Financial Accounting & Corporate Reporting",
+      "structural_change": "Merged from two 2018-scheme courses."
+    },
+    {
+      "course_key": "icmap.cma2025.S1",
+      "code": "S1",
+      "name": "Advanced Financial Accounting & Sustainability Reporting",
+      "level": "SL1",
+      "phase": "advanced",
+      "difficulty": 5,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "S1 - Advanced Financial Accounting & Corporate Reporting",
+      "structural_change": "Sustainability reporting added to scope."
+    },
+    {
+      "course_key": "icmap.cma2025.S2",
+      "code": "S2",
+      "name": "Advance Taxation",
+      "level": "SL1",
+      "phase": "advanced",
+      "difficulty": 4,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "S3 - Business Taxation",
+      "naming_warning": "Rendered 'Advanced Taxation' on the ICMAP web page and 'Advance Taxation' in the circular. Not the same as M2 Business Taxation. See CONTRADICTIONS.md C-003."
+    },
+    {
+      "course_key": "icmap.cma2025.S3",
+      "code": "S3",
+      "name": "Corporate Laws, Governance & Ethics",
+      "level": "SL1",
+      "phase": "advanced",
+      "difficulty": 4,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "M6 - Corporate Governance, Business Laws & Ethics",
+      "structural_change": "Moved up from Managerial to Strategic level."
+    },
+    {
+      "course_key": "icmap.cma2025.S4",
+      "code": "S4",
+      "name": "Audit & Assurance",
+      "level": "SL2",
+      "phase": "advanced",
+      "difficulty": 4,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "S2 - Audit & Assurance"
+    },
+    {
+      "course_key": "icmap.cma2025.S5",
+      "code": "S5",
+      "name": "Strategic Financial Management",
+      "level": "SL2",
+      "phase": "advanced",
+      "difficulty": 5,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "S5 - Strategic Financial Management"
+    },
+    {
+      "course_key": "icmap.cma2025.S6",
+      "code": "S6",
+      "name": "Strategic Management Accounting",
+      "level": "SL2",
+      "phase": "advanced",
+      "difficulty": 5,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "S4 - Strategic Management Accounting"
+    },
+    {
+      "course_key": "icmap.cma2025.PTM1",
+      "code": "PTM1",
+      "name": "Data Analytics & Visualisation (Power BI)",
+      "level": "PTM_L1",
+      "phase": "applied",
+      "difficulty": 3,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "PM8 - Applied Analytics with Power BI & Python",
+      "structural_change": "Python dropped from the module title."
+    },
+    {
+      "course_key": "icmap.cma2025.PTM2",
+      "code": "PTM2",
+      "name": "Entrepreneurship and Business Planning",
+      "level": "PTM_L1",
+      "phase": "applied",
+      "difficulty": 2,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "O4 - Fundamentals of Management",
+      "structural_change": "Substantially rescoped."
+    },
+    {
+      "course_key": "icmap.cma2025.PTM3",
+      "code": "PTM3",
+      "name": "Communication & Behavioural Skills",
+      "level": "PTM_L1",
+      "phase": "applied",
+      "difficulty": 2,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "O3 - Business Communication and Report Writing, or PM6 - Communication Skills"
+    },
+    {
+      "course_key": "icmap.cma2025.PTM4",
+      "code": "PTM4",
+      "name": "Audit Procedures",
+      "level": "PTM_L2",
+      "phase": "applied",
+      "difficulty": 3,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "PM1 - ERP Solutions and Practical Aspects of Accounting & Auditing Procedures",
+      "structural_change": "ERP Solutions dropped from the module title."
+    },
+    {
+      "course_key": "icmap.cma2025.PTM5",
+      "code": "PTM5",
+      "name": "Practical Aspects of Banking & Finance",
+      "level": "PTM_L2",
+      "phase": "applied",
+      "difficulty": 3,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "PM3 - Practical Aspects of Banking and Finance"
+    },
+    {
+      "course_key": "icmap.cma2025.PTM6",
+      "code": "PTM6",
+      "name": "Strategic Management Analysis",
+      "level": "PTM_L2",
+      "phase": "applied",
+      "difficulty": 4,
+      "is_new_in_2025": false,
+      "maps_from_2018_scheme": "S6 - Strategic Management"
+    }
+  ],
+  "course_level_prerequisites": {
+    "$comment": "REGULATORY sitting order, derived from Circular section 9. This is NOT the pedagogical concept graph - see DECISIONS-7.md D-005. Edges point prerequisite -> dependent.",
+    "edges": [
+      { "from": "OL1", "to": "OL2" },
+      { "from": "OL2", "to": "ML1" },
+      { "from": "ML1", "to": "ML2" },
+      { "from": "ML2", "to": "SL1" },
+      { "from": "SL1", "to": "SL2" },
+      { "from": "ML1", "to": "PTM_L1" },
+      { "from": "SL1", "to": "PTM_L2" }
+    ],
+    "rules": [
+      "Maximum six courses per examination sitting.",
+      "No skipping a lower level; sitting order must be sequential.",
+      "Enrolment must be at least one month before examination forms are submitted.",
+      "PTM Level-1 eligibility: passed all courses up to ML1 AND appeared in ML2.",
+      "PTM Level-2 eligibility: passed all courses up to SL1 AND appearing in all SL2 papers."
+    ]
+  },
+  "entry_routes": [
+    {
+      "id": "12yr",
+      "academic_background": "12-year education (Intermediate / A-Levels)",
+      "entry_level": "OL1",
+      "courses_required": 18,
+      "ptms_required": 6,
+      "stated_years": 4,
+      "waivable_courses": {
+        "Intermediate Commerce": ["O1"],
+        "A-Levels": ["O1", "O4", "O5"]
+      },
+      "waiver_cost_rule": "50% of prescribed tuition fee for the respective course, in addition to the registration fee."
+    },
+    {
+      "id": "14yr",
+      "academic_background": "14-year education in commerce or business studies (HEC-recognised)",
+      "entry_level": "ML1",
+      "courses_required": 12,
+      "ptms_required": 3,
+      "stated_years": 2.5
+    },
+    {
+      "id": "16yr",
+      "academic_background": "16-year education in commerce or business studies (HEC-recognised)",
+      "entry_level": "ML2",
+      "courses_required": 9,
+      "ptms_required": 3,
+      "stated_years": 2.0
+    },
+    {
+      "id": "14or16yr_noncommerce",
+      "academic_background": "14- or 16-year education, non-commerce/non-business",
+      "entry_level": "ML1",
+      "courses_required": 12,
+      "ptms_required": 3,
+      "stated_years": 2.5,
+      "additional_requirement": "Three weeks of Basic Accounting Course (BAC) classes, free of cost, conducted at centres."
+    }
+  ],
+  "fees_pkr": {
+    "as_of_circular": "2025-07-15",
+    "registration_packages": {
+      "12yr_at_OL1": { "registration_once": 12500, "annual_subscription": 3800, "total_lump_sum": 16300 },
+      "14yr_at_ML1": { "registration_once": 48500, "annual_subscription": 3800, "total_lump_sum": 52300, "total_two_instalments": 57150 },
+      "16yr_at_ML2": { "registration_once": 63000, "annual_subscription": 3800, "total_lump_sum": 66800, "total_two_instalments": 73100 }
+    },
+    "instalment_surcharge_percent": 10,
+    "per_course": {
+      "OL1": { "coaching_dlp": 17500, "examination": 5500, "total": 23000 },
+      "OL2": { "coaching_dlp": 20500, "examination": 5500, "total": 26000 },
+      "ML1": { "coaching_dlp": 25000, "examination": 7000, "total": 32000 },
+      "ML2": { "coaching_dlp": 26000, "examination": 7000, "total": 33000 },
+      "SL1": { "coaching_dlp": 28500, "examination": 9000, "total": 37500 },
+      "SL2": { "coaching_dlp": 30500, "examination": 9000, "total": 39500 },
+      "PTM_L1": { "coaching_dlp": 15500, "examination": 5600, "total": 21100 },
+      "PTM_L2": { "coaching_dlp": 15500, "examination": 5600, "total": 21100 }
+    },
+    "overseas_examination_fee_usd": 100,
+    "re_coaching_rule": "50% of the prescribed course fee; non-refundable and non-adjustable.",
+    "legacy_attempt_rule": "Study Scheme-2018 students pay normal exam fee for up to 6 attempts, then double."
+  },
+  "modelled_total_cost_pkr": {
+    "$comment": "Tier E - my arithmetic on Tier A inputs. First-attempt pass in every course, no resits, no books, no travel, fees frozen at the 2025-07-15 schedule.",
+    "route_12yr": 727300,
+    "route_14yr": 549200,
+    "route_16yr": 463900
+  },
+  "sources": [
+    {
+      "tier": "A",
+      "title": "Policy Guidelines for Study Scheme-2025, ICMAP/HO/Edu/106/2025",
+      "date": "2025-07-15",
+      "url": "https://www.icmap.com.pk/StudentNotices_PDF/cir_edu_15072025.pdf",
+      "accessed": "2026-09-30"
+    },
+    {
+      "tier": "A",
+      "title": "ICMAP Syllabus Guide for Study Scheme-2025",
+      "url": "https://www.icmap.com.pk/syllabus.aspx",
+      "accessed": "2026-09-30"
+    },
+    {
+      "tier": "A",
+      "title": "ICMAP Fee Structure",
+      "url": "https://www.icmap.com.pk/fee_structure.aspx",
+      "accessed": "2026-09-30"
+    },
+    {
+      "tier": "A",
+      "title": "ICMAP Examination Fee Structure",
+      "url": "https://www.icmap.com.pk/exam_fee_structure.aspx",
+      "accessed": "2026-09-30"
+    }
+  ]
+}
