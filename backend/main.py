@@ -13,6 +13,7 @@ from typing import Annotated
 
 from fastapi import Depends, FastAPI, Header, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, EmailStr, Field
 
 ROOT = Path(__file__).resolve().parent
@@ -59,6 +60,14 @@ CREATE TABLE IF NOT EXISTS tasks (
   id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   title TEXT NOT NULL, subject TEXT NOT NULL, due_at TEXT NOT NULL, duration INTEGER NOT NULL DEFAULT 25,
   completed INTEGER NOT NULL DEFAULT 0
+);
+CREATE TABLE IF NOT EXISTS settings (
+  key TEXT PRIMARY KEY, value TEXT NOT NULL, label TEXT NOT NULL, kind TEXT NOT NULL DEFAULT 'text',
+  category TEXT NOT NULL DEFAULT 'general', updated_at TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS audit_logs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, actor_id INTEGER REFERENCES users(id), action TEXT NOT NULL,
+  entity TEXT NOT NULL, entity_id TEXT, details TEXT NOT NULL DEFAULT '', created_at TEXT NOT NULL
 );
 """
 
@@ -108,6 +117,23 @@ def init_db() -> None:
                 (3, "Arrays and objects", "Data structures", 2),
             ]
             conn.executemany("INSERT INTO concepts(course_id,title,chapter,position) VALUES(?,?,?,?)", concepts)
+        defaults = [
+            ("site_name", "HAAFIZ", "Platform name", "text", "branding", now()),
+            ("tagline", "Parho samajh kar. Aage barho yaqeen se.", "Platform tagline", "text", "branding", now()),
+            ("primary_color", "#5b4be8", "Primary colour", "color", "branding", now()),
+            ("registration_enabled", "true", "Allow new registrations", "boolean", "access", now()),
+            ("teacher_registration", "true", "Allow teacher registration", "boolean", "access", now()),
+            ("tutor_enabled", "true", "Socratic tutor", "boolean", "features", now()),
+            ("diagnostic_enabled", "true", "Adaptive diagnostic", "boolean", "features", now()),
+            ("whatsapp_enabled", "false", "WhatsApp delivery", "boolean", "features", now()),
+            ("maintenance_mode", "false", "Maintenance mode", "boolean", "system", now()),
+            ("support_email", "support@haafiz.edu.pk", "Support email", "email", "general", now()),
+        ]
+        conn.executemany("INSERT OR IGNORE INTO settings(key,value,label,kind,category,updated_at) VALUES(?,?,?,?,?,?)", defaults)
+        admin_email = os.getenv("HAAFIZ_ADMIN_EMAIL", "admin@haafiz.edu.pk").lower()
+        if not conn.execute("SELECT 1 FROM users WHERE role='admin'").fetchone():
+            conn.execute("INSERT INTO users(name,email,password_hash,role,created_at) VALUES(?,?,?,?,?)",
+                         ("System Admin", admin_email, password_hash(os.getenv("HAAFIZ_ADMIN_PASSWORD", "ChangeMe123!")), "admin", now()))
 
 init_db()
 
@@ -130,6 +156,18 @@ class TaskInput(BaseModel):
 class AttemptInput(BaseModel):
     concept_id: int
     correct: bool
+
+class CourseInput(BaseModel):
+    title: str = Field(min_length=2, max_length=120)
+    code: str = Field(min_length=2, max_length=30)
+    description: str = Field(default="", max_length=500)
+    accent: str = Field(default="#5b4be8", pattern=r"^#[0-9a-fA-F]{6}$")
+
+class SettingInput(BaseModel):
+    value: str = Field(max_length=500)
+
+class RoleInput(BaseModel):
+    role: str
 
 
 def public_user(row: sqlite3.Row) -> dict:
@@ -154,6 +192,15 @@ def current_user(authorization: Annotated[str | None, Header()] = None) -> dict:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Session expired")
     return public_user(row)
 
+def require_admin(user=Depends(current_user)) -> dict:
+    if user["role"] != "admin":
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "Administrator access required")
+    return user
+
+def audit(conn: sqlite3.Connection, user_id: int, action: str, entity: str, entity_id=None, details=""):
+    conn.execute("INSERT INTO audit_logs(actor_id,action,entity,entity_id,details,created_at) VALUES(?,?,?,?,?,?)",
+                 (user_id, action, entity, str(entity_id) if entity_id is not None else None, details, now()))
+
 @app.get("/api/health")
 def health():
     return {"status": "ok", "service": "haafiz-edu"}
@@ -163,6 +210,13 @@ def register(data: RegisterInput):
     if data.role not in {"student", "teacher"}:
         raise HTTPException(400, "Role must be student or teacher")
     with db() as conn:
+        setting = conn.execute("SELECT value FROM settings WHERE key='registration_enabled'").fetchone()
+        if setting and setting["value"] != "true":
+            raise HTTPException(403, "New registrations are currently closed")
+        if data.role == "teacher":
+            setting = conn.execute("SELECT value FROM settings WHERE key='teacher_registration'").fetchone()
+            if setting and setting["value"] != "true":
+                raise HTTPException(403, "Teacher registration is currently closed")
         try:
             cursor = conn.execute("INSERT INTO users(name,email,password_hash,role,created_at) VALUES(?,?,?,?,?)",
                                   (data.name.strip(), data.email.lower(), password_hash(data.password), data.role, now()))
@@ -263,3 +317,98 @@ def dashboard(user=Depends(current_user)):
     return {"student": user["name"], "courses": enrolled, "tasks_due": due,
             "average_mastery": round((avg or 0)*100), "weak_concepts": [dict(x) for x in weak],
             "next_action": "Enroll in your first course" if not enrolled else "Continue your weakest concept"}
+
+# ---- Public configuration and administrator control plane -----------------
+@app.get("/api/config")
+def public_config():
+    public_keys = {"site_name", "tagline", "primary_color", "registration_enabled", "teacher_registration", "tutor_enabled", "diagnostic_enabled", "whatsapp_enabled", "support_email"}
+    with db() as conn:
+        rows = conn.execute("SELECT key,value,kind FROM settings").fetchall()
+    return {r["key"]: (r["value"] == "true" if r["kind"] == "boolean" else r["value"]) for r in rows if r["key"] in public_keys}
+
+@app.get("/api/admin/overview")
+def admin_overview(admin=Depends(require_admin)):
+    with db() as conn:
+        counts = {table: conn.execute(f"SELECT COUNT(*) n FROM {table}").fetchone()["n"]
+                  for table in ("users", "courses", "enrollments", "concepts", "tasks")}
+        roles = [dict(r) for r in conn.execute("SELECT role,COUNT(*) count FROM users GROUP BY role").fetchall()]
+        recent = [dict(r) for r in conn.execute("""SELECT a.*,u.name actor FROM audit_logs a
+                   LEFT JOIN users u ON u.id=a.actor_id ORDER BY a.id DESC LIMIT 8""").fetchall()]
+    return {"counts": counts, "roles": roles, "recent_activity": recent}
+
+@app.get("/api/admin/users")
+def admin_users(q: str = "", admin=Depends(require_admin)):
+    with db() as conn:
+        rows = conn.execute("""SELECT id,name,email,role,language,created_at FROM users
+          WHERE name LIKE ? OR email LIKE ? ORDER BY id DESC LIMIT 200""", (f"%{q}%", f"%{q}%")).fetchall()
+    return [dict(r) for r in rows]
+
+@app.patch("/api/admin/users/{user_id}/role")
+def admin_change_role(user_id: int, data: RoleInput, admin=Depends(require_admin)):
+    if data.role not in {"student", "teacher", "admin"}:
+        raise HTTPException(400, "Invalid role")
+    if user_id == admin["id"] and data.role != "admin":
+        raise HTTPException(400, "You cannot remove your own admin access")
+    with db() as conn:
+        if not conn.execute("SELECT 1 FROM users WHERE id=?", (user_id,)).fetchone():
+            raise HTTPException(404, "User not found")
+        conn.execute("UPDATE users SET role=? WHERE id=?", (data.role, user_id))
+        audit(conn, admin["id"], "role.changed", "user", user_id, data.role)
+    return {"id": user_id, "role": data.role}
+
+@app.get("/api/admin/settings")
+def admin_settings(admin=Depends(require_admin)):
+    with db() as conn:
+        rows = conn.execute("SELECT * FROM settings ORDER BY category,label").fetchall()
+    return [dict(r) for r in rows]
+
+@app.patch("/api/admin/settings/{key}")
+def admin_update_setting(key: str, data: SettingInput, admin=Depends(require_admin)):
+    with db() as conn:
+        row = conn.execute("SELECT * FROM settings WHERE key=?", (key,)).fetchone()
+        if not row:
+            raise HTTPException(404, "Setting not found")
+        if row["kind"] == "boolean" and data.value not in {"true", "false"}:
+            raise HTTPException(400, "Boolean value must be true or false")
+        conn.execute("UPDATE settings SET value=?,updated_at=? WHERE key=?", (data.value, now(), key))
+        audit(conn, admin["id"], "setting.updated", "setting", key, data.value)
+    return {"key": key, "value": data.value}
+
+@app.post("/api/admin/courses", status_code=201)
+def admin_create_course(data: CourseInput, admin=Depends(require_admin)):
+    with db() as conn:
+        cursor = conn.execute("INSERT INTO courses(title,code,description,accent,created_by) VALUES(?,?,?,?,?)",
+                              (data.title, data.code.upper(), data.description, data.accent, admin["id"]))
+        audit(conn, admin["id"], "course.created", "course", cursor.lastrowid, data.title)
+        row = conn.execute("SELECT * FROM courses WHERE id=?", (cursor.lastrowid,)).fetchone()
+    return dict(row)
+
+@app.put("/api/admin/courses/{course_id}")
+def admin_update_course(course_id: int, data: CourseInput, admin=Depends(require_admin)):
+    with db() as conn:
+        if not conn.execute("SELECT 1 FROM courses WHERE id=?", (course_id,)).fetchone():
+            raise HTTPException(404, "Course not found")
+        conn.execute("UPDATE courses SET title=?,code=?,description=?,accent=? WHERE id=?",
+                     (data.title, data.code.upper(), data.description, data.accent, course_id))
+        audit(conn, admin["id"], "course.updated", "course", course_id, data.title)
+    return {"id": course_id, **data.model_dump()}
+
+@app.get("/api/admin/audit")
+def admin_audit(admin=Depends(require_admin)):
+    with db() as conn:
+        rows = conn.execute("""SELECT a.*,u.name actor FROM audit_logs a LEFT JOIN users u ON u.id=a.actor_id
+          ORDER BY a.id DESC LIMIT 200""").fetchall()
+    return [dict(r) for r in rows]
+
+# Serve only approved web assets; application source and data are never exposed.
+@app.get("/", include_in_schema=False)
+def web_index():
+    return FileResponse(ROOT.parent / "index.html")
+
+@app.get("/styles.css", include_in_schema=False)
+def web_styles():
+    return FileResponse(ROOT.parent / "styles.css", media_type="text/css")
+
+@app.get("/script.js", include_in_schema=False)
+def web_script():
+    return FileResponse(ROOT.parent / "script.js", media_type="application/javascript")

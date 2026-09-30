@@ -34,7 +34,7 @@ The existing `index.html` dashboard is the visual starting point. It can be open
 python3 -m http.server 5173
 ```
 
-The interface will be migrated screen-by-screen to the HAAFIZ design system and connected to the API.
+The HAAFIZ web application is served directly by the API and includes role-aware student and administrator workspaces. Default local administrator credentials are `admin@haafiz.edu.pk` / `ChangeMe123!`; override them with `HAAFIZ_ADMIN_EMAIL` and `HAAFIZ_ADMIN_PASSWORD` before first production startup.
 
 ## Documentation
 
