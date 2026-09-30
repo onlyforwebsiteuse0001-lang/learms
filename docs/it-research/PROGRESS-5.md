@@ -12,7 +12,8 @@
 | 2026-09-30 | Area 4 problems | Draft complete | Created 8 student-problem draft files using CS education, debugging, code-review, skill-gap, and Pakistan industry sources S079-S092. | e61d5b1 |
 | 2026-09-30 | Area 5 solutions | Draft complete | Created 6 solution drafts using active learning, spaced retrieval, deliberate practice, PBL, peer instruction, and Pakistan sources S093-S098. | d3f1442 |
 | 2026-09-30 | Area 6 books | Draft started | Created 7 book-area drafts plus initial catalog; explicitly marked unsourced ISBN/chapter gaps. Source register through S104. | 8dbe010 |
-| 2026-09-30 | Area 7 UI/UX | Draft complete | Created 6 UI/UX research drafts using usability, accessibility, UDL, cognitive load, multimedia learning, and learning analytics sources S105-S110. | pending |
+| 2026-09-30 | Area 7 UI/UX | Draft complete | Created 6 UI/UX research drafts using usability, accessibility, UDL, cognitive load, multimedia learning, and learning analytics sources S105-S110. | 5327668 |
+| 2026-09-30 | Area 8 Pakistan IT | Draft complete | Created 5 Pakistan-specific drafts on industry, connectivity, HEC curriculum, government programs, and market hypotheses. Source register through S117. | pending |
 
 ## Deliverable Status
 
@@ -90,6 +91,15 @@
 - [x] `ui-ux/MOBILE_LOW_BANDWIDTH.md` draft v0.1.
 - [ ] Deepen with Pakistan mobile/bandwidth data and user testing sources.
 
+### Area 8 — Pakistan IT Specific
+
+- [x] `pakistan/IT_INDUSTRY.md` draft v0.1.
+- [x] `pakistan/CONNECTIVITY_AND_ACCESS.md` draft v0.1.
+- [x] `pakistan/EDUCATION_CURRICULUM.md` draft v0.1.
+- [x] `pakistan/GOVERNMENT_PROGRAMS.md` draft v0.1.
+- [x] `pakistan/ROLE_MARKET_HYPOTHESES.md` draft v0.1.
+- [ ] Deepen with P@SHA/PSEB page extraction, job-posting samples, salary data, official HEC source, Ignite/NIC/STZA sources.
+
 ### Remaining Areas
 
 - [ ] Area 2 — Programming Languages deepening
@@ -98,7 +108,7 @@
 - [ ] Area 5 — Solutions deepening
 - [ ] Area 6 — Books deepening
 - [ ] Area 7 — UI/UX deepening for IT Learning
-- [ ] Area 8 — Pakistan IT Specific
+- [ ] Area 8 — Pakistan IT Specific deepening
 - [ ] Area 9 — Career Paths & Salaries
 - [ ] Area 10 — Tools & Platforms
 - [ ] Area 11 — Research Papers
