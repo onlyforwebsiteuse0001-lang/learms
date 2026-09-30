@@ -59,3 +59,10 @@ def bandit_topological_order(graph: nx.DiGraph, posteriors: dict[str, tuple[floa
             ordered.append(selected.concept_id)
             remaining.remove(selected.concept_id)
     return ordered
+
+
+def concept_centrality(graph: nx.DiGraph) -> dict[str, float]:
+    """Return normalized prerequisite-graph degree centrality for explainability analytics."""
+    if not graph:
+        return {}
+    return {str(node): float(score) for node, score in nx.degree_centrality(graph).items()}

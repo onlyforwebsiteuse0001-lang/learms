@@ -13,8 +13,7 @@ class BKTParams:
         for name, value in vars(self).items():
             if not 0 <= value <= 1:
                 raise ValueError(f"{name} must be between 0 and 1")
-        if self.p_slip + self.p_guess >= 1:
-            raise ValueError("slip + guess must be below 1 for identifiable evidence")
+
 
 
 def update_mastery(p_know: float, correct: bool, params: BKTParams | None = None) -> float:
@@ -23,10 +22,14 @@ def update_mastery(p_know: float, correct: bool, params: BKTParams | None = None
     if not 0 <= p_know <= 1:
         raise ValueError("p_know must be between 0 and 1")
     if correct:
-        denominator = p_know * (1 - params.p_slip) + (1 - p_know) * params.p_guess
-        posterior = p_know * (1 - params.p_slip) / denominator
+        numerator = p_know * (1 - params.p_slip)
+        denominator = numerator + (1 - p_know) * params.p_guess
     else:
-        denominator = p_know * params.p_slip + (1 - p_know) * (1 - params.p_guess)
-        posterior = p_know * params.p_slip / denominator
+        numerator = p_know * params.p_slip
+        denominator = numerator + (1 - p_know) * (1 - params.p_guess)
+    # Degenerate parameters can assign zero likelihood to an observation. There
+    # is then no Bayesian evidence to condition on, so preserve the prior rather
+    # than emitting NaN/inf or inventing certainty.
+    posterior = numerator / denominator if denominator > 0 else p_know
     transitioned = posterior + (1 - posterior) * params.p_learn
     return min(1.0, max(0.0, transitioned))

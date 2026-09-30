@@ -15,7 +15,9 @@ Updated: 2026-10-01
 
 Agent 1 backend hardening started 2026-10-01. Baseline is 29 passing tests and 65% combined backend/AI coverage. Plan: `docs/HARDENING_PLAN.md`.
 
-Current unit: service, BKT, graph, extraction and property-test expansion.
+Checkpoint 1 complete: added Hypothesis and 72 new algorithm test cases (101 focused tests total). BKT now handles degenerate probability boundaries without NaN/inf; Unicode concept normalization strips presentation/combining marks; graph centrality and 10,000-node behavior are covered. One initial Urdu normalization assertion exposed and drove the normalization fix.
+
+Current unit: extraction/provider/service error paths and full-suite coverage measurement.
 
 ## Next engineering work
 

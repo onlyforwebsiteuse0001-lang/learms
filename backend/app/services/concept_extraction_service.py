@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 from dataclasses import dataclass
 
 HEADING = re.compile(r"^(?:\d+(?:\.\d+)*[.)]?\s+)?([A-Z\u0600-\u06FF][^.!?]{2,80})$")
@@ -29,8 +30,13 @@ class ExtractedPrerequisite:
 
 
 def normalize_name(name: str) -> str:
-    """Normalize a concept for conservative exact deduplication."""
-    return re.sub(r"\s+", " ", re.sub(r"[^\w\u0600-\u06FF+\- ]", "", name)).strip().casefold()
+    """Normalize Unicode, spacing and presentation marks for conservative deduplication."""
+    compatible = unicodedata.normalize("NFKC", name)
+    # Remove Arabic vowel/recitation marks while preserving letter-forming marks
+    # such as hamza above/below (U+0654/U+0655).
+    without_marks = "".join(character for character in compatible if not ("\u064b" <= character <= "\u0652" or character == "\u0670"))
+    compatible = unicodedata.normalize("NFC", without_marks)
+    return re.sub(r"\s+", " ", re.sub(r"[^\w\u0600-\u06FF+\- ]", "", compatible)).strip().casefold()
 
 
 def extract_deterministic(text: str, max_concepts: int = 80) -> tuple[list[ExtractedConcept], list[ExtractedPrerequisite]]:
