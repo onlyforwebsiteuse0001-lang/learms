@@ -128,3 +128,13 @@ async def test_streamed_upload_uses_exclusive_destination(tmp_path: Path) -> Non
     with pytest.raises(FileExistsError):
         await _store_upload(upload, destination, 10, "new.pdf")
     assert destination.read_bytes() == b"old"
+
+
+def test_liveness_and_prometheus_metrics_use_route_templates() -> None:
+    client = TestClient(app)
+    assert client.get("/api/health/live").json() == {"status": "alive"}
+    metrics = client.get("/metrics")
+    assert metrics.status_code == 200
+    assert "haafiz_http_requests_total" in metrics.text
+    assert 'path="/api/health/live"' in metrics.text
+    assert "request_duration_seconds" in metrics.text

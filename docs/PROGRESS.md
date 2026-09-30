@@ -21,7 +21,9 @@ Checkpoint 2 complete: 34 provider/extraction tests and 25 security tests pass. 
 
 Checkpoint 3 complete: full suite reached **201 passing tests / 77% coverage**. Added 22 learning API contract tests and 24 core/OCR/AI/document-service tests (focused suites pass). Tests found and fixed uninitialized SQLAlchemy client-side defaults in first-answer BKT/Bandit state creation and malformed stored-password handling. Current count after focused additions is at least 225 tests; next full measurement pending.
 
-Current unit: concept persistence/task tests, observability, performance/security reports and live-runtime probes.
+Checkpoint 4 complete: concept persistence suite passes, process-local bounded-cardinality Prometheus metrics and liveness were added, and a real 1,000-request in-process profile measured P95 6.688 ms / 219.00 serial req/s (explicitly not a production load claim). Live probes found no Docker/Podman/PostgreSQL/Redis executables or listening ports and no AI keys. `pip-audit` found vulnerable old pypdf/Pillow constraints; upgraded constraints now produce **No known vulnerabilities found** for production requirements. Security, performance, operations, load test and four ADR documents added.
+
+Current unit: task/error-path tests, final full suite/coverage and morning report.
 
 ## Next engineering work
 

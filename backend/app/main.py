@@ -7,7 +7,7 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, PlainTextResponse
 from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
 
 from backend.app.api.v1.auth import router as auth_router
@@ -15,12 +15,17 @@ from backend.app.api.v1.documents import router as documents_router
 from backend.app.api.v1.learning import router as learning_router
 from backend.app.core.config import get_settings
 from backend.app.core.logging import configure_logging
-from backend.app.core.middleware import SecurityHeadersMiddleware
+from backend.app.core.middleware import (
+    MetricsMiddleware,
+    SecurityHeadersMiddleware,
+    prometheus_metrics,
+)
 from backend.app.services.api_errors import APIError
 
 settings = get_settings()
 configure_logging(settings.log_level)
 app = FastAPI(title=settings.app_name, version="1.0.0", docs_url="/docs" if settings.app_env != "production" else None)
+app.add_middleware(MetricsMiddleware)
 app.add_middleware(GZipMiddleware, minimum_size=1_000)
 if settings.security_headers_enabled:
     app.add_middleware(SecurityHeadersMiddleware)
@@ -68,3 +73,15 @@ async def health() -> dict[str, object]:
         "tesseract_installed": shutil.which(str(settings.tesseract_cmd)) is not None,
         "ai_providers_enabled": settings.enabled_ai_providers,
     }
+
+
+@app.get("/api/health/live", tags=["operations"], include_in_schema=False)
+async def liveness() -> dict[str, str]:
+    """Report only that the API event loop can serve requests."""
+    return {"status": "alive"}
+
+
+@app.get("/metrics", tags=["operations"], include_in_schema=False)
+async def metrics() -> PlainTextResponse:
+    """Expose process-local, bounded-cardinality Prometheus metrics."""
+    return PlainTextResponse(prometheus_metrics(), media_type="text/plain; version=0.0.4")
