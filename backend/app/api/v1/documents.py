@@ -50,17 +50,28 @@ def _safe_filename(filename: str | None) -> str:
 
 
 def _validate_file_container(path: Path, extension: str, original_name: str) -> None:
-    """Reject empty, corrupt, or mislabeled containers before creating database records."""
+    """Reject empty, corrupt, mislabeled, or archive-bomb-like containers."""
     try:
+        with path.open("rb") as source:
+            header = source.read(8)
         if extension == ".pdf":
+            if not header.startswith(b"%PDF-"):
+                raise ValueError("PDF magic bytes are missing")
             reader = PdfReader(str(path), strict=False)
             if not reader.pages:
                 raise ValueError("PDF has no pages")
         elif extension in {".docx", ".pptx"}:
-            if not zipfile.is_zipfile(path):
+            if not header.startswith(b"PK") or not zipfile.is_zipfile(path):
                 raise ValueError("OpenXML package is not a valid ZIP container")
             required = "word/document.xml" if extension == ".docx" else "ppt/presentation.xml"
             with zipfile.ZipFile(path) as package:
+                members = package.infolist()
+                if len(members) > 10_000:
+                    raise ValueError("OpenXML package has too many members")
+                compressed = sum(max(member.compress_size, 1) for member in members)
+                expanded = sum(member.file_size for member in members)
+                if expanded > 500 * 1024 * 1024 or expanded / max(compressed, 1) > 100:
+                    raise ValueError("OpenXML package expansion ratio is unsafe")
                 if required not in package.namelist():
                     raise ValueError(f"missing {required}")
         else:
@@ -77,9 +88,11 @@ def _validate_file_container(path: Path, extension: str, original_name: str) -> 
 async def _store_upload(upload: UploadFile, destination: Path, max_bytes: int, original_name: str) -> int:
     """Stream one upload to private storage while enforcing its configured byte limit."""
     size = 0
+    created = False
     destination.parent.mkdir(parents=True, exist_ok=True)
     try:
         with destination.open("xb") as output:
+            created = True
             while chunk := await upload.read(1024 * 1024):
                 size += len(chunk)
                 if size > max_bytes:
@@ -90,7 +103,8 @@ async def _store_upload(upload: UploadFile, destination: Path, max_bytes: int, o
                     )
                 output.write(chunk)
     except Exception:
-        destination.unlink(missing_ok=True)
+        if created:
+            destination.unlink(missing_ok=True)
         raise
     finally:
         await upload.close()

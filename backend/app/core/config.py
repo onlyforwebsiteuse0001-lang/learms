@@ -10,7 +10,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
-from pydantic import Field, SecretStr, field_validator
+from pydantic import Field, SecretStr, field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -28,6 +28,8 @@ class Settings(BaseSettings):
     app_port: int = Field(default=8000, ge=1, le=65535)
     secret_key: SecretStr = SecretStr("development-only-change-before-deploy")
     cors_origins: str = "http://localhost:3000,http://localhost:5173"
+    force_https: bool = False
+    security_headers_enabled: bool = True
     log_level: str = "INFO"
 
     database_url: str = "postgresql+asyncpg://haafiz:haafiz@localhost:5432/haafiz"
@@ -65,6 +67,18 @@ class Settings(BaseSettings):
         if not value.get_secret_value():
             raise ValueError("SECRET_KEY cannot be empty")
         return value
+
+    @model_validator(mode="after")
+    def validate_production_security(self) -> Settings:
+        """Reject unsafe deployment defaults in staging and production."""
+        if self.app_env in {"staging", "production"}:
+            if self.secret_key.get_secret_value() == "development-only-change-before-deploy" or len(self.secret_key.get_secret_value()) < 32:
+                raise ValueError("A unique SECRET_KEY of at least 32 characters is required outside development")
+            if not self.force_https:
+                raise ValueError("FORCE_HTTPS must be enabled outside development")
+            if "localhost" in self.cors_origins:
+                raise ValueError("Localhost CORS origins are not allowed outside development")
+        return self
 
     @property
     def cors_origin_list(self) -> list[str]:

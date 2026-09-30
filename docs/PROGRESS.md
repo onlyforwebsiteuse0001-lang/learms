@@ -17,7 +17,9 @@ Agent 1 backend hardening started 2026-10-01. Baseline is 29 passing tests and 6
 
 Checkpoint 1 complete: added Hypothesis and 72 new algorithm test cases (101 focused tests total). BKT now handles degenerate probability boundaries without NaN/inf; Unicode concept normalization strips presentation/combining marks; graph centrality and 10,000-node behavior are covered. One initial Urdu normalization assertion exposed and drove the normalization fix.
 
-Current unit: extraction/provider/service error paths and full-suite coverage measurement.
+Checkpoint 2 complete: 34 provider/extraction tests and 25 security tests pass. Provider ordering, malformed/partial/hallucinated output, timeouts, local OCR/PDF/Office failures, archive bombs, magic bytes, streamed size limits, filenames, production settings and HTTP headers are covered. Fixed an exclusive-file cleanup bug that could delete a pre-existing destination after `xb` failed.
+
+Current unit: API/service contract tests and coverage measurement.
 
 ## Next engineering work
 

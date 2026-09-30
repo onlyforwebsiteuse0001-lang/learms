@@ -6,18 +6,26 @@ import shutil
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
+from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
 
 from backend.app.api.v1.auth import router as auth_router
 from backend.app.api.v1.documents import router as documents_router
 from backend.app.api.v1.learning import router as learning_router
 from backend.app.core.config import get_settings
 from backend.app.core.logging import configure_logging
+from backend.app.core.middleware import SecurityHeadersMiddleware
 from backend.app.services.api_errors import APIError
 
 settings = get_settings()
 configure_logging(settings.log_level)
 app = FastAPI(title=settings.app_name, version="1.0.0", docs_url="/docs" if settings.app_env != "production" else None)
+app.add_middleware(GZipMiddleware, minimum_size=1_000)
+if settings.security_headers_enabled:
+    app.add_middleware(SecurityHeadersMiddleware)
+if settings.force_https:
+    app.add_middleware(HTTPSRedirectMiddleware)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origin_list,
