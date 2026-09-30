@@ -26,11 +26,24 @@
 
 ## Documents created
 
-This report is updated at each research checkpoint. See `MASTER_INDEX.md` when available.
+Eight research/tracking files at checkpoint 1, including:
+
+- `taxonomy/PROGRAMS_COMPLETE.md` — 607-line regulator-aware map
+- `sources/SOURCE_REGISTER.csv` — 30 official sources
+- Research plan and four recovery/tracking reports
 
 ## Key findings
 
-In progress. Only source-verified findings will be listed.
+1. Pakistan's health-professions education is distributed across profession-specific regulators; HEC curriculum recognition does not replace professional accreditation or registration. — PM&DC/PCP/PNMC/AHPC/PVMC/NCT/NCH official sources
+2. PM&DC defines MBBS as five years and at least 6,200 teaching hours. — PM&DC, 2024
+3. BDS duration is not safe to encode as one evergreen value: PM&DC announced five years in 2024, but a 2025 PM&DC inspection standard still describes four curricular years. — PM&DC, 2024–2025
+4. AHPC's current list has 30 top-level categories; HEC's February 2026 allied-health booklet standardizes ten named BS programs. A discipline listing does not prove a BS curriculum or recognized intake. — AHPC Act/site; HEC, 2026
+5. DPT and Pharm.D are professional qualifications, not research PhDs. — HEC curricula and NQF
+6. Two-year technician diplomas and four-year BS technologies with similar names are not interchangeable. — AHPC/HEC/PMF
+7. Paramedical diploma catalogs are province-sensitive. — PMF and FPAHS KP
+8. Generic, bridge, diploma, and post-basic nursing routes require separate pathway logic. — PNMC/HEC
+9. BSPH and Public Health Technology are distinct program/discipline nodes. — HEC/AHPC
+10. BEMS/FTJ and BHMS/DHMS require their own regulator labels and cannot be inferred equivalent to MBBS. — NCT/NCH/PM&DC
 
 ## Source counts
 
@@ -39,8 +52,8 @@ In progress. Only source-verified findings will be listed.
 | Papers | 0 |
 | Books | 0 |
 | Websites/institution pages | 0 |
-| Laws/regulator guidelines | 0 |
-| **Total unique** | **0** |
+| Laws/regulator guidelines/curricula | 30 |
+| **Total unique** | **30** |
 
 ## Recommendations for Agents
 

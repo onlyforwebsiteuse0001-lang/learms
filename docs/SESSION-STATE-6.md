@@ -1,6 +1,6 @@
 # Agent 6 Session State
 
-**Last updated:** 2026-09-30T22:35:37Z  
+**Last updated:** 2026-09-30T22:40:00Z
 **Branch:** `arena/01a0f474-learms` (Arena-fixed; requested branch name cannot be used)  
 **Mode:** medical research only; Markdown/JSON/CSV/YAML deliverables; no application code.
 
@@ -17,7 +17,8 @@
 - Phase 0 folder structure and research governance created.
 - Agent 1, Agent 2, Agent 3, and visible remote-branch context inspected without switching branches.
 - Agent 4 branch was not identifiable among remote branches as of the timestamp above.
-- Next: complete Area 1 program taxonomy from official regulator/curriculum sources.
+- Area 1.1 program taxonomy complete in `medical-research/taxonomy/PROGRAMS_COMPLETE.md`: 30 official sources, regulator map, degree/diploma distinctions, BDS contradiction, gaps, and implementation guidance.
+- Next: specialty pathway files, beginning with MBBS/FCPS against CPSP and PM&DC sources.
 
 ## Non-negotiable cautions
 
