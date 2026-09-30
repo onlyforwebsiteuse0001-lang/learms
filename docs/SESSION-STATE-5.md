@@ -22,4 +22,5 @@
 ## Current Workstream
 
 - Phase 0: setup and existing-context scan — completed initial folder/file setup.
-- Area 1: IT Roots Complete Taxonomy — in progress.
+- Area 1: IT Roots Complete Taxonomy — draft v0.1 complete.
+- Area 2: Programming Languages Deep Research — next.

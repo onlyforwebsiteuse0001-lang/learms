@@ -6,7 +6,7 @@
 |---|---|---|---|---|
 | 2026-09-30 | Phase 0 setup | Done | Folder structure and recovery files created. | pending |
 | 2026-09-30 | Existing context | Done with blockers | Repo has README only; no `docs/ARCHITECTURE.md`; no remote Agent 1/4 branches visible. | pending |
-| 2026-09-30 | Area 1 taxonomy | In progress | Authoritative source registry started; taxonomy files being drafted. | pending |
+| 2026-09-30 | Area 1 taxonomy | Draft complete | Created root taxonomy (66 roots), sub-root seed map (660 seeds), and prerequisite graph. Source-depth remains pending for final 10+ sources/root requirement. | pending |
 
 ## Deliverable Status
 
@@ -24,9 +24,9 @@
 
 ### Area 1 — IT Roots Taxonomy
 
-- [ ] `taxonomy/IT_ROOTS_COMPLETE.md`
-- [ ] `taxonomy/IT_SUBROOTS_COMPLETE.md`
-- [ ] `taxonomy/ROOT_PREREQUISITES.md`
+- [x] `taxonomy/IT_ROOTS_COMPLETE.md` — draft v0.1 complete, source-depth pending
+- [x] `taxonomy/IT_SUBROOTS_COMPLETE.md` — draft v0.1 complete, 660 sub-root seeds
+- [x] `taxonomy/ROOT_PREREQUISITES.md` — draft v0.1 complete
 
 ### Remaining Areas
 

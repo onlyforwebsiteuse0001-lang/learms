@@ -9,7 +9,7 @@
 ## Areas Completed
 
 - [x] Phase 0: Setup and recovery files
-- [ ] Area 1: IT Roots Taxonomy
+- [x] Area 1: IT Roots Taxonomy (draft v0.1; deeper per-root source expansion pending)
 - [ ] Area 2: Programming Languages
 - [ ] Area 3: Sub-Domains
 - [ ] Area 4: Student Problems
@@ -30,6 +30,10 @@
 - `docs/it-research/BLOCKERS-5.md`
 - `docs/it-research/DECISIONS-5.md`
 - `docs/it-research/MORNING_REPORT-5.md`
+- `docs/it-research/sources/SOURCE_REGISTER.csv`
+- `docs/it-research/taxonomy/IT_ROOTS_COMPLETE.md`
+- `docs/it-research/taxonomy/IT_SUBROOTS_COMPLETE.md`
+- `docs/it-research/taxonomy/ROOT_PREREQUISITES.md`
 
 ## Top Key Findings
 
@@ -37,11 +41,11 @@ To be filled as source-backed findings are finalized.
 
 ## Sources Count
 
-- Papers: 0 finalized
-- Books: 0 finalized
-- Websites/official reports: 0 finalized
+- Papers: 7 registered or cited in draft
+- Books: 3 registered or cited in draft
+- Websites/official reports: 20 registered or cited in draft
 - Videos: 0 finalized
-- Total: 0 finalized
+- Total: 30 source-register entries
 
 ## Recommendations for Agents
 
