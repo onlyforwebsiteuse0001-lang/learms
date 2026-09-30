@@ -10,6 +10,7 @@ from fastapi.responses import JSONResponse
 
 from backend.app.api.v1.auth import router as auth_router
 from backend.app.api.v1.documents import router as documents_router
+from backend.app.api.v1.learning import router as learning_router
 from backend.app.core.config import get_settings
 from backend.app.core.logging import configure_logging
 from backend.app.services.api_errors import APIError
@@ -26,6 +27,7 @@ app.add_middleware(
 )
 app.include_router(auth_router, prefix="/api/v1")
 app.include_router(documents_router, prefix="/api/v1")
+app.include_router(learning_router, prefix="/api/v1")
 
 
 @app.exception_handler(APIError)

@@ -158,3 +158,23 @@ cd frontend && npm run build
 - Handwriting, formulas, and complex tables depend on source quality. Gemini is attempted only when configured and still may fail; failure remains explicit.
 - WebSocket notifications are not implemented. The required polling endpoint is implemented.
 - Concept extraction and knowledge graph construction are deliberately not included; those are ordered Step 3.
+
+## Concept, diagnostic, mastery, and path APIs
+
+Uploaded documents now feed an evidence-gated concept pipeline. Configured AI order is Gemini, Groq, then OpenRouter; without working keys the system labels and uses a conservative deterministic source-only extractor.
+
+Authenticated endpoints:
+
+- `POST /api/v1/jobs/{job_id}/retry`
+- `GET /api/v1/concepts?course={course_key}`
+- `GET /api/v1/concepts/{concept_id}/prerequisites`
+- `POST /api/v1/diagnostic/start`
+- `POST /api/v1/diagnostic/{session_id}/answer`
+- `GET /api/v1/diagnostic/{session_id}/result`
+- `GET /api/v1/mastery/{student_id}`
+- `GET /api/v1/mastery/{student_id}/concept/{concept_id}`
+- `POST /api/v1/path/generate`
+- `GET /api/v1/path/current`
+- `GET /api/v1/path/why/{concept_id}`
+
+Diagnostics explicitly return unavailable when fewer than three source-grounded questions exist. Mastery is exact online BKT (`p_know * 100`); defaults are not represented as fitted. Paths enforce prerequisite topology before Thompson Sampling.

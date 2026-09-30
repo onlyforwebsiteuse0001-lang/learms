@@ -81,6 +81,9 @@ async def _process_document(document_id: uuid.UUID) -> dict[str, str]:
             document.status = DocumentStatus.SUCCESS
             document.error_message = None
             document.processed_at = datetime.now(timezone.utc)
+            await session.flush()
+            from backend.app.services.concept_service import extract_and_store_concepts
+            await extract_and_store_concepts(session, document_id)
             if job_id:
                 await _update_job(session, job_id)
             await session.commit()

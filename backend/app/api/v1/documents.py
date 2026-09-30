@@ -9,12 +9,13 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, File, Query, UploadFile, status
 from PIL import Image
 from pypdf import PdfReader
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.app.api.dependencies import get_current_student
 from backend.app.core.config import get_settings
 from backend.app.database import get_db_session
-from backend.app.models.document import Student
+from backend.app.models.document import Document, DocumentStatus, JobStatus, Student
 from backend.app.schemas.document import (
     DocumentDetailResponse,
     DocumentListResponse,
@@ -199,4 +200,27 @@ async def job_status(job_id: uuid.UUID, student: Annotated[Student, Depends(get_
     job = await document_service.get_job(session, student.student_id, job_id)
     if not job:
         raise APIError(404, "job_not_found", "Processing job not found. / Processing job nahi mila.")
+    return JobResponse.model_validate(job)
+
+@router.post("/jobs/{job_id}/retry", response_model=JobResponse, status_code=status.HTTP_202_ACCEPTED)
+async def retry_job(job_id: uuid.UUID, student: Annotated[Student, Depends(get_current_student)], session: Annotated[AsyncSession, Depends(get_db_session)]) -> JobResponse:
+    """Requeue only failed student-owned documents without duplicating successful extraction."""
+    job = await document_service.get_job(session, student.student_id, job_id)
+    if not job:
+        raise APIError(404, "job_not_found", "Processing job not found. / Processing job nahi mila.")
+    failed = list((await session.execute(select(Document).where(Document.job_id == job_id, Document.student_id == student.student_id, Document.status == DocumentStatus.FAILED))).scalars())
+    if not failed:
+        raise APIError(409, "nothing_to_retry", "This job has no failed documents to retry. / Retry ke liye failed document nahi hai.")
+    for document in failed:
+        document.status = DocumentStatus.QUEUED
+        document.error_message = None
+        document.processed_at = None
+    job.status = JobStatus.QUEUED
+    job.failed_files = 0
+    await session.commit()
+    try:
+        from backend.app.tasks import process_batch
+        process_batch.delay(str(job_id), [str(document.document_id) for document in failed])
+    except Exception as exc:
+        raise APIError(503, "processing_queue_unavailable", "Documents are queued but the processing service is unavailable. / Processing service available nahi hai.") from exc
     return JobResponse.model_validate(job)
