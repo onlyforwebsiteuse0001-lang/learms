@@ -226,3 +226,27 @@ suggests region-specific mark-ups or bundled pricing presented as IMA's own fees
 **Note:** the *professional* figures ($300 entrance, $295 membership, $495/part) show 4–5 source
 agreement and are used with moderate-to-high confidence in
 `cma-deep/CMA_PAKISTAN_VS_USA.md`. The contradiction is confined to student rates.
+
+---
+
+## C-014 — The text of Article 38(f) after the 26th Constitutional Amendment
+
+| Rendering | Sources | Legal effect |
+|---|---|---|
+| "eliminate riba **completely** before the first day of January, two thousand twenty-eight" | Arab News (quoting the Bill); Express Tribune | **Unconditional constitutional command** |
+| "**as far as practicable**, by the 1st of January, 2028" | The News (print); The Islamic Information | **Qualified obligation with an escape clause** |
+
+**Why it matters:** these are not stylistic variants. "As far as practicable" is a materially
+weaker duty and would change how a bank, regulator or auditor assesses compliance risk against the
+2028 deadline — which in turn changes how urgently accounting curricula must respond.
+
+**Resolution: UNRESOLVED.** The authoritative enacted text was **not retrieved** from the Gazette
+of Pakistan, the National Assembly or the Senate. All five sources located are news media. The
+two sources that claim to quote the Bill text directly favour the absolute rendering, which is
+weak evidence in its favour but not sufficient.
+
+**Instruction:** do not state either wording as the constitutional text anywhere in Learms until
+the Gazette version is checked. The *deadline of 1 January 2028* is consistent across all five
+sources and may be stated; the *wording of the obligation* may not.
+
+**Detail:** `pakistan/ISLAMIC_FINANCE.md` §3.
