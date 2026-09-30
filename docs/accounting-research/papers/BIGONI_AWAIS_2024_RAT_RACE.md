@@ -10,9 +10,17 @@ contradict assumptions embedded in the Learms brief.
 
 ## 1. Full citation
 
-> Bigoni, M. and Awais, M. (2025) '"I am no longer part of this rat race": accounting education
-> and students' resistance in Pakistan', *Accounting Forum*, 49(2), pp. 472–497.
+> Bigoni, M. and Awais, W. (2025) '"I am no longer part of this rat race": Student resistance to
+> neoliberal accounting education in Pakistan', *Accounting Forum*, 49(2), pp. 472–497.
 > DOI: [10.1080/01559982.2024.2309595](https://doi.org/10.1080/01559982.2024.2309595)
+
+> **Citation corrected 2026-09-30.** An earlier draft of this file gave the second author's
+> initial as "M." and paraphrased the subtitle as "accounting education and students' resistance
+> in Pakistan". Both were wrong. The correct form above is taken from the authors' own reference
+> list in Awais & Bigoni (2026) — see `RESEARCH_PAPERS.md` §2. The subtitle matters: the paper is
+> explicitly about resistance to **neoliberal** accounting education, which is a stronger and more
+> specific claim than "students' resistance". The error is recorded rather than silently fixed,
+> per the no-fake-research rule.
 
 - Published online 2024; assigned to issue 49(2), 2025.
 - Open-access Version of Record: https://shura.shu.ac.uk/33485/3/Awais-IAmNoLongerPart(VoR).pdf
