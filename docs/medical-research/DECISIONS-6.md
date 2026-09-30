@@ -1,6 +1,6 @@
 # Agent 6 Research Decisions
 
-**Last updated:** 2026-09-30 (Area 2 checkpoint)
+**Last updated:** 2026-09-30 (Area 4 checkpoint)
 
 ## D-001 — Evidence hierarchy
 
@@ -77,3 +77,23 @@ Use later, more specific official exam standards for current guidance while reta
 ## D-019 — Jurisdiction-specific international pathways
 
 USMLE/ECFMG, PLAB/GMC, and PM&DC/CPSP are separate authority graphs. Exam passage never implies residency match, employment, immigration status, or a licence in another jurisdiction.
+
+## D-020 — Student-problem evidence is non-diagnostic
+
+A screening result, self-description, app behavior, attendance record, grade, or pooled prevalence cannot establish an individual diagnosis. Learms must not create a composite wellbeing, burnout, or suicide-risk score from Area 4 evidence.
+
+## D-021 — Preserve study design in graph relations
+
+Cross-sectional association, qualitative theme, meta-analytic correlation, policy requirement, and intervention effect are distinct edge types. “Associated with” cannot be rewritten as “causes,” and qualitative themes cannot be assigned population percentages.
+
+## D-022 — Distress, emergency, and harassment routes are separate
+
+Mental-health care, acute emergency support, confidential advice, and formal harassment inquiry have different operators and data obligations. Do not funnel all routes into a chatbot or represent Learms as a clinical or adjudicatory authority.
+
+## D-023 — Support-service claims require operational verification
+
+A regulator standard or institutional policy establishes an expectation, not current service quality. Display availability/confidentiality only with first-party evidence for operator, scope, hours, cost, eligibility, disclosure, retention, and verification date.
+
+## D-024 — No individual-responsibility-only framing
+
+Burnout, sleep loss, mistreatment, financial pressure, and distress can involve curricular, institutional and structural conditions. Area 5 will separate learner-controlled techniques from faculty, curriculum, service, and policy interventions.

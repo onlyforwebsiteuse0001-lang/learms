@@ -1,6 +1,6 @@
 # Agent 6 Session State
 
-**Last updated:** 2026-09-30 (Area 2 checkpoint)
+**Last updated:** 2026-09-30 (Area 4 checkpoint)
 **Branch:** `arena/01a0f474-learms` (Arena-fixed; requested branch name cannot be used)  
 **Mode:** medical research only; Markdown/JSON/CSV/YAML deliverables; no application code.
 
@@ -27,8 +27,12 @@
 - Area 3 complete for reviewed official evidence: nine exam/licensing files under `medical-research/exams/`, including a validated pathway graph and a dated 2026 schedule.
 - Current evidence separates MDCAT, PM&DC provisional/full registration, house job, NRE, NEB, FCPS-I/induction/IMM/FCPS-II, MCPS, and foreign-jurisdiction pathways.
 - Source conflicts preserved: NRE 2023 70% versus 2024 60%; 2024 medical NRE basic-science row sum 56 versus stated 60; NEB migration two-month versus older three-month wording; mutable PM&DC registration fees.
-- Source register now has 86 unique official records.
-- Next: Area 4 medical-student problems and wellbeing using systematic reviews and Pakistan-specific primary studies.
+- Area 4 complete for reviewed evidence: eleven files under `medical-research/student-problems/` cover distress, burnout, learning environment, sleep, digital use, mistreatment, finance, career uncertainty, help-seeking, interpretation limits and Pakistan gaps.
+- `PROBLEM_EVIDENCE_MATRIX.csv` contains 23 study/guideline observations; `STUDENT_PROBLEM_ONTOLOGY.json` encodes non-diagnostic domains, typed associations and prohibited inferences.
+- Pakistan depressive-symptom studies range from 9% to 94% with I²=99.15%; no single national rate, college ranking, diagnosis or individual risk is inferred.
+- Current institution-level counselling operations and a universally applicable Pakistan crisis-contact dataset remain not found/verified.
+- Source register now has 109 unique records: 89 official/institutional and 20 peer-reviewed.
+- Next: Area 5 evidence-based learning and wellbeing solutions, preserving intervention, comparator, effect, follow-up, population and harms.
 
 ## Non-negotiable cautions
 

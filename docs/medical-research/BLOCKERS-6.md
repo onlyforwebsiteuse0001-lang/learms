@@ -1,6 +1,6 @@
 # Agent 6 Blockers and Constraints
 
-**Last updated:** 2026-09-30 (Area 2 checkpoint)
+**Last updated:** 2026-09-30 (Area 4 checkpoint)
 
 | ID | Constraint | Impact | Response |
 |---|---|---|---|
@@ -15,4 +15,7 @@
 | B-009 | No current official national medical-college league table or consolidated final closing-merit dataset was found. | A “Top 10” list or individual admission probability would be unsupported. | Use evidence-separated filters and exact session/category final-list observations; report probability and national ranking as `not found`. |
 | B-010 | High-stakes exam dates, registration windows, formats, fees, and pass rules change by cycle and component. A scheduled date may pass without a reviewed completion notice. | A countdown or “exam completed” state can become false or unsafe. | Store announcement/reschedule/result as separate events; require an official completion/result source rather than inferring from time. |
 | B-011 | NRE 2023 standards used 70% thresholds while the 2024 standards use 60% plus Angoff wording; the 2024 medical NRE basic-science rows sum to 56 although the source labels the domain total as 60. | Old preparation guidance and fabricated row balancing could misstate the controlling exam. | Prefer the later version for current guidance, preserve superseded versions, flag the arithmetic conflict, and require sitting-specific verification. |
-| B-012 | The 2023 Registration Regulations give a three-month NEB migration timing rule, while later 2024 NEB standards state two months. | A student could rely on a stale migration window. | Display the later exam-specific two-month rule with an official-source conflict warning and direct-verification advice.
+| B-012 | The 2023 Registration Regulations give a three-month NEB migration timing rule, while later 2024 NEB standards state two months. | A student could rely on a stale migration window. | Display the later exam-specific two-month rule with an official-source conflict warning and direct-verification advice. |
+| B-013 | Pakistan medical-student symptom studies use incompatible instruments/cutoffs and the 2026 depression review reports 9%–94% with I²=99.15%. | A national point estimate or college comparison would be statistically misleading. | Preserve instrument, cutoff, setting, year, sample and design; show range/heterogeneity; prohibit national or individual prediction. |
+| B-014 | Current institution-level counselling operations and a universally applicable Pakistan crisis-contact dataset were not verified. | Hard-coded routing could be stale, inaccessible, or unsafe. | Do not launch or label a route as available/confidential until first-party operator, scope, hours, cost, data handling and verification date are recorded. |
+| B-015 | Most Pakistan problem evidence is cross-sectional or qualitative; older harassment studies remain the strongest multicentre evidence found. | Causal claims and current-prevalence claims are not supported. | Type edges as association/theme/policy; retain publication year; do not infer causality or current safety from old prevalence or policy presence. |

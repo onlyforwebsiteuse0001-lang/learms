@@ -21,7 +21,7 @@
 | `DECISIONS-6.md` | Research and modeling decisions | Current |
 | `MORNING_REPORT-6.md` | Honest cumulative report | In progress |
 | `../SESSION-STATE-6.md` | Recovery state | Current |
-| `sources/SOURCE_REGISTER.csv` | Source-level evidence register | 86 unique official records through Area 3 |
+| `sources/SOURCE_REGISTER.csv` | Source-level evidence register | 109 unique records through Area 4: 89 official/institutional and 20 peer-reviewed |
 
 ## Area 1 — Program and specialization taxonomy
 
@@ -63,11 +63,26 @@
 | `exams/EXAM_CALENDAR_2026.csv` | Dated PM&DC/CPSP schedule observations with non-inferred status | Structurally valid |
 | `exams/EXAM_PATHWAY_GRAPH.json` | Machine-readable stage/edge model and prohibited equivalences | Valid JSON |
 
+## Area 4 — Medical-student problems and wellbeing
+
+| File | Coverage | Status |
+|---|---|---|
+| `student-problems/STUDENT_PROBLEMS_OVERVIEW.md` | Multidomain evidence map, Pakistan boundary, institutional responsibilities | Complete for reviewed evidence |
+| `student-problems/DEPRESSION_ANXIETY_AND_SUICIDAL_IDEATION.md` | Global and Pakistan estimates, screening/diagnosis boundary, digital safety | Complete; crisis-contact gap explicit |
+| `student-problems/BURNOUT_AND_LEARNING_ENVIRONMENT.md` | Global review, incompatible Pakistan instruments, learning-environment and system factors | Complete for reviewed studies |
+| `student-problems/SLEEP_FATIGUE_AND_DIGITAL_DISTRACTION.md` | Sleep meta-analysis, Pakistan stress/sleep study, smartphone-use evidence | Complete with causal limits |
+| `student-problems/MISTREATMENT_HARASSMENT_AND_DISCRIMINATION.md` | Global/Pakistan prevalence signals, hierarchy, HEC procedure, privacy boundary | Complete; current outcome-data gap explicit |
+| `student-problems/FINANCIAL_PRESSURE_AND_CAREER_UNCERTAINTY.md` | Qualitative mechanisms, burnout association, support standard, cost gaps | Complete; no national prevalence claim |
+| `student-problems/MEASUREMENT_AND_INTERPRETATION_LIMITS.md` | Screening, study-design and prohibited-inference rules | Complete |
+| `student-problems/HELP_SEEKING_AND_SAFETY_BOUNDARIES.md` | Treatment gap, stigma, digital limits, distinct reporting/care routes | Complete; launch verification gaps explicit |
+| `student-problems/PAKISTAN_EVIDENCE_GAPS.md` | National, longitudinal, service, suicide, harassment and equity gaps | Complete |
+| `student-problems/PROBLEM_EVIDENCE_MATRIX.csv` | 23 study/guideline observations with design, sample and limitation fields | Structurally valid |
+| `student-problems/STUDENT_PROBLEM_ONTOLOGY.json` | Non-diagnostic domains, typed associations, support nodes and product constraints | Valid JSON |
+
 ## Remaining research areas
 
 | Area | Planned outputs | Status |
 |---|---|---|
-| 4. Student problems | Burnout, depression/anxiety, workload, barriers, Pakistan evidence | Not started |
 | 5. Evidence-based solutions | Study science, wellbeing, mentoring, institutional support | Not started |
 | 6. Books | Stage- and specialty-specific books with edition/ISBN/chapter evidence | Not started |
 | 7. Medical-learning UI/UX | Evidence-derived workflows, accessibility, cognitive load | Not started |
@@ -93,6 +108,8 @@
 9. NRE's official threshold changed from 70% in 2023 to 60% plus Angoff wording in 2024; the 2024 medical basic-science table rows sum to 56 despite a stated total of 60.
 10. The Registration Regulations 2023 say three months for a target-year NEB migration window while the later 2024 NEB standards say two months.
 11. The Registration Regulations 2023 and current PM&DC FAQ display different local provisional-license and good-standing fees.
+12. Pakistan depressive-symptom studies range from 9% to 94% with I²=99.15%; one national point estimate would conceal major instrument, cutoff, setting, and sampling differences.
+13. Pakistan burnout studies use incompatible MBI-HSS, BCSQ-12, BAT-23, and dimension-specific measures; their percentages are not a trend series.
 
 ## Current integration assets
 
@@ -104,6 +121,7 @@
 - Claim-specific college model and prohibited inference edges in `colleges/COLLEGE_COMPARISON_SCHEMA.yaml`
 - Versioned recognition, seat, fee, hospital, and admission observations
 - Exam and licence-stage nodes/edges in `exams/EXAM_PATHWAY_GRAPH.json`; scheduled events do not imply completion
+- Non-diagnostic problem nodes and typed association/policy edges in `student-problems/STUDENT_PROBLEM_ONTOLOGY.json`
 
 ### Agent 2
 
@@ -111,12 +129,14 @@
 - Evidence-separated college comparison with no default composite rank
 - Admission aggregate and historical-comparison UX without false probability
 - Versioned exam cards separating syllabus, sitting, component, attempt, and result; no pass-rate promises
+- Learner-controlled support discovery with no composite wellbeing score, college ranking, diagnosis, or causal rewrite
 
 ### Agent 3
 
 - Patient-data boundaries for portfolios, images, radiographs, case logs, laboratory/imaging artifacts, and learning simulations
 - Do not ingest applicant-level names, parent names, dates of birth, roll/form numbers, or identity numbers from merit-list PDFs when aggregate observations suffice
 - Licensing and exam checklists should store verification status and minimum metadata, not CNIC/passport scans or patient-identifiable logbook cases
+- Distress and harassment routes are separate; do not create silent risk monitoring or an unmandated complaint repository
 
 ### Agent 4
 
