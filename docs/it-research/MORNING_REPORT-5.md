@@ -15,9 +15,9 @@
 - [x] Area 4: Student Problems (initial 8 files created; Pakistan-specific deepening pending)
 - [x] Area 5: Solutions (initial 6 files created; deepening pending)
 - [x] Area 6: Books (initial catalog and selection rubric created; ISBN/chapter deepening pending)
-- [x] Area 7: UI/UX (initial UX guidance created; Pakistan mobile/bandwidth evidence pending) for IT
-- [x] Area 8: Pakistan IT (initial 5 files created; job/salary dataset pending) Specific
-- [ ] Area 9: Career Paths
+- [x] Area 7: UI/UX (initial UX guidance created; Pakistan mobile/bandwidth evidence pending)
+- [x] Area 8: Pakistan IT (initial 5 files created; job/salary dataset pending)
+- [x] Area 9: Career Paths & Salaries (initial role and salary-evidence guidance created; current Pakistan job dataset pending)
 - [ ] Area 10: Tools
 - [ ] Area 11: Research Papers
 - [ ] Area 12: Synthesis
@@ -43,6 +43,7 @@
 - `docs/it-research/books/` — 7 book-area drafts plus initial CSV catalog
 - `docs/it-research/ui-ux/` — 6 UI/UX guidance drafts
 - `docs/it-research/pakistan/` — 5 Pakistan-specific drafts
+- `docs/it-research/career/` — 6 career/salary guidance drafts
 
 ## Top Key Findings
 
@@ -52,9 +53,9 @@ To be filled as source-backed findings are finalized.
 
 - Papers: 29 registered or cited in draft
 - Books: 10 registered or cited in draft
-- Websites/official reports/documentation/policies: 78 registered or cited in draft
+- Websites/official reports/documentation/policies: 84 registered or cited in draft
 - Videos: 0 finalized
-- Total: 117 source-register entries
+- Total: 123 source-register entries
 
 ## Recommendations for Agents
 

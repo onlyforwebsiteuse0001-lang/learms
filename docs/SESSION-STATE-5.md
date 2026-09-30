@@ -30,4 +30,5 @@
 - Area 6: Books — initial catalog and rubric complete; ISBN/chapter deepening pending.
 - Area 7: UI/UX — initial 6 draft files complete; Pakistan mobile/bandwidth evidence pending.
 - Area 8: Pakistan IT — initial 5 draft files complete; job/salary dataset pending.
-- Area 9: Career Paths & Salaries — next.
+- Area 9: Career Paths & Salaries — initial 6 draft files complete; current Pakistan job/salary dataset pending.
+- Area 10: Tools & Platforms — next.
