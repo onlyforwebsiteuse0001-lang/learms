@@ -1,45 +1,114 @@
 # HAAFIZ EDU
 
-Pakistan-first personalized learning system. This repository now contains the working API foundation and the first dashboard UI while the complete product is being developed iteratively.
+Pakistan-first AI-powered personalized learning system. Development follows the approved ordered build plan: each step is implemented, tested, and reported before the next begins. The repository never returns fake AI or learning results when a dependency is unavailable.
 
-## Implemented backend capabilities
+## Build status
 
-- Persistent SQLite database with migrations-on-start
-- Student and teacher registration/login with PBKDF2 password hashing
-- Expiring bearer sessions
-- Course catalogue and enrollment
-- Concept-level mastery records
-- Interpretable early BKT-style mastery updates
-- Student tasks and completion tracking
-- Personalized dashboard summary and weak-concept recommendations
-- Seeded FSc Mathematics, Physics, and Computer Science content
-- CORS support for local and Arena preview environments
-- Interactive OpenAPI documentation
+| Step | Deliverable | Status |
+|---|---|---|
+| 1 | Project structure, environment, PostgreSQL/Redis/Celery, React PWA, Docker | **Complete** |
+| 2 | PDF/DOCX/PPTX/image upload and OCR pipeline | Not started |
+| 3 | AI + deterministic concept extraction and knowledge graph | Not started |
+| 4+ | Diagnostic, BKT, paths, FSRS, tutor, quizzes, planner, mock exams | Ordered backlog |
 
-## Run the API
+The earlier experimental dashboard remains temporarily available from `backend/main.py`; it is not presented as the final learning system. The new React workspace is under `frontend/` and becomes the product UI starting in Step 2.
 
-```bash
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
-.venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
+## Repository structure
+
+```text
+backend/               FastAPI API and Celery worker
+  app/api/             Versioned route modules
+  app/core/            Typed config and JSON logging
+  app/models/          SQLAlchemy models
+  app/schemas/         Pydantic contracts
+  app/services/        Domain services
+frontend/              React 18 + TypeScript + Vite PWA
+ai_services/           Provider adapters and fallback router
+database/init/         Fresh PostgreSQL extension setup
+docs/                  Architecture and UX decisions
+tests/                 Pytest critical-path tests
 ```
 
-Open `http://localhost:8000/docs` for the interactive API.
+See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for component boundaries and security decisions.
 
-## Current UI
+## Prerequisites
 
-The existing `index.html` dashboard is the visual starting point. It can be opened directly or served with:
+### Recommended
+
+- Docker Engine 24+
+- Docker Compose v2
+
+### Native development
+
+- Python 3.11+
+- Node.js 20+ (22 recommended)
+- PostgreSQL 15+
+- Redis 7+
+- Tesseract with English and Urdu language packs
+- Poppler utilities
+
+## Docker setup
+
+1. Create your local environment file:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Replace `POSTGRES_PASSWORD`, `SECRET_KEY`, and administrator password. AI keys are optional and should remain blank until configured.
+
+3. Build and start:
+
+   ```bash
+   docker compose up --build
+   ```
+
+4. Open:
+
+   - Frontend: <http://localhost:3000>
+   - API: <http://localhost:8000>
+   - OpenAPI: <http://localhost:8000/docs>
+
+PostgreSQL and Redis are intentionally not exposed to the host.
+
+## Native setup
 
 ```bash
-python3 -m http.server 5173
+cp .env.example .env
+make setup
+make dev
 ```
 
-The HAAFIZ web application is served directly by the API and includes role-aware student and administrator workspaces. Default local administrator credentials are `admin@haafiz.edu.pk` / `ChangeMe123!`; override them with `HAAFIZ_ADMIN_EMAIL` and `HAAFIZ_ADMIN_PASSWORD` before first production startup.
+Run the React workspace separately:
 
-## Documentation
+```bash
+cd frontend
+npm run dev
+```
 
-- [`docs/UX_RESEARCH.md`](docs/UX_RESEARCH.md) — research-backed interface principles and acceptance criteria
+## Quality checks
 
-## Security note
+```bash
+make test
+make lint
+cd frontend && npm run build
+```
 
-SQLite is suitable for local development and the first deployable version. Production will use PostgreSQL, environment-managed secrets, rate limiting, email verification, password reset, and audited authorization policies before public enrollment.
+## Environment and AI policy
+
+- Real keys belong only in `.env` or a deployment secret manager.
+- `.env` is excluded from Git and Docker build context.
+- Provider order will be Gemini → Groq → OpenRouter.
+- A provider without a key is disabled.
+- If all providers are unavailable, the API must return a clear unavailable state.
+- Deterministic extraction in Step 3 will be labeled with its actual extraction method and confidence evidence; it will not impersonate AI output.
+
+## Current step acceptance criteria
+
+- Typed settings load from environment.
+- Missing AI keys produce an empty enabled-provider list.
+- PostgreSQL, Redis, backend, Celery worker, and frontend are defined in Compose.
+- Backend image includes Tesseract English/Urdu and Poppler.
+- Frontend production build is a mobile-first installable PWA shell.
+- Containers have health checks and persistent named volumes.
+- No secret is committed.
