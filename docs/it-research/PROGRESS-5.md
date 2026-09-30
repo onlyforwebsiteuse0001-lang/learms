@@ -14,7 +14,8 @@
 | 2026-09-30 | Area 6 books | Draft started | Created 7 book-area drafts plus initial catalog; explicitly marked unsourced ISBN/chapter gaps. Source register through S104. | 8dbe010 |
 | 2026-09-30 | Area 7 UI/UX | Draft complete | Created 6 UI/UX research drafts using usability, accessibility, UDL, cognitive load, multimedia learning, and learning analytics sources S105-S110. | 5327668 |
 | 2026-09-30 | Area 8 Pakistan IT | Draft complete | Created 5 Pakistan-specific drafts on industry, connectivity, HEC curriculum, government programs, and market hypotheses. Source register through S117. | e74123c |
-| 2026-09-30 | Area 9 career/salary | Draft complete | Created 6 career-path, salary, competency, freelance, and interview-prep drafts. Source register through S123. | pending |
+| 2026-09-30 | Area 9 career/salary | Draft complete | Created 6 career-path, salary, competency, freelance, and interview-prep drafts. Source register through S123. | d7f155e |
+| 2026-09-30 | Area 10 tools/platforms | Draft complete | Created 6 tool/platform drafts covering learning platforms, IDEs, AI coding tools, collaboration, and assessment. Source register through S129. | pending |
 
 ## Deliverable Status
 
@@ -111,6 +112,16 @@
 - [x] `career/INTERVIEW_PREP.md` draft v0.1.
 - [ ] Deepen with live Pakistan job-post sample and current salary distribution.
 
+### Area 10 — Tools & Platforms
+
+- [x] `tools/PLATFORM_COMPARISON.md` draft v0.1.
+- [x] `tools/IDES_EDITORS.md` draft v0.1.
+- [x] `tools/ONLINE_CODING_PLATFORMS.md` draft v0.1.
+- [x] `tools/AI_CODING_TOOLS.md` draft v0.1.
+- [x] `tools/VERSION_CONTROL_COLLABORATION.md` draft v0.1.
+- [x] `tools/ASSESSMENT_PLATFORM_RUBRIC.md` draft v0.1.
+- [ ] Deepen with official/pricing/accessibility data for Replit, CodeSandbox, Colab, Kaggle, LeetCode, HackerRank, Coursera, Udemy, Codecademy.
+
 ### Remaining Areas
 
 - [ ] Area 2 — Programming Languages deepening
@@ -121,6 +132,6 @@
 - [ ] Area 7 — UI/UX deepening for IT Learning
 - [ ] Area 8 — Pakistan IT Specific deepening
 - [ ] Area 9 — Career Paths & Salaries deepening
-- [ ] Area 10 — Tools & Platforms
+- [ ] Area 10 — Tools & Platforms deepening
 - [ ] Area 11 — Research Papers
 - [ ] Area 12 — Synthesis & Final Report

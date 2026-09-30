@@ -18,7 +18,7 @@
 - [x] Area 7: UI/UX (initial UX guidance created; Pakistan mobile/bandwidth evidence pending)
 - [x] Area 8: Pakistan IT (initial 5 files created; job/salary dataset pending)
 - [x] Area 9: Career Paths & Salaries (initial role and salary-evidence guidance created; current Pakistan job dataset pending)
-- [ ] Area 10: Tools
+- [x] Area 10: Tools (initial 6 tool/platform guidance files created; pricing/accessibility deepening pending)
 - [ ] Area 11: Research Papers
 - [ ] Area 12: Synthesis
 
@@ -44,6 +44,7 @@
 - `docs/it-research/ui-ux/` — 6 UI/UX guidance drafts
 - `docs/it-research/pakistan/` — 5 Pakistan-specific drafts
 - `docs/it-research/career/` — 6 career/salary guidance drafts
+- `docs/it-research/tools/` — 6 tool/platform guidance drafts
 
 ## Top Key Findings
 
@@ -53,9 +54,9 @@ To be filled as source-backed findings are finalized.
 
 - Papers: 29 registered or cited in draft
 - Books: 10 registered or cited in draft
-- Websites/official reports/documentation/policies: 84 registered or cited in draft
+- Websites/official reports/documentation/policies: 90 registered or cited in draft
 - Videos: 0 finalized
-- Total: 123 source-register entries
+- Total: 129 source-register entries
 
 ## Recommendations for Agents
 
