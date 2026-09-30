@@ -21,7 +21,7 @@
 | `DECISIONS-6.md` | Research and modeling decisions | Current |
 | `MORNING_REPORT-6.md` | Honest cumulative report | In progress |
 | `../SESSION-STATE-6.md` | Recovery state | Current |
-| `sources/SOURCE_REGISTER.csv` | Source-level evidence register | 63 unique records through Area 2 |
+| `sources/SOURCE_REGISTER.csv` | Source-level evidence register | 86 unique official records through Area 3 |
 
 ## Area 1 — Program and specialization taxonomy
 
@@ -49,11 +49,24 @@
 | `colleges/ADMISSION_CHANCES.md` | Eligibility, aggregate formula, segmentation, historical comparison, privacy boundary | Complete without unsupported probability |
 | `colleges/COLLEGE_COMPARISON_SCHEMA.yaml` | Claim-specific comparison/evidence schema and prohibited inferences | Complete |
 
+## Area 3 — Entry, licensing, transfer, and postgraduate examinations
+
+| File | Coverage | Status |
+|---|---|---|
+| `exams/MDCAT_COMPLETE.md` | Legal role, 2026 pattern/date versions, latest final syllabus found, non-probability boundary | Complete for reviewed official evidence |
+| `exams/PMDC_LICENSING_AND_HOUSE_JOB.md` | Local/foreign pathways, provisional/full registration, MBBS/BDS rotations, hospital/stipend/fee conflicts | Complete; mutable fees flagged |
+| `exams/NRE_COMPLETE.md` | Medical/dental 2024 standards, 2026 Step-I notice, 2023–24 threshold change | Complete; exact future notices remain mutable |
+| `exams/NEB_COMPLETE.md` | Medical/dental target-year transfer exams, vacancy boundary, two-/three-month conflict | Complete for 2024-and-onwards standards |
+| `exams/FCPS_EXAM_PATHWAY.md` | FCPS-I, induction, RTMC, IMM, FCPS-II, attempt and calendar rules | Complete at general level; specialty prospectus controls |
+| `exams/IMM_AND_MCPS_EXAMS.md` | IMM role, MCPS pathway, specialty-dependent formats, qualification registration boundary | Complete at general level |
+| `exams/INTERNATIONAL_EXAMS_USMLE_PLAB.md` | ECFMG/USMLE and GMC/PLAB high-level boundaries | Complete at high level; no immigration claims |
+| `exams/EXAM_CALENDAR_2026.csv` | Dated PM&DC/CPSP schedule observations with non-inferred status | Structurally valid |
+| `exams/EXAM_PATHWAY_GRAPH.json` | Machine-readable stage/edge model and prohibited equivalences | Valid JSON |
+
 ## Remaining research areas
 
 | Area | Planned outputs | Status |
 |---|---|---|
-| 3. Entry, licensing, postgraduate exams | MDCAT, university admissions, NRE, FCPS, licensing | Not started |
 | 4. Student problems | Burnout, depression/anxiety, workload, barriers, Pakistan evidence | Not started |
 | 5. Evidence-based solutions | Study science, wellbeing, mentoring, institutional support | Not started |
 | 6. Books | Stage- and specialty-specific books with edition/ISBN/chapter evidence | Not started |
@@ -77,6 +90,9 @@
 6. PM&DC's paginated college directories reported 178 entries, but the reviewed rendering exposed only the first ten rows per category; indexed snippets showed older/different dental values.
 7. The March and August 2026 PM&DC fee notifications contain dated institution-specific observations; Al Aleem's later August value differs from its March value and must not be destructively merged.
 8. HEC's official ranking page exposes archives through 2015; no current official national medical-college league table was found.
+9. NRE's official threshold changed from 70% in 2023 to 60% plus Angoff wording in 2024; the 2024 medical basic-science table rows sum to 56 despite a stated total of 60.
+10. The Registration Regulations 2023 say three months for a target-year NEB migration window while the later 2024 NEB standards say two months.
+11. The Registration Regulations 2023 and current PM&DC FAQ display different local provisional-license and good-standing fees.
 
 ## Current integration assets
 
@@ -87,17 +103,20 @@
 - Prohibited equivalence/inference edges in each specialty file
 - Claim-specific college model and prohibited inference edges in `colleges/COLLEGE_COMPARISON_SCHEMA.yaml`
 - Versioned recognition, seat, fee, hospital, and admission observations
+- Exam and licence-stage nodes/edges in `exams/EXAM_PATHWAY_GRAPH.json`; scheduled events do not imply completion
 
 ### Agent 2
 
 - Recognition banners, dated evidence, conflict states, pathway timelines, and `not found` UX guidance
 - Evidence-separated college comparison with no default composite rank
 - Admission aggregate and historical-comparison UX without false probability
+- Versioned exam cards separating syllabus, sitting, component, attempt, and result; no pass-rate promises
 
 ### Agent 3
 
 - Patient-data boundaries for portfolios, images, radiographs, case logs, laboratory/imaging artifacts, and learning simulations
 - Do not ingest applicant-level names, parent names, dates of birth, roll/form numbers, or identity numbers from merit-list PDFs when aggregate observations suffice
+- Licensing and exam checklists should store verification status and minimum metadata, not CNIC/passport scans or patient-identifiable logbook cases
 
 ### Agent 4
 

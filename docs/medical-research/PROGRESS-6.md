@@ -12,12 +12,13 @@
 | 2A — medical/dental specialties | 2026-09-30 23:05 | Complete | MBBS and BDS pathways; machine-readable 48 first/44 second/19 MCPS snapshot; recognition and source conflicts |
 | 2B — other professions | 2026-09-30 23:30 | Complete | Pharmacy, nursing/CNS, allied-health, veterinary, and emerging-field pathways; master index |
 | 3 — colleges/accreditation | 2026-09-30 | Complete for reviewed official evidence | Four PM&DC directory totals; transparent partial row snapshot; accreditation workflow; 2025–26 fee versions; ranking caveat; admission-chance model |
+| 4 — entry/licensing/postgraduate exams | 2026-09-30 | Complete for reviewed official evidence | MDCAT; PM&DC licensing and house job; NRE; NEB; FCPS/IMM/MCPS; 2026 calendar; USMLE/ECFMG and PLAB/GMC boundaries |
 
 ## Area status
 
 - [x] Area 1: Medical taxonomy — program map and all seven requested specialty-family files complete for reviewed official evidence
 - [x] Area 2: Medical colleges — complete for reviewed official sources; incomplete row-level PM&DC export and national historical closing-merit dataset explicitly retained as gaps
-- [ ] Area 3: Medical exams
+- [x] Area 3: Medical exams — complete for reviewed official pathways; exact sitting notices remain mutable
 - [ ] Area 4: Student problems
 - [ ] Area 5: Solutions
 - [ ] Area 6: Books
@@ -37,15 +38,15 @@ Counts are updated only after sources are entered in the source register.
 
 | Type | Unique sources reviewed |
 |---|---:|
-| Official law/regulator/guideline/directory | 60 |
+| Official law/regulator/guideline/directory/exam source | 83 |
 | Peer-reviewed paper/systematic review | 0 |
 | Book | 0 |
 | Official institutional/admissions website | 3 |
 | Other secondary source | 0 |
-| **Total** | **63** |
+| **Total** | **86** |
 
 ## Immediate queue
 
-1. Map MDCAT, NRE, licensing, FCPS, and other high-stakes exam pathways.
-2. Research wellbeing with systematic reviews plus Pakistan-specific primary studies.
-3. Return to the college register only if PM&DC exposes a complete authoritative row export; do not fill pagination gaps from stale search snippets.
+1. Research medical-student problems and wellbeing using systematic reviews plus Pakistan-specific primary studies.
+2. Map evidence-based study/wellbeing solutions, preserving effect sizes and intervention context.
+3. Return to mutable exam and college records only on a new official notice; do not infer completion from a scheduled date.

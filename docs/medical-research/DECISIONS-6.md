@@ -61,3 +61,19 @@ Eligibility, calculated aggregate, and historical selection are separate outputs
 ## D-015 — Fee records are append-only dated observations
 
 Later PM&DC fee notifications do not erase older values. Store notification date, exact institution wording, cap, and source; select the applicable record only after resolving session and institution/program identity.
+
+## D-016 — Exam standards are versioned independently from sittings
+
+An exam's law, syllabus/standard, registration notice, reschedule, admit-card date, component result, and credential outcome are separate records. A date passing does not prove the event occurred.
+
+## D-017 — Exam milestones are not interchangeable credentials
+
+MDCAT pass, admission eligibility, selection, graduation, provisional registration, house job, NRE/NEB, FCPS-I, induction, IMM, FCPS-II, CPSP election, and PM&DC additional-qualification registration remain separate graph states.
+
+## D-018 — Later standards do not erase contradictions
+
+Use later, more specific official exam standards for current guidance while retaining earlier values and arithmetic/text conflicts in provenance. Never add missing questions or silently repair a regulator table.
+
+## D-019 — Jurisdiction-specific international pathways
+
+USMLE/ECFMG, PLAB/GMC, and PM&DC/CPSP are separate authority graphs. Exam passage never implies residency match, employment, immigration status, or a licence in another jurisdiction.

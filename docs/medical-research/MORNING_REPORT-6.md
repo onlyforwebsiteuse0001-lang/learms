@@ -10,7 +10,7 @@
 
 - [x] Area 1: Medical Taxonomy
 - [x] Area 2: Medical Colleges — complete for reviewed official evidence; full row export and national closing-merit dataset remain explicit gaps
-- [ ] Area 3: Medical Exams
+- [x] Area 3: Medical Exams — complete for reviewed official entry, licensing, transfer, CPSP, and high-level US/UK pathways
 - [ ] Area 4: Student Problems
 - [ ] Area 5: Solutions
 - [ ] Area 6: Books
@@ -26,14 +26,15 @@
 
 ## Documents created
 
-Twenty-four research/tracking files through Area 2, including the external recovery file `docs/SESSION-STATE-6.md`:
+Thirty-three research/tracking files through Area 3, including the external recovery file `docs/SESSION-STATE-6.md`:
 
 - `taxonomy/PROGRAMS_COMPLETE.md` — 607-line regulator-aware map
 - Seven requested professional specialization files under `specializations/`
 - `specializations/CPSP_SPECIALTY_GRAPH.json` — validated 48 first/44 second/19 MCPS evidence snapshot
 - Seven Area 2 deliverables under `colleges/`, including dated JSON, fee CSV, and comparison YAML
+- Nine Area 3 deliverables under `exams/`, including a pathway graph and dated calendar CSV
 - `MASTER_INDEX.md` — completion and integration index
-- `sources/SOURCE_REGISTER.csv` — 63 unique official sources
+- `sources/SOURCE_REGISTER.csv` — 86 unique official sources
 - Research plan and four recovery/tracking reports
 
 ## Key findings
@@ -68,6 +69,16 @@ Twenty-four research/tracking files through Area 2, including the external recov
 28. PM&DC's 4 August 2026 notification adds 16 cap records and incorporates the March terms; Al Aleem's newer value differs from its March value, demonstrating the need for append-only versioning. — PM&DC, 2026
 29. The 2025 regulations use 50% MDCAT, 40% HSSC/equivalent, and 10% SSC/equivalent for the reviewed public and private merit formulation; the aggregate is not an admission probability. — PM&DC, 2025
 30. No single national medical cutoff exists: session, authority, program, sector, domicile, category/quota, college preference, seats, and list round determine whether a historical observation is comparable. — PM&DC/UHS/KMU/DUHS
+31. MDCAT 2026 was specified as 180 paper-based English MCQs with no negative marking; PM&DC rescheduled it from 16 August to 20 September while keeping other terms unchanged unless notified. — PM&DC, 2026
+32. The latest final MDCAT syllabus located was labeled 2025; it matches the 2026 pattern and states 55% medical and 50% dental minimum pass values, but the PDF must not be relabeled as a 2026 edition. — PM&DC, 2025–2026
+33. Graduation, provisional registration, one-year approved house job, and full registration are separate states; pre-provisional house-job experience is not accepted under the reviewed regulations. — PM&DC Act/Regulations
+34. MBBS house job comprises 3 months medicine, 3 medicine-allied, 3 surgery, and 3 surgery-allied; BDS uses four named 3-month modules. — PM&DC, 2023
+35. NRE and NEB are different: NRE is the foreign-graduate licensing route; NEB is for transfer after partial foreign study and does not guarantee a vacant seat. — PM&DC Act/standards
+36. NRE's official pass threshold changed from 70% in 2023 to 60% plus Angoff wording in 2024; stale preparation claims must retain a version. — PM&DC, 2023–2024
+37. The 2024 medical NRE basic-science rows sum to 56 while the source labels the domain total as 60; no missing four questions were invented. — PM&DC, 2024
+38. The later NEB standards say migration into a target year is barred after two months, while the older Registration Regulations say three months; the conflict requires direct verification. — PM&DC, 2023–2024
+39. FCPS-I passage does not grant residency: induction, RTMC registration, accredited training, IMM where prescribed, research/workshops/logbook, FCPS-II components, CPSP election, and PM&DC registration are separate stages. — CPSP/PM&DC
+40. USMLE/ECFMG and PLAB/GMC examination passage does not itself grant a residency match, employment, immigration status, or cross-jurisdiction licence. — ECFMG/USMLE/GMC
 
 ## Source counts
 
@@ -76,22 +87,22 @@ Twenty-four research/tracking files through Area 2, including the external recov
 | Papers | 0 |
 | Books | 0 |
 | Official institutional/admissions websites | 3 |
-| Laws/regulator guidelines/curricula/directories | 60 |
-| **Total unique** | **63** |
+| Laws/regulator guidelines/curricula/directories/exam sources | 83 |
+| **Total unique** | **86** |
 
 ## Recommendations for Agents
 
 ### Agent 1 (knowledge graph)
 
-Keep specialty, qualification, offering, site, awarder, and recognition as separate nodes; ingest `CPSP_SPECIALTY_GRAPH.json` without converting directory labels into active programs. For colleges, use `COLLEGE_COMPARISON_SCHEMA.yaml`: directory entry, seat, intake permission, hospital, affiliation, fee, historical selection, and rank are separate dated observations.
+Keep specialty, qualification, offering, site, awarder, and recognition as separate nodes; ingest `CPSP_SPECIALTY_GRAPH.json` without converting directory labels into active programs. For colleges, use `COLLEGE_COMPARISON_SCHEMA.yaml`. For exams/licensing, use `EXAM_PATHWAY_GRAPH.json`: eligibility, examination component, selection, training, credential award, and regulator registration are distinct states.
 
 ### Agent 2 (frontend/content)
 
-Show pathway stages and dated recognition evidence. Surface CPSP count/directory conflicts and avoid unsourced “best specialty,” salary, or lifestyle rankings. For college comparison, provide source-separated filters with no default league table; distinguish eligibility, calculated aggregate, and historical selection rather than displaying a fabricated chance percentage.
+Show pathway stages and dated recognition evidence. Surface CPSP count/directory conflicts and avoid unsourced rankings. For college comparison, provide source-separated filters with no default league table. For exams, show standard version, sitting, component, status, and source; distinguish scheduled from completion-verified and never display a fabricated chance/pass percentage.
 
 ### Agent 3 (security)
 
-Treat case logs, oral photographs, radiographs, and clinical narratives as potentially identifiable patient information; a learner portfolio should default to de-identified competencies rather than case records. Do not ingest applicant names, parent names, dates of birth, roll/form numbers, or identity numbers from public merit-list PDFs when aggregate observations suffice.
+Treat case logs, oral photographs, radiographs, and clinical narratives as potentially identifiable patient information; a learner portfolio should default to de-identified competencies rather than case records. Do not ingest applicant identifiers from merit lists. Licensing/exam checklists should retain document type, issuer, and verification state—not CNIC/passport scans or patient-identifiable e-logbook cases.
 
 ### Agent 4 (general)
 
@@ -103,14 +114,17 @@ Agent 4 materials were not located. Future integration should cross-check specia
 - PM&DC's college-directory rendering did not expose a complete row export; only 40 directly visible rows plus four category totals are captured.
 - A current official national medical-college ranking and a consolidated official national closing-merit dataset were not found.
 - Complete institution-level court/stop-admission history, college ancillary fees, scholarships, hostel/transport charges, and current affiliation evidence remain incomplete.
+- MDCAT 2026 completion/results and the current NRE Step-II date were not verified; scheduled dates are not treated as completed events.
+- CPSP specialty-specific prospectuses and clinical/TOACS dates remain candidate/discipline-specific; no official specialty-level pass-rate dataset was found.
+- International examination fees, immigration, employment, and match probabilities were deliberately not inferred.
 - Agent 4's branch was not identifiable at setup.
 
 ## What's not done
 
-Areas 1–2 are complete for the official evidence reviewed, with explicit Area 2 export/data gaps; Areas 3–15 remain substantive future work. No peer-reviewed papers or books have yet been entered.
+Areas 1–3 are complete for the official evidence reviewed, with explicit export/version gaps; Areas 4–15 remain substantive future work. No peer-reviewed papers or books have yet been entered.
 
 ## Next session priorities
 
-1. Map entry, licensing, NRE, and postgraduate examinations.
-2. Prioritize high-risk evidence areas: wellbeing, patient privacy, and mutable exam/regulatory rules.
-3. Return to the PM&DC college rows only if a complete authoritative export becomes retrievable; do not substitute indexed snippets.
+1. Research medical-student problems and wellbeing using systematic reviews plus Pakistan-specific primary studies.
+2. Map evidence-based learning and wellbeing interventions with effect sizes and implementation limits.
+3. Return to mutable regulator records only when a newer official notice is found; do not infer events from elapsed dates.

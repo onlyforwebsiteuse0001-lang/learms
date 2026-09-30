@@ -24,8 +24,11 @@
 - Area 2 complete for reviewed official evidence: seven college/accreditation/fee/admission files under `medical-research/colleges/`.
 - PM&DC's four live directories reported 178 program-sector entries (50 public medical, 71 private medical, 17 public dental, 40 private dental); the row capture is intentionally marked incomplete because only the first ten rows per category were exposed.
 - March and August 2026 institution-specific fee-cap observations are preserved in `PRIVATE_FEE_CAPS_2026.csv`; older records are not overwritten.
-- Source register now has 63 unique sources: 60 regulator/law/guideline/directory records and 3 official admitting-authority portals.
-- Next: Area 3 entry, licensing, NRE, FCPS, and other examination pathways.
+- Area 3 complete for reviewed official evidence: nine exam/licensing files under `medical-research/exams/`, including a validated pathway graph and a dated 2026 schedule.
+- Current evidence separates MDCAT, PM&DC provisional/full registration, house job, NRE, NEB, FCPS-I/induction/IMM/FCPS-II, MCPS, and foreign-jurisdiction pathways.
+- Source conflicts preserved: NRE 2023 70% versus 2024 60%; 2024 medical NRE basic-science row sum 56 versus stated 60; NEB migration two-month versus older three-month wording; mutable PM&DC registration fees.
+- Source register now has 86 unique official records.
+- Next: Area 4 medical-student problems and wellbeing using systematic reviews and Pakistan-specific primary studies.
 
 ## Non-negotiable cautions
 
