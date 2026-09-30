@@ -8,7 +8,7 @@
 
 ## Areas completed
 
-- [ ] Area 1: Medical Taxonomy
+- [x] Area 1: Medical Taxonomy
 - [ ] Area 2: Medical Colleges
 - [ ] Area 3: Medical Exams
 - [ ] Area 4: Student Problems
@@ -26,13 +26,13 @@
 
 ## Documents created
 
-Eleven research/tracking files through checkpoint 2A, including:
+Seventeen research/tracking files through Area 1, including:
 
 - `taxonomy/PROGRAMS_COMPLETE.md` — 607-line regulator-aware map
-- `specializations/MBBS_SPECIALIZATIONS.md` — FCPS/MCPS/MD/MS pathway and evidence gaps
-- `specializations/BDS_SPECIALIZATIONS.md` — FCPS/MCPS/MDS pathway and source conflicts
+- Seven requested professional specialization files under `specializations/`
 - `specializations/CPSP_SPECIALTY_GRAPH.json` — validated 48 first/44 second/19 MCPS evidence snapshot
-- `sources/SOURCE_REGISTER.csv` — 42 official sources
+- `MASTER_INDEX.md` — completion and integration index
+- `sources/SOURCE_REGISTER.csv` — 50 official sources
 - Research plan and four recovery/tracking reports
 
 ## Key findings
@@ -51,6 +51,12 @@ Eleven research/tracking files through checkpoint 2A, including:
 12. A specialty name, qualification route, awarding body, training site, and PM&DC recognition record must be separate graph objects. — CPSP/PM&DC
 13. FCPS-I passage does not guarantee a residency seat; institutional selection and available accredited slots remain distinct. — CPSP NRP
 14. No official national specialty-by-specialty competitiveness, lifestyle, demand, or earnings dataset was found in this checkpoint. — CPSP/PM&DC source review
+15. The 2025 Pharm.D curriculum permits 12 optional specialization clusters; 195 credits are required without a track and 210 with one. — HEC/PCP, 2025
+16. PNMC's amended Act ties CNS status to recognized post-BSN diploma or specialized MSN education plus PNMC registration/licensure; workplace assignment alone is insufficient. — PNMC Act amendment, 2023
+17. DPT domain exposure does not create a separately licensed specialist credential. — HEC, 2025
+18. PVMC DVM accreditation does not automatically authorize postgraduate programs; postgraduate permission is subject-specific. — PVMC, 2015/current directory
+19. Health Informatics appears as a BS Computer Science specialization and Public Health Informatics as a public-health specialization; neither should be collapsed into AHPC Medical Informatics. — HEC/AHPC
+20. No Pakistan-regulated qualification explicitly titled Genetic Counseling, Digital Health Specialist, or Medical AI Specialist was located in the reviewed official sources. — HEC/AHPC review
 
 ## Source counts
 
@@ -59,8 +65,8 @@ Eleven research/tracking files through checkpoint 2A, including:
 | Papers | 0 |
 | Books | 0 |
 | Websites/institution pages | 0 |
-| Laws/regulator guidelines/curricula | 42 |
-| **Total unique** | **42** |
+| Laws/regulator guidelines/curricula | 50 |
+| **Total unique** | **50** |
 
 ## Recommendations for Agents
 
@@ -82,16 +88,15 @@ Agent 4 materials were not located. Future integration should cross-check specia
 
 ## Gaps
 
-- Five professional specialty-family files remain unfinished.
-- Specialty-specific duration, seats, cutoffs, pass rates, demand, work-life, and earnings remain not found in a consolidated official dataset.
+- Area 1 specialty files are complete for the official sources reviewed, but specialty-specific duration, seats, cutoffs, pass rates, demand, work-life, and earnings remain not found in a consolidated official dataset.
 - Agent 4's branch was not identifiable at setup.
 
 ## What's not done
 
-Area 1 is partially complete; Areas 2–15 remain substantive future work. No peer-reviewed papers or books have yet been entered.
+Area 1 is complete for reviewed official sources; Areas 2–15 remain substantive future work. No peer-reviewed papers or books have yet been entered.
 
 ## Next session priorities
 
-1. Complete pharmacy, nursing, allied-health, veterinary, and emerging specialization maps.
-2. Build college/accreditation evidence with current regulator directories.
+1. Build college/accreditation evidence with current regulator directories.
+2. Map entry, licensing, NRE, and postgraduate examinations.
 3. Prioritize high-risk evidence areas: wellbeing, patient privacy, and mutable exam/regulatory rules.
