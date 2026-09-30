@@ -24,4 +24,5 @@
 - Phase 0: setup and existing-context scan — completed initial folder/file setup.
 - Area 1: IT Roots Complete Taxonomy — draft v0.1 complete.
 - Area 2: Programming Languages Deep Research — initial v0.1 profiles complete; deepening pending.
-- Area 3: IT Sub-Domains Deep Research — next.
+- Area 3: IT Sub-Domains Deep Research — initial 15 draft files created; deepening pending.
+- Area 4: IT Students ke Masail — next.

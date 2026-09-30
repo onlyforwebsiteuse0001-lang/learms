@@ -7,7 +7,8 @@
 | 2026-09-30 | Phase 0 setup | Done | Folder structure and recovery files created. | pending |
 | 2026-09-30 | Existing context | Done with blockers | Repo has README only; no `docs/ARCHITECTURE.md`; no remote Agent 1/4 branches visible. | pending |
 | 2026-09-30 | Area 1 taxonomy | Draft complete | Created root taxonomy (66 roots), sub-root seed map (660 seeds), and prerequisite graph. Source-depth remains pending for final 10+ sources/root requirement. | 46a93fe |
-| 2026-09-30 | Area 2 languages | Draft complete | Created 35 initial language profiles, comparison matrix, learning paths, and language source register entries S031-S072. Deepening pending. | pending |
+| 2026-09-30 | Area 2 languages | Draft complete | Created 35 initial language profiles, comparison matrix, learning paths, and language source register entries S031-S072. Deepening pending. | efca7cf |
+| 2026-09-30 | Area 3 sub-domains | Draft started | Created 15 initial sub-domain deep-dive draft files and source entries S073-S078. Deepening pending. | pending |
 
 ## Deliverable Status
 
@@ -36,10 +37,15 @@
 - [x] `languages/LEARNING_PATHS.md` draft v0.1 created.
 - [ ] Deepen each language to requested 10+ sources, top 50 beginner errors, salary ranges, and Pakistan job-platform analysis.
 
+### Area 3 — IT Sub-Domains
+
+- [x] 15 initial sub-domain draft files created in `sub-domains/`.
+- [ ] Deepen each sub-domain to requested 10+ sources, Pakistan evidence, tools, learning path, and learner-problem research.
+
 ### Remaining Areas
 
 - [ ] Area 2 — Programming Languages deepening
-- [ ] Area 3 — IT Sub-Domains
+- [ ] Area 3 — IT Sub-Domains deepening
 - [ ] Area 4 — Student Problems
 - [ ] Area 5 — Solutions
 - [ ] Area 6 — Books

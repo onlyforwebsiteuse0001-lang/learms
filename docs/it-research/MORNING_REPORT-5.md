@@ -11,7 +11,7 @@
 - [x] Phase 0: Setup and recovery files
 - [x] Area 1: IT Roots Taxonomy (draft v0.1; deeper per-root source expansion pending)
 - [x] Area 2: Programming Languages (initial profiles complete; deepening pending)
-- [ ] Area 3: Sub-Domains
+- [x] Area 3: Sub-Domains (initial 15 files created; deepening pending)
 - [ ] Area 4: Student Problems
 - [ ] Area 5: Solutions
 - [ ] Area 6: Books
@@ -37,6 +37,7 @@
 - `docs/it-research/languages/` — 35 initial language profile files
 - `docs/it-research/languages/COMPARISON_MATRIX.md`
 - `docs/it-research/languages/LEARNING_PATHS.md`
+- `docs/it-research/sub-domains/` — 15 initial sub-domain deep-dive drafts
 
 ## Top Key Findings
 
@@ -46,9 +47,9 @@ To be filled as source-backed findings are finalized.
 
 - Papers: 7 registered or cited in draft
 - Books: 3 registered or cited in draft
-- Websites/official reports/documentation: 62 registered or cited in draft
+- Websites/official reports/documentation: 68 registered or cited in draft
 - Videos: 0 finalized
-- Total: 72 source-register entries
+- Total: 78 source-register entries
 
 ## Recommendations for Agents
 
