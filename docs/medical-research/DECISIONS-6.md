@@ -1,6 +1,6 @@
 # Agent 6 Research Decisions
 
-**Last updated:** 2026-09-30T22:35:37Z
+**Last updated:** 2026-09-30T23:05:00Z
 
 ## D-001 — Evidence hierarchy
 
@@ -33,3 +33,11 @@ Curricular sequence is evidence for teaching order, not proof of universal cogni
 ## D-008 — No implied legal equivalence
 
 HIPAA, GDPR, and FERPA can inform control design but are not automatically applicable in Pakistan. Compliance documents must distinguish legal applicability from voluntary good practice.
+
+## D-009 — Credential-path separation
+
+Model specialty, qualification route, program offering, awarding body, training site, supervisor, and regulator recognition as separate objects. FCPS, MCPS, MD, MS, MDS, and diploma labels do not establish interchangeable credentials or site recognition.
+
+## D-010 — Preserve official-source count conflicts
+
+Store an authority's stated total and the count enumerated on its page as separate facts when they disagree. The current CPSP page states 98 fellowships but visibly lists 48 first plus 44 second fellowships; neither will be silently selected as the definitive total.

@@ -26,10 +26,13 @@
 
 ## Documents created
 
-Eight research/tracking files at checkpoint 1, including:
+Eleven research/tracking files through checkpoint 2A, including:
 
 - `taxonomy/PROGRAMS_COMPLETE.md` — 607-line regulator-aware map
-- `sources/SOURCE_REGISTER.csv` — 30 official sources
+- `specializations/MBBS_SPECIALIZATIONS.md` — FCPS/MCPS/MD/MS pathway and evidence gaps
+- `specializations/BDS_SPECIALIZATIONS.md` — FCPS/MCPS/MDS pathway and source conflicts
+- `specializations/CPSP_SPECIALTY_GRAPH.json` — validated 48 first/44 second/19 MCPS evidence snapshot
+- `sources/SOURCE_REGISTER.csv` — 42 official sources
 - Research plan and four recovery/tracking reports
 
 ## Key findings
@@ -44,6 +47,10 @@ Eight research/tracking files at checkpoint 1, including:
 8. Generic, bridge, diploma, and post-basic nursing routes require separate pathway logic. — PNMC/HEC
 9. BSPH and Public Health Technology are distinct program/discipline nodes. — HEC/AHPC
 10. BEMS/FTJ and BHMS/DHMS require their own regulator labels and cannot be inferred equivalent to MBBS. — NCT/NCH/PM&DC
+11. CPSP's current page states 98 fellowships but visibly enumerates 48 first plus 44 second fellowships (92); this remains unresolved. — CPSP, accessed 2026-09-30
+12. A specialty name, qualification route, awarding body, training site, and PM&DC recognition record must be separate graph objects. — CPSP/PM&DC
+13. FCPS-I passage does not guarantee a residency seat; institutional selection and available accredited slots remain distinct. — CPSP NRP
+14. No official national specialty-by-specialty competitiveness, lifestyle, demand, or earnings dataset was found in this checkpoint. — CPSP/PM&DC source review
 
 ## Source counts
 
@@ -52,38 +59,39 @@ Eight research/tracking files at checkpoint 1, including:
 | Papers | 0 |
 | Books | 0 |
 | Websites/institution pages | 0 |
-| Laws/regulator guidelines/curricula | 30 |
-| **Total unique** | **30** |
+| Laws/regulator guidelines/curricula | 42 |
+| **Total unique** | **42** |
 
 ## Recommendations for Agents
 
-### Agent 1 (backend)
+### Agent 1 (knowledge graph)
 
-Pending evidence synthesis.
+Keep specialty, qualification, offering, site, awarder, and recognition as separate nodes; ingest `CPSP_SPECIALTY_GRAPH.json` without converting directory labels into active programs.
 
 ### Agent 2 (frontend/content)
 
-Pending evidence synthesis.
+Show pathway stages and dated recognition evidence. Surface CPSP count/directory conflicts and avoid unsourced “best specialty,” salary, or lifestyle rankings.
 
 ### Agent 3 (security)
 
-Pending evidence synthesis.
+Treat case logs, oral photographs, radiographs, and clinical narratives as potentially identifiable patient information; a learner portfolio should default to de-identified competencies rather than case records.
 
 ### Agent 4 (general)
 
-Pending evidence synthesis.
+Agent 4 materials were not located. Future integration should cross-check specialty labor-market claims against the regulator-grounded program identifiers in this research.
 
 ## Gaps
 
-- Detailed research has not yet been completed.
+- Five professional specialty-family files remain unfinished.
+- Specialty-specific duration, seats, cutoffs, pass rates, demand, work-life, and earnings remain not found in a consolidated official dataset.
 - Agent 4's branch was not identifiable at setup.
 
 ## What's not done
 
-All substantive areas remain incomplete at this setup checkpoint.
+Area 1 is partially complete; Areas 2–15 remain substantive future work. No peer-reviewed papers or books have yet been entered.
 
 ## Next session priorities
 
-1. Complete regulator-aware Pakistan program taxonomy.
-2. Build specialty pathway source base.
+1. Complete pharmacy, nursing, allied-health, veterinary, and emerging specialization maps.
+2. Build college/accreditation evidence with current regulator directories.
 3. Prioritize high-risk evidence areas: wellbeing, patient privacy, and mutable exam/regulatory rules.

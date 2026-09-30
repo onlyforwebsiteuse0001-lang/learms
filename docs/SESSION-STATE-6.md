@@ -1,6 +1,6 @@
 # Agent 6 Session State
 
-**Last updated:** 2026-09-30T22:40:00Z
+**Last updated:** 2026-09-30T23:05:00Z
 **Branch:** `arena/01a0f474-learms` (Arena-fixed; requested branch name cannot be used)  
 **Mode:** medical research only; Markdown/JSON/CSV/YAML deliverables; no application code.
 
@@ -18,7 +18,9 @@
 - Agent 1, Agent 2, Agent 3, and visible remote-branch context inspected without switching branches.
 - Agent 4 branch was not identifiable among remote branches as of the timestamp above.
 - Area 1.1 program taxonomy complete in `medical-research/taxonomy/PROGRAMS_COMPLETE.md`: 30 official sources, regulator map, degree/diploma distinctions, BDS contradiction, gaps, and implementation guidance.
-- Next: specialty pathway files, beginning with MBBS/FCPS against CPSP and PM&DC sources.
+- Area 1.2A MBBS/BDS specialty pathway files and `CPSP_SPECIALTY_GRAPH.json` complete. Source register now has 42 official sources.
+- New unresolved source conflicts: current CPSP FCPS page states 98 programs but visibly enumerates 92; current MCPS page and accredited directory expose different label sets.
+- Next: pharmacy, nursing, allied-health, veterinary, and emerging-field specialization files.
 
 ## Non-negotiable cautions
 
