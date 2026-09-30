@@ -23,7 +23,7 @@ Checkpoint 3 complete: full suite reached **201 passing tests / 77% coverage**. 
 
 Checkpoint 4 complete: concept persistence suite passes, process-local bounded-cardinality Prometheus metrics and liveness were added, and a real 1,000-request in-process profile measured P95 6.688 ms / 219.00 serial req/s (explicitly not a production load claim). Live probes found no Docker/Podman/PostgreSQL/Redis executables or listening ports and no AI keys. `pip-audit` found vulnerable old pypdf/Pillow constraints; upgraded constraints now produce **No known vulnerabilities found** for production requirements. Security, performance, operations, load test and four ADR documents added.
 
-Current unit: task/error-path tests, final full suite/coverage and morning report.
+Final hardening checkpoint: **241 passed, 0 failed, 89% coverage**; Ruff, Python compilation, Alembic offline SQL and `git diff --check` passed. This is 212 tests above baseline. Exact results and incomplete scope are in `docs/MORNING_REPORT.md`. Live infrastructure remains blocked by absent Docker/Podman/PostgreSQL/Redis runtimes and absent AI keys.
 
 ## Next engineering work
 
