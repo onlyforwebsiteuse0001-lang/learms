@@ -148,3 +148,69 @@ but the exact 87%/69% pairing was **not found**.
 **Impact:** Reported in `pakistan/BRAIN_DRAIN.md` as an **unsourced claim in circulation**,
 with the independently-verifiable emigration evidence presented separately. Not stated as
 fact.
+
+---
+
+## B-010 — ICAP CAF Group A / Group B split not enumerable
+
+**What's needed:** the eight CAF papers, correctly assigned to Group A and Group B, with codes.
+
+**What was obtained:** ICAP's published scheme documents confirm CAF comprises **8 papers
+organised into Groups A and B**, that a maximum of **4 papers** may be attempted per sitting, and
+that all CAF papers must be passed before CFAP entry. The **per-paper titles and their group
+assignment** were not captured from a Tier-A source in the material retrieved.
+
+**Why it wasn't resolved:** the papers are listed in ICAP's detailed syllabus documents, which
+were not fetched. Secondary sources list CAF papers, but several were observed carrying the
+**pre-2025 scheme's** paper names, and distinguishing a correct listing from an obsolete one
+without the Tier-A document is not possible.
+
+**Impact:** `ca-deep/COMPLETE_GUIDE.md` states the CAF structure at group level only and does not
+enumerate papers. `data/accounting_concept_graph_seed.json` maps CA concepts to `icap.ca2025.PRC`
+/ `.CAF` / `.CFAP3` rather than to individual CAF paper keys.
+
+**To resolve:** fetch ICAP's CAF syllabus PDFs from icap.org.pk. Estimated low effort, high value —
+**recommended as the first task of any continuation.**
+
+---
+
+## B-011 — No authoritative GBP/PKR or USD/PKR rate captured
+
+**What's needed:** a Tier-A exchange rate (State Bank of Pakistan) to convert ACCA's GBP fees and
+IMA's USD fees into PKR for like-for-like comparison against ICMAP and ICAP.
+
+**What was obtained:** nothing. No rate was fetched from SBP or any authoritative source.
+
+**Consequence — a deliberate refusal:** **ACCA's total cost is never stated in PKR anywhere in
+this research.** It is reported as £2,458 (no exemptions) / £2,670 (four exemptions) and left
+there. Converting with an unverified rate would manufacture false precision in exactly the
+comparison students most rely on, and would additionally freeze a number that moves.
+
+**Where an assumed rate was unavoidable:** `cma-deep/CMA_PAKISTAN_VS_USA.md` §2 uses PKR
+275–290/USD, labelled as an assumption, and the conclusion is stated in a form robust to the
+assumption (the direction holds at any rate below ~PKR 459/USD).
+
+**Secondary point that survives regardless of the rate:** ACCA fees are GBP-denominated, so their
+PKR cost rises with rupee depreciation *independently of any ACCA price increase*. A Pakistani
+ACCA student carries unhedged currency risk over 3+ years. This is a structural finding that needs
+no exchange rate to state, and it is absent from every Pakistani ACCA comparison reviewed.
+
+**To resolve:** fetch https://www.sbp.org.pk/ecodata/rates/ and record rate + timestamp. Then
+present ACCA totals as "£X (≈PKR Y at the SBP rate on DATE)" — never as a bare PKR figure.
+
+---
+
+## B-012 — IMA (USA) official fee pages not fetched
+
+**What's needed:** Tier-A confirmation of IMA membership, entrance and exam fees for 2026.
+
+**What was obtained:** five independent secondary sources, triangulated in
+`cma-deep/CMA_PAKISTAN_VS_USA.md` §5. Professional-rate figures agree 4–5 ways and are used with
+moderate-to-high confidence. **Student-rate exam fees disagree four ways** and are therefore not
+asserted — see `CONTRADICTIONS.md` C-013.
+
+**Also unresolved:** the "~40–45% global pass rate" for IMA CMA rests on a **single unattributed
+secondary claim**. It is not used to rank IMA against ACCA, whose rates are published per paper
+per session.
+
+**To resolve:** fetch imanet.org membership and CMA certification fee pages. Low effort.

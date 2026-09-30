@@ -161,3 +161,68 @@ bases are not comparable so no counter-claim is made either.
 **Resolution:** The official figures are floors for three distinct routes, not a range for one
 route. Real-world completion is longer; ICMAP publishes no time-to-completion statistics
 (related to B-003), so the upper bound of "5 years" has no published basis.
+
+---
+
+## C-011 — The brief's CA structure is obsolete
+
+| Source | Claim |
+|---|---|
+| Task brief | CA route described as AFC / CAF / **CFAP + MSA** (Multi-Subject Assessments) |
+| **ICAP Education Scheme 2025** | **PRC (3) → CAF (8) → CFAP (6) → Strategic Case Study**, plus 2 Hands-on Courses and 2 Integrated Modules. **MSA-1, MSA-2 and SPM are abolished.** New **CFAP-03 Sustainability Reporting and Assurance.** |
+
+**Resolution:** The brief describes the superseded scheme. ICAP's official transition rules give
+legacy MSA/SPM holders sittings up to and including **Winter 2026 as the last chance**, after
+which they are mapped onto the new structure.
+
+**Why this is urgent, not merely stale:** any Learms content built to the brief's structure would
+be wrong *and* would mislead precisely the cohort facing a hard deadline. Flagged to Agent 2 as a
+time-critical content requirement. Detail in `ca-deep/COMPLETE_GUIDE.md`.
+
+**Source:** ICAP Education Scheme 2025 — Principles and Structure; ICAP FAQs on Education Scheme
+2025. Accessed 2026-09-30.
+
+---
+
+## C-012 — "Pakistan has a shortage of 40,000–50,000 accountants"
+
+| Source | Claim |
+|---|---|
+| Task brief | Pakistan faces a shortage of 40,000–50,000 qualified accountants |
+| **Search for origin** | **Not found.** No ICAP, ICMAP, PIPFA, SECP, HEC, Pakistan Bureau of Statistics, World Bank or peer-reviewed publication stating this figure was located. |
+
+**Resolution:** **Unsourced.** The figure circulates in Pakistani coaching-centre and careers
+content without attribution. It may originate in a real study, but none was found.
+
+**What can be said instead, honestly:** membership numbers for all three bodies are small relative
+to a ~240-million population and a documented emigration outflow of qualified finance
+professionals exists. That supports a qualitative claim of undersupply. **It does not support a
+specific number.**
+
+**Instruction to downstream agents:** do not reproduce "40,000–50,000" as fact anywhere in Learms.
+If market-demand framing is needed, use the qualitative statement and cite the absence of a
+quantified figure. Related: `BLOCKERS-7.md` B-005, B-008.
+
+---
+
+## C-013 — IMA CMA (USA) student exam fee: four sources, four numbers
+
+| Source | Claimed student exam fee per part |
+|---|---|
+| VoraPrep (2026) | **$415** |
+| Eduyush (2026) | **$407** |
+| Miami Herald careers (2026) | **$370** |
+| Xylem Learning (2026) | **$480.26** |
+
+**Spread:** ~30% between lowest and highest, all claiming to describe 2026.
+
+**Resolution:** **Unresolved and deliberately not resolved.** No figure is adopted; the range
+$370–480 is reported as a range. Xylem is treated as a Tier-D outlier because its membership
+($500) and professional exam ($643.10) figures also diverge from the other four sources, which
+suggests region-specific mark-ups or bundled pricing presented as IMA's own fees.
+
+**Fix:** fetch imanet.org directly. Not done this session. See `BLOCKERS-7.md` B-012.
+
+**Note:** the *professional* figures ($300 entrance, $295 membership, $495/part) show 4–5 source
+agreement and are used with moderate-to-high confidence in
+`cma-deep/CMA_PAKISTAN_VS_USA.md`. The contradiction is confined to student rates.
