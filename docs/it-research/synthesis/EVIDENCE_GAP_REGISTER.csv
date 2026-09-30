@@ -1,0 +1,11 @@
+gap_id,area,gap,why_it_matters,priority,next_action
+G001,Pakistan careers,current job-posting dataset by role/city,Needed for accurate local recommendations,P0,Sample LinkedIn/Rozee/Indeed/Mustakbil/company pages
+G002,Pakistan salaries,current salary ranges by role/experience/city,Prevents misleading salary promises,P0,Triangulate P@SHA new data PayScale Glassdoor recruiter interviews
+G003,Books,verified ISBN/chapter/page metadata for full catalog,Required by citation standard,P1,Use publisher/library pages and tables of contents
+G004,HEC curriculum,official source and detailed BSCS/BSSE/BSIT/AI/cyber extraction,Needed for university companion mode,P1,Locate official HEC/NCEAC PDFs and extract courses
+G005,Pakistan access,device bandwidth affordability and gender inclusion evidence,Needed for low-data/accessibility design,P0,Use PTA GSMA World Bank/ITU student surveys
+G006,Platform comparison,pricing accessibility and low-bandwidth tests,Needed for tool recommendations,P2,Hands-on trial and official pricing pages
+G007,CS education Pakistan,local studies on novice programming/dropout/learning barriers,Needed for localization,P1,Search HEC journals ACM/IEEE regional papers
+G008,Security,code sandbox and AI tutor privacy design,Needed for safe implementation,P0,Agent 3 threat model
+G009,Language profiles,10+ sources per language and top beginner errors,Needed for final deep language guidance,P2,Deepen profiles incrementally
+G010,Subdomains,10+ sources per domain and Pakistan evidence,Needed for final domain depth,P2,Deepen high-priority roles first
