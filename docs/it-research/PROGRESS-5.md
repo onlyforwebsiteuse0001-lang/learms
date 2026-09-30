@@ -6,7 +6,8 @@
 |---|---|---|---|---|
 | 2026-09-30 | Phase 0 setup | Done | Folder structure and recovery files created. | pending |
 | 2026-09-30 | Existing context | Done with blockers | Repo has README only; no `docs/ARCHITECTURE.md`; no remote Agent 1/4 branches visible. | pending |
-| 2026-09-30 | Area 1 taxonomy | Draft complete | Created root taxonomy (66 roots), sub-root seed map (660 seeds), and prerequisite graph. Source-depth remains pending for final 10+ sources/root requirement. | pending |
+| 2026-09-30 | Area 1 taxonomy | Draft complete | Created root taxonomy (66 roots), sub-root seed map (660 seeds), and prerequisite graph. Source-depth remains pending for final 10+ sources/root requirement. | 46a93fe |
+| 2026-09-30 | Area 2 languages | Draft complete | Created 35 initial language profiles, comparison matrix, learning paths, and language source register entries S031-S072. Deepening pending. | pending |
 
 ## Deliverable Status
 
@@ -28,9 +29,16 @@
 - [x] `taxonomy/IT_SUBROOTS_COMPLETE.md` — draft v0.1 complete, 660 sub-root seeds
 - [x] `taxonomy/ROOT_PREREQUISITES.md` — draft v0.1 complete
 
+### Area 2 — Programming Languages
+
+- [x] 35 initial per-language draft files created in `languages/`.
+- [x] `languages/COMPARISON_MATRIX.md` draft v0.1 created.
+- [x] `languages/LEARNING_PATHS.md` draft v0.1 created.
+- [ ] Deepen each language to requested 10+ sources, top 50 beginner errors, salary ranges, and Pakistan job-platform analysis.
+
 ### Remaining Areas
 
-- [ ] Area 2 — Programming Languages
+- [ ] Area 2 — Programming Languages deepening
 - [ ] Area 3 — IT Sub-Domains
 - [ ] Area 4 — Student Problems
 - [ ] Area 5 — Solutions
