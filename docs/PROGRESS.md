@@ -11,10 +11,16 @@ Updated: 2026-10-01
 | 80% coverage target | Not met | Latest recorded full coverage 65% |
 | Production stack verification | Blocked | Docker unavailable; no live provider keys |
 
+## Active hardening session
+
+Agent 1 backend hardening started 2026-10-01. Baseline is 29 passing tests and 65% combined backend/AI coverage. Plan: `docs/HARDENING_PLAN.md`.
+
+Current unit: service, BKT, graph, extraction and property-test expansion.
+
 ## Next engineering work
 
-1. Add async PostgreSQL endpoint/integration tests and raise coverage above 80%.
-2. Build the mobile-first diagnostic/mastery/path frontend and offline read cache.
-3. Run migrations plus workers under Compose in CI or deployment.
-4. Gather sufficient response logs before any pyBKT fitting.
-5. Add explicit optional mood input before mood can be used as context.
+1. Raise backend coverage with service, API contract, integration and security tests.
+2. Harden authentication, uploads, middleware, audit logs and tenant isolation.
+3. Add metrics/readiness, performance profiling and operational runbooks.
+4. Attempt real PostgreSQL/Redis/Celery integration where runtimes permit.
+5. Gather sufficient response logs before any pyBKT fitting.
