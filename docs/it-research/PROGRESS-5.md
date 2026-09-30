@@ -9,7 +9,8 @@
 | 2026-09-30 | Area 1 taxonomy | Draft complete | Created root taxonomy (66 roots), sub-root seed map (660 seeds), and prerequisite graph. Source-depth remains pending for final 10+ sources/root requirement. | 46a93fe |
 | 2026-09-30 | Area 2 languages | Draft complete | Created 35 initial language profiles, comparison matrix, learning paths, and language source register entries S031-S072. Deepening pending. | efca7cf |
 | 2026-09-30 | Area 3 sub-domains | Draft started | Created 15 initial sub-domain deep-dive draft files and source entries S073-S078. Deepening pending. | 055c018 |
-| 2026-09-30 | Area 4 problems | Draft complete | Created 8 student-problem draft files using CS education, debugging, code-review, skill-gap, and Pakistan industry sources S079-S092. | pending |
+| 2026-09-30 | Area 4 problems | Draft complete | Created 8 student-problem draft files using CS education, debugging, code-review, skill-gap, and Pakistan industry sources S079-S092. | e61d5b1 |
+| 2026-09-30 | Area 5 solutions | Draft complete | Created 6 solution drafts using active learning, spaced retrieval, deliberate practice, PBL, peer instruction, and Pakistan sources S093-S098. | pending |
 
 ## Deliverable Status
 
@@ -55,12 +56,22 @@
 - [x] `problems/CAREER_CONFUSION.md` draft v0.1.
 - [ ] Deepen with Pakistan-specific surveys/interviews and additional education literature.
 
+### Area 5 — Solutions
+
+- [x] `solutions/PEDAGOGY.md` draft v0.1.
+- [x] `solutions/TECHNOLOGY.md` draft v0.1.
+- [x] `solutions/CURRICULUM.md` draft v0.1.
+- [x] `solutions/PAKISTAN.md` draft v0.1.
+- [x] `solutions/CAREER_GUIDANCE.md` draft v0.1.
+- [x] `solutions/MENTAL_HEALTH.md` draft v0.1.
+- [ ] Deepen with platform comparisons, HEC curriculum, bootcamps, and Pakistan resource validation.
+
 ### Remaining Areas
 
 - [ ] Area 2 — Programming Languages deepening
 - [ ] Area 3 — IT Sub-Domains deepening
 - [ ] Area 4 — Student Problems deepening
-- [ ] Area 5 — Solutions
+- [ ] Area 5 — Solutions deepening
 - [ ] Area 6 — Books
 - [ ] Area 7 — UI/UX for IT Learning
 - [ ] Area 8 — Pakistan IT Specific

@@ -13,7 +13,7 @@
 - [x] Area 2: Programming Languages (initial profiles complete; deepening pending)
 - [x] Area 3: Sub-Domains (initial 15 files created; deepening pending)
 - [x] Area 4: Student Problems (initial 8 files created; Pakistan-specific deepening pending)
-- [ ] Area 5: Solutions
+- [x] Area 5: Solutions (initial 6 files created; deepening pending)
 - [ ] Area 6: Books
 - [ ] Area 7: UI/UX for IT
 - [ ] Area 8: Pakistan IT Specific
@@ -39,6 +39,7 @@
 - `docs/it-research/languages/LEARNING_PATHS.md`
 - `docs/it-research/sub-domains/` — 15 initial sub-domain deep-dive drafts
 - `docs/it-research/problems/` — 8 initial student-problem drafts
+- `docs/it-research/solutions/` — 6 initial solution drafts
 
 ## Top Key Findings
 
@@ -46,11 +47,11 @@ To be filled as source-backed findings are finalized.
 
 ## Sources Count
 
-- Papers: 21 registered or cited in draft
+- Papers: 27 registered or cited in draft
 - Books: 3 registered or cited in draft
 - Websites/official reports/documentation: 68 registered or cited in draft
 - Videos: 0 finalized
-- Total: 92 source-register entries
+- Total: 98 source-register entries
 
 ## Recommendations for Agents
 
