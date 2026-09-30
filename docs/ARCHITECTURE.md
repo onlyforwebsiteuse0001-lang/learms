@@ -3,7 +3,7 @@
 ## Ordered delivery status
 
 - **Step 1 — project foundation:** complete
-- Step 2 — upload and OCR pipeline: not implemented yet
+- **Step 2 — upload and OCR pipeline:** complete
 - Step 3 — concept extraction and knowledge graph: not implemented yet
 
 No unfinished step is represented as working.

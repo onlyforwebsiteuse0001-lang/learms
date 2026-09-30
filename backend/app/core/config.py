@@ -38,6 +38,8 @@ class Settings(BaseSettings):
     storage_backend: Literal["local", "s3"] = "local"
     upload_dir: Path = Path("data/uploads")
     max_upload_mb: int = Field(default=50, ge=1, le=500)
+    max_files_per_upload: int = Field(default=10, ge=1, le=50)
+    access_token_minutes: int = Field(default=1440, ge=5, le=43200)
     s3_endpoint_url: str | None = None
     s3_access_key_id: SecretStr | None = None
     s3_secret_access_key: SecretStr | None = None
