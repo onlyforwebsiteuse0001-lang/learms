@@ -97,16 +97,20 @@ async def answer_diagnostic(session_id: uuid.UUID, data: DiagnosticAnswer, stude
     if not question or data.selected_index >= len(question.options):
         raise APIError(422, "invalid_option", "Selected option is invalid. / Selected option durust nahi.")
     correct = data.selected_index == question.correct_index
-    params = await db.get(BKTParameter, question.concept_id) or BKTParameter(concept_id=question.concept_id)
+    params = await db.get(BKTParameter, question.concept_id)
+    if params is None:
+        params = BKTParameter(concept_id=question.concept_id, p_learn=.15, p_slip=.10, p_guess=.20, source="documented_default", sample_size=0)
+        db.add(params)
     state = await db.get(MasteryState, (student.student_id, question.concept_id))
     if state is None:
-        state = MasteryState(student_id=student.student_id, concept_id=question.concept_id, p_know=.20); db.add(state)
+        state = MasteryState(student_id=student.student_id, concept_id=question.concept_id, p_know=.20, attempts=0, correct_attempts=0)
+        db.add(state)
     before = state.p_know
     state.p_know = update_mastery(before, correct, BKTParams(params.p_learn, params.p_slip, params.p_guess))
     state.attempts += 1; state.correct_attempts += int(correct); state.last_updated = datetime.now(timezone.utc)
     bandit = await db.get(BanditState, (student.student_id, question.concept_id))
     if bandit is None:
-        bandit = BanditState(student_id=student.student_id, concept_id=question.concept_id)
+        bandit = BanditState(student_id=student.student_id, concept_id=question.concept_id, alpha=1.0, beta=1.0, observations=0)
         db.add(bandit)
     reward = max(0.0, min(1.0, state.p_know - before))
     bandit.alpha, bandit.beta = update_posterior(bandit.alpha, bandit.beta, reward)

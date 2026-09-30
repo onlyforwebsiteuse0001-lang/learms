@@ -25,7 +25,7 @@ def verify_password(password: str, stored: str) -> bool:
         salt_hex, expected = stored.split(":", 1)
         actual = hash_password(password, bytes.fromhex(salt_hex)).split(":", 1)[1]
         return hmac.compare_digest(actual, expected)
-    except (ValueError, TypeError):
+    except (AttributeError, ValueError, TypeError):
         return False
 
 

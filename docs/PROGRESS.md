@@ -19,7 +19,9 @@ Checkpoint 1 complete: added Hypothesis and 72 new algorithm test cases (101 foc
 
 Checkpoint 2 complete: 34 provider/extraction tests and 25 security tests pass. Provider ordering, malformed/partial/hallucinated output, timeouts, local OCR/PDF/Office failures, archive bombs, magic bytes, streamed size limits, filenames, production settings and HTTP headers are covered. Fixed an exclusive-file cleanup bug that could delete a pre-existing destination after `xb` failed.
 
-Current unit: API/service contract tests and coverage measurement.
+Checkpoint 3 complete: full suite reached **201 passing tests / 77% coverage**. Added 22 learning API contract tests and 24 core/OCR/AI/document-service tests (focused suites pass). Tests found and fixed uninitialized SQLAlchemy client-side defaults in first-answer BKT/Bandit state creation and malformed stored-password handling. Current count after focused additions is at least 225 tests; next full measurement pending.
+
+Current unit: concept persistence/task tests, observability, performance/security reports and live-runtime probes.
 
 ## Next engineering work
 
