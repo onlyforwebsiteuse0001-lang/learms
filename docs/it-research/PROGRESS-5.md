@@ -8,7 +8,8 @@
 | 2026-09-30 | Existing context | Done with blockers | Repo has README only; no `docs/ARCHITECTURE.md`; no remote Agent 1/4 branches visible. | pending |
 | 2026-09-30 | Area 1 taxonomy | Draft complete | Created root taxonomy (66 roots), sub-root seed map (660 seeds), and prerequisite graph. Source-depth remains pending for final 10+ sources/root requirement. | 46a93fe |
 | 2026-09-30 | Area 2 languages | Draft complete | Created 35 initial language profiles, comparison matrix, learning paths, and language source register entries S031-S072. Deepening pending. | efca7cf |
-| 2026-09-30 | Area 3 sub-domains | Draft started | Created 15 initial sub-domain deep-dive draft files and source entries S073-S078. Deepening pending. | pending |
+| 2026-09-30 | Area 3 sub-domains | Draft started | Created 15 initial sub-domain deep-dive draft files and source entries S073-S078. Deepening pending. | 055c018 |
+| 2026-09-30 | Area 4 problems | Draft complete | Created 8 student-problem draft files using CS education, debugging, code-review, skill-gap, and Pakistan industry sources S079-S092. | pending |
 
 ## Deliverable Status
 
@@ -42,11 +43,23 @@
 - [x] 15 initial sub-domain draft files created in `sub-domains/`.
 - [ ] Deepen each sub-domain to requested 10+ sources, Pakistan evidence, tools, learning path, and learner-problem research.
 
+### Area 4 — Student Problems
+
+- [x] `problems/PROGRAMMING_LEARNING.md` draft v0.1.
+- [x] `problems/MATH_PREREQUISITES.md` draft v0.1.
+- [x] `problems/DROPOUT_RETENTION.md` draft v0.1.
+- [x] `problems/SKILL_GAP.md` draft v0.1.
+- [x] `problems/FRAMEWORK_FATIGUE.md` draft v0.1.
+- [x] `problems/DEBUGGING.md` draft v0.1.
+- [x] `problems/CODE_QUALITY.md` draft v0.1.
+- [x] `problems/CAREER_CONFUSION.md` draft v0.1.
+- [ ] Deepen with Pakistan-specific surveys/interviews and additional education literature.
+
 ### Remaining Areas
 
 - [ ] Area 2 — Programming Languages deepening
 - [ ] Area 3 — IT Sub-Domains deepening
-- [ ] Area 4 — Student Problems
+- [ ] Area 4 — Student Problems deepening
 - [ ] Area 5 — Solutions
 - [ ] Area 6 — Books
 - [ ] Area 7 — UI/UX for IT Learning
