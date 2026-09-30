@@ -19,7 +19,7 @@
 - [x] Area 8: Pakistan IT (initial 5 files created; job/salary dataset pending)
 - [x] Area 9: Career Paths & Salaries (initial role and salary-evidence guidance created; current Pakistan job dataset pending)
 - [x] Area 10: Tools (initial 6 tool/platform guidance files created; pricing/accessibility deepening pending)
-- [ ] Area 11: Research Papers
+- [x] Area 11: Research Papers (initial 6 paper-index/synthesis files created; Pakistan-specific papers pending)
 - [ ] Area 12: Synthesis
 
 ## Documents Created
@@ -45,6 +45,7 @@
 - `docs/it-research/pakistan/` — 5 Pakistan-specific drafts
 - `docs/it-research/career/` — 6 career/salary guidance drafts
 - `docs/it-research/tools/` — 6 tool/platform guidance drafts
+- `docs/it-research/papers/` — 6 research-paper synthesis/index drafts
 
 ## Top Key Findings
 
