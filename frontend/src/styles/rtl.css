@@ -1,0 +1,64 @@
+/*
+ * RTL exceptions ONLY.
+ *
+ * The overwhelming majority of direction handling is done by CSS logical properties in
+ * global.css (`margin-inline-start`, `inset-inline-end`, `text-align: start`, ...), which
+ * the browser resolves automatically once `dir="rtl"` is on <html>. This file holds the
+ * small set of things logical properties genuinely cannot express.
+ */
+
+/* 1. Directional icons must mirror. Non-directional ones (logo, check, warning) must not,
+      so mirroring is opt-in via a class rather than applied to every svg. */
+[dir='rtl'] .icon-directional {
+  transform: scaleX(-1);
+}
+
+/* 2. Horizontal entrance animations must come from the trailing edge. */
+[dir='rtl'] {
+  --slide-from: 16px;
+}
+
+/* 3. Urdu script needs more vertical room and a larger optical size than Latin at the
+      same nominal px. Applied on the root when the locale is Urdu. */
+:root[lang='ur'] body {
+  font-family: var(--font-urdu);
+  font-size: 1.08rem;
+  line-height: 2;
+  letter-spacing: 0;
+}
+
+/* 4. Fields whose content is inherently LTR stay LTR inside an RTL document, otherwise
+      an email reads "moc.elpmaxe@a" to the eye and the caret jumps while typing.
+      `text-align: start` then resolves to left, which is what these fields want. */
+[dir='rtl'] input[type='email'],
+[dir='rtl'] input[type='password'],
+[dir='rtl'] input[type='url'],
+[dir='rtl'] input[type='tel'],
+[dir='rtl'] input[type='number'],
+[dir='rtl'] .force-ltr,
+[dir='rtl'] code,
+[dir='rtl'] pre,
+[dir='rtl'] .mono {
+  direction: ltr;
+  text-align: start;
+}
+
+/* 5. Latin runs inside Urdu text (file names, course codes) keep Latin metrics. */
+:root[lang='ur'] .latin {
+  font-family: var(--font-latin);
+  font-size: 0.92em;
+  line-height: 1.5;
+}
+
+/* 6. A progress fill must grow from the reading-start edge. Flexbox honours direction;
+      animating `width` from a `left`-anchored box does not. */
+.progress-track {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* 7. Chart axes are geometric, not textual: mirroring an SVG bar chart would put the
+      origin on the wrong side of the labels. Keep plots LTR and let labels flip. */
+[dir='rtl'] .chart-plot {
+  direction: ltr;
+}
