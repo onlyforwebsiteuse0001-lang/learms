@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StudyFlow — a clean demo dashboard for focused learning." />
+  <title>StudyFlow — Learn with focus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="StudyFlow home">
+        <span class="brand-mark">S</span>
+        <span>studyflow</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <p class="nav-label">MENU</p>
+        <a class="nav-item active" href="#overview"><span>⌂</span> Overview</a>
+        <a class="nav-item" href="#courses"><span>▤</span> My Courses</a>
+        <a class="nav-item" href="#planner"><span>□</span> Study Planner</a>
+        <a class="nav-item" href="#progress"><span>↗</span> Progress</a>
+        <a class="nav-item" href="#notes"><span>◇</span> Notes</a>
+        <p class="nav-label second">ACCOUNT</p>
+        <a class="nav-item" href="#settings"><span>⚙</span> Settings</a>
+        <a class="nav-item" href="#help"><span>?</span> Help Center</a>
+      </nav>
+
+      <div class="upgrade-card">
+        <div class="spark">✦</div>
+        <strong>Unlock your potential</strong>
+        <p>Get unlimited courses and insights.</p>
+        <button>Upgrade plan</button>
+      </div>
+      <div class="profile-mini">
+        <div class="avatar">AK</div>
+        <div><strong>Ali Khan</strong><span>Student</span></div>
+        <button aria-label="More profile options">•••</button>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+        <div class="search"><span>⌕</span><input aria-label="Search" placeholder="Search courses, notes..." /></div>
+        <div class="top-actions">
+          <button class="icon-button" aria-label="Notifications">♢<i></i></button>
+          <div class="avatar small">AK</div>
+        </div>
+      </header>
+
+      <section class="content" id="overview">
+        <div class="welcome-row">
+          <div><p class="eyebrow">THURSDAY, OCTOBER 1</p><h1>Good morning, Ali <span>👋</span></h1><p>Ready to make today count? You're doing great.</p></div>
+          <button class="primary-button" id="studyButton"><span>▶</span> Start studying</button>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card purple"><div class="stat-icon">◷</div><div><span>Study time</span><strong>12.5h</strong><small><b>+18%</b> this week</small></div></article>
+          <article class="stat-card green"><div class="stat-icon">✓</div><div><span>Tasks completed</span><strong>24</strong><small><b>8</b> left this week</small></div></article>
+          <article class="stat-card orange"><div class="stat-icon">🔥</div><div><span>Current streak</span><strong>7 days</strong><small>Personal best: 12</small></div></article>
+          <article class="stat-card blue"><div class="stat-icon">◎</div><div><span>Average score</span><strong>86%</strong><small><b>+4%</b> this month</small></div></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="panel courses" id="courses">
+            <div class="panel-header"><div><h2>Continue learning</h2><p>Pick up where you left off</p></div><a href="#courses">View all →</a></div>
+            <div class="course-list">
+              <article class="course-card">
+                <div class="course-art math">∑<span>π</span><i>x²</i></div>
+                <div class="course-info"><span class="subject math-tag">MATHEMATICS</span><h3>Calculus & Analytical Geometry</h3><p>Chapter 6 · Integration Techniques</p><div class="progress"><i style="width:68%"></i></div><small>68% complete</small></div>
+                <button class="play" aria-label="Continue mathematics">▶</button>
+              </article>
+              <article class="course-card">
+                <div class="course-art physics">⚛<span>F</span><i>E=mc²</i></div>
+                <div class="course-info"><span class="subject physics-tag">PHYSICS</span><h3>Fundamentals of Physics</h3><p>Chapter 4 · Laws of Motion</p><div class="progress"><i style="width:42%"></i></div><small>42% complete</small></div>
+                <button class="play" aria-label="Continue physics">▶</button>
+              </article>
+              <article class="course-card">
+                <div class="course-art cs">&lt;/&gt;<span>01</span><i>{ }</i></div>
+                <div class="course-info"><span class="subject cs-tag">COMPUTER SCIENCE</span><h3>Introduction to Programming</h3><p>Chapter 8 · Arrays & Objects</p><div class="progress"><i style="width:81%"></i></div><small>81% complete</small></div>
+                <button class="play" aria-label="Continue programming">▶</button>
+              </article>
+            </div>
+          </section>
+
+          <aside class="right-column">
+            <section class="panel schedule" id="planner">
+              <div class="panel-header"><div><h2>Today's schedule</h2><p>3 tasks · 2h 30m</p></div><button aria-label="More schedule options">•••</button></div>
+              <div class="timeline">
+                <div class="event"><time>09:00</time><i class="dot purple-dot"></i><div><b>Calculus practice</b><span>45 min · Mathematics</span></div><input type="checkbox" aria-label="Complete calculus practice"></div>
+                <div class="event"><time>11:30</time><i class="dot green-dot"></i><div><b>Physics quiz</b><span>30 min · Physics</span></div><input type="checkbox" aria-label="Complete physics quiz"></div>
+                <div class="event"><time>15:00</time><i class="dot orange-dot"></i><div><b>Review programming</b><span>1h 15m · Computer Science</span></div><input type="checkbox" aria-label="Complete programming review"></div>
+              </div>
+              <button class="add-task">＋ Add new task</button>
+            </section>
+
+            <section class="panel weekly" id="progress">
+              <div class="panel-header"><div><h2>Weekly activity</h2><p>12h 30m total</p></div><span class="trend">↗ 18%</span></div>
+              <div class="chart" aria-label="Weekly study hours chart">
+                <div style="--h:42%"><i></i><span>Mon</span></div><div style="--h:64%"><i></i><span>Tue</span></div><div style="--h:49%"><i></i><span>Wed</span></div><div class="today" style="--h:88%"><i></i><span>Thu</span></div><div style="--h:70%"><i></i><span>Fri</span></div><div style="--h:36%"><i></i><span>Sat</span></div><div style="--h:18%"><i></i><span>Sun</span></div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast">Focus session started — you've got this! 🚀</div>
+  <script src="script.js"></script>
+</body>
+</html>
