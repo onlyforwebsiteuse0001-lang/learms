@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "agronomy_principles",
+  "field": "agriculture_vet",
+  "category": "agronomy_crop_science",
+  "title": "Principles of Agronomy",
+  "title_ur": "اصولِ زراعت",
+  "description": "Crop production as a managed system: soil, water, nutrients, seed and protection, applied to the Pakistani cropping calendar.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 2,
+    "lab": 1
+  },
+  "estimated_hours": 12.0,
+  "accreditation": "HEC — BSc (Hons) Agriculture core",
+  "source": {
+    "name": "HEC revised curriculum — BSc (Hons) Agriculture (Agronomy)",
+    "retrieved": "2026-09-30",
+    "url": "https://www.hec.gov.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Relate soil physical and chemical properties to crop performance.",
+    "Plan a crop rotation for a given agro-ecological zone.",
+    "Calculate fertiliser and irrigation requirements for a field.",
+    "Select integrated management practices for common pests and weeds."
+  ],
+  "concepts": [
+    {
+      "id": "agriculture_vet.agronomy_principles.agronomy_scope",
+      "name": "Scope of agronomy",
+      "summary": "Agronomy's place among the agricultural sciences and Pakistan's agro-ecological zones.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 40,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "agro-ecological zone",
+        "cropping system"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.soil_physical",
+      "name": "Soil physical properties",
+      "summary": "Texture, structure, bulk density, porosity and their effect on root growth.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.agronomy_scope",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "texture",
+        "structure",
+        "bulk density"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.soil_chemical",
+      "name": "Soil chemistry and fertility",
+      "summary": "pH, salinity, cation exchange capacity, organic matter and nutrient availability.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.soil_physical",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "pH",
+        "CEC",
+        "salinity"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.soil_water",
+      "name": "Soil-water relationships",
+      "summary": "Field capacity, permanent wilting point, available water and infiltration.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.soil_physical",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "field capacity",
+        "wilting point",
+        "infiltration"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.tillage",
+      "name": "Tillage and seedbed preparation",
+      "summary": "Conventional, minimum and zero tillage; the trade-off with soil structure.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.soil_physical",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "tillage",
+        "zero tillage",
+        "seedbed"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.seed_sowing",
+      "name": "Seed quality and sowing",
+      "summary": "Germination percentage, seed rate calculation, sowing depth, time and geometry.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.tillage",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "seed rate",
+        "germination",
+        "row spacing"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.crop_growth",
+      "name": "Crop growth and development",
+      "summary": "Growth stages, growth analysis, photoperiod and thermal time.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.seed_sowing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "growth stage",
+        "GDD",
+        "photoperiod"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.nutrient_management",
+      "name": "Nutrient management",
+      "summary": "Essential nutrients, deficiency symptoms, fertiliser recommendation and application timing.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.soil_chemical",
+          "strength": "hard"
+        },
+        {
+          "id": "agriculture_vet.agronomy_principles.crop_growth",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "NPK",
+        "deficiency",
+        "split application"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.irrigation",
+      "name": "Irrigation management",
+      "summary": "Crop water requirement, scheduling, and surface versus pressurised methods.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.soil_water",
+          "strength": "hard"
+        },
+        {
+          "id": "agriculture_vet.agronomy_principles.crop_growth",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "ETc",
+        "scheduling",
+        "drip"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.weed_management",
+      "name": "Weed management",
+      "summary": "Weed classification, competition losses, and cultural, mechanical and chemical control.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.crop_growth",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "weed",
+        "herbicide",
+        "competition"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.pest_disease",
+      "name": "Integrated pest and disease management",
+      "summary": "Economic threshold, scouting, biological control and pesticide stewardship.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.weed_management",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "IPM",
+        "economic threshold",
+        "scouting"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.kharif_rabi",
+      "name": "Kharif and rabi crop production",
+      "summary": "Wheat, rice, cotton, maize and sugarcane: package of practices by season.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.nutrient_management",
+          "strength": "hard"
+        },
+        {
+          "id": "agriculture_vet.agronomy_principles.irrigation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "wheat",
+        "rice",
+        "cotton",
+        "kharif",
+        "rabi"
+      ]
+    },
+    {
+      "id": "agriculture_vet.agronomy_principles.rotation_harvest",
+      "name": "Cropping systems, harvest and storage",
+      "summary": "Rotation and intercropping rationale, harvest indices, and post-harvest losses.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "agriculture_vet.agronomy_principles.kharif_rabi",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "rotation",
+        "intercropping",
+        "post-harvest"
+      ]
+    }
+  ]
+}

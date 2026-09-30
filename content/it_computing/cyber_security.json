@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "cyber_security",
+  "field": "it_computing",
+  "category": "cyber_security",
+  "title": "Information & Cyber Security",
+  "title_ur": "انفارمیشن و سائبر سیکیورٹی",
+  "description": "The Computing Core information-security course: threat modelling, cryptographic building blocks, and the controls that actually reduce risk.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 3,
+    "lab": 0
+  },
+  "estimated_hours": 9.9,
+  "accreditation": "HEC/NCEAC Computing Core — Information Security",
+  "source": {
+    "name": "HEC & NCEAC, Curriculum of Computing Disciplines (Revised 2023)",
+    "retrieved": "2026-09-30",
+    "url": "https://nceac.org.pk/Documents/Curriculums/BS%20Curriculm%20Computing%20Disciplines-2023.pdf"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Apply the CIA triad to evaluate a system's security posture.",
+    "Select appropriate cryptographic primitives for a stated goal.",
+    "Model threats against a system and rank them by risk.",
+    "Explain the legal and ethical boundaries of security testing."
+  ],
+  "concepts": [
+    {
+      "id": "it_computing.cyber_security.cia_triad",
+      "name": "CIA triad and security goals",
+      "summary": "Confidentiality, integrity and availability, and the trade-offs between them.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 35,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "confidentiality",
+        "integrity",
+        "availability"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.threat_modeling",
+      "name": "Threat modelling",
+      "summary": "Assets, adversaries, attack surface and trust boundaries; STRIDE as a checklist.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.cia_triad",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "STRIDE",
+        "attack surface",
+        "trust boundary"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.symmetric_crypto",
+      "name": "Symmetric cryptography",
+      "summary": "Block vs stream ciphers, AES, modes of operation, and why ECB leaks structure.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.cia_triad",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "AES",
+        "CBC",
+        "GCM",
+        "IV"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.asymmetric_crypto",
+      "name": "Public-key cryptography",
+      "summary": "RSA and elliptic curves, key exchange, and what a digital signature actually proves.",
+      "bloom": "understand",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.symmetric_crypto",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "RSA",
+        "ECC",
+        "Diffie-Hellman"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.hashing",
+      "name": "Hash functions and password storage",
+      "summary": "Preimage and collision resistance; salting and slow KDFs (bcrypt/argon2) versus raw SHA.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.symmetric_crypto",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "SHA-256",
+        "salt",
+        "bcrypt",
+        "argon2"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.pki_tls",
+      "name": "PKI and TLS",
+      "summary": "Certificates, chains of trust, the handshake, and what a browser padlock does and does not mean.",
+      "bloom": "understand",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.asymmetric_crypto",
+          "strength": "hard"
+        },
+        {
+          "id": "it_computing.cyber_security.hashing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "certificate",
+        "CA",
+        "TLS",
+        "handshake"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.access_control",
+      "name": "Authentication and access control",
+      "summary": "Factors, MFA, RBAC vs ABAC, and least privilege as a default.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.hashing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "MFA",
+        "RBAC",
+        "least privilege"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.network_attacks",
+      "name": "Network attacks and defences",
+      "summary": "Sniffing, spoofing, MITM, DDoS; firewalls, segmentation and IDS placement.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.pki_tls",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "MITM",
+        "firewall",
+        "IDS",
+        "segmentation"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.app_security",
+      "name": "Application security",
+      "summary": "Injection, XSS, CSRF, broken access control, and input validation as a boundary discipline.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.access_control",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "OWASP",
+        "injection",
+        "XSS"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.malware",
+      "name": "Malware and endpoint defence",
+      "summary": "Classes of malware, persistence mechanisms, and detection versus prevention.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.network_attacks",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "ransomware",
+        "rootkit",
+        "EDR"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.incident_response",
+      "name": "Incident response",
+      "summary": "Preparation, detection, containment, eradication, recovery, lessons learned.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.malware",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "IR",
+        "containment",
+        "forensics"
+      ]
+    },
+    {
+      "id": "it_computing.cyber_security.security_ethics",
+      "name": "Law, ethics and responsible disclosure",
+      "summary": "Authorised testing, Pakistan's PECA framework, and coordinated vulnerability disclosure.",
+      "bloom": "evaluate",
+      "difficulty": 3,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "it_computing.cyber_security.threat_modeling",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "PECA",
+        "disclosure",
+        "authorisation"
+      ]
+    }
+  ]
+}

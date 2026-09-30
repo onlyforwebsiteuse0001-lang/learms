@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "web_development",
+  "field": "it_computing",
+  "category": "web_development",
+  "title": "Full-Stack Web Development",
+  "title_ur": "فل اسٹیک ویب ڈویلپمنٹ",
+  "description": "How a request becomes a rendered page and a stored record. Covers the browser platform, HTTP, server-side APIs, persistence and the security baseline every public web application needs.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 2,
+    "lab": 1
+  },
+  "estimated_hours": 13.5,
+  "accreditation": "HEC/NCEAC Domain Elective — Computing",
+  "source": {
+    "name": "HEC & NCEAC, Curriculum of Computing Disciplines (Revised 2023)",
+    "retrieved": "2026-09-30",
+    "url": "https://nceac.org.pk/Documents/Curriculums/BS%20Curriculm%20Computing%20Disciplines-2023.pdf"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Explain the full request/response lifecycle of a web page.",
+    "Build a semantic, accessible, responsive interface.",
+    "Design and implement a REST API backed by a database.",
+    "Identify and mitigate the OWASP Top 10 risks in a small application."
+  ],
+  "concepts": [
+    {
+      "id": "it_computing.web_development.http_model",
+      "name": "HTTP request/response model",
+      "summary": "Methods, status codes, headers, and why HTTP being stateless shapes everything above it.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "GET",
+        "POST",
+        "status code",
+        "stateless"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.html_semantics",
+      "name": "Semantic HTML and document structure",
+      "summary": "Elements that carry meaning, heading hierarchy, landmarks, and the accessibility tree they produce.",
+      "bloom": "apply",
+      "difficulty": 1,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "practical",
+      "keywords": [
+        "semantic",
+        "landmark",
+        "heading"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.css_layout",
+      "name": "CSS layout: flexbox and grid",
+      "summary": "The box model, normal flow, and choosing between flexbox (one axis) and grid (two).",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.html_semantics",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "flexbox",
+        "grid",
+        "box model"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.responsive",
+      "name": "Responsive and mobile-first design",
+      "summary": "Fluid units, min-width media queries, and designing the small layout first.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.css_layout",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "media query",
+        "viewport",
+        "mobile-first"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.js_dom",
+      "name": "JavaScript and the DOM",
+      "summary": "Selecting, creating and updating nodes; event delegation; why layout thrashing is slow.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.html_semantics",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "DOM",
+        "event",
+        "delegation"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.async_js",
+      "name": "Asynchronous JavaScript",
+      "summary": "The event loop, promises, async/await, and why blocking the main thread freezes the UI.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.js_dom",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "event loop",
+        "promise",
+        "async"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.fetch_api",
+      "name": "Consuming APIs from the browser",
+      "summary": "fetch, JSON, CORS, and handling failure as a normal case rather than an exception.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.async_js",
+          "strength": "hard"
+        },
+        {
+          "id": "it_computing.web_development.http_model",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "fetch",
+        "CORS",
+        "JSON"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.components",
+      "name": "Component-based UI",
+      "summary": "Composition, props, unidirectional data flow, and keeping state as close to its use as possible.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.js_dom",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "component",
+        "props",
+        "state"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.rest_api",
+      "name": "Designing a REST API",
+      "summary": "Resources, verbs, status codes, pagination and versioning that survives a breaking change.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.http_model",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "REST",
+        "resource",
+        "pagination"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.server_framework",
+      "name": "Server-side application structure",
+      "summary": "Routing, middleware, request validation, and separating transport from domain logic.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.rest_api",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "routing",
+        "middleware",
+        "validation"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.persistence",
+      "name": "Persistence and ORM basics",
+      "summary": "Mapping objects to relations, migrations, and the N+1 query problem.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.server_framework",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "ORM",
+        "migration",
+        "N+1"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.authn_authz",
+      "name": "Authentication and authorisation",
+      "summary": "Password hashing, sessions vs tokens, and why authorisation is always checked server-side.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.persistence",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "JWT",
+        "session",
+        "bcrypt",
+        "RBAC"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.web_security",
+      "name": "Web security baseline",
+      "summary": "XSS, CSRF, SQL injection, insecure direct object references, and the headers that help.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.authn_authz",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "XSS",
+        "CSRF",
+        "SQLi",
+        "OWASP"
+      ]
+    },
+    {
+      "id": "it_computing.web_development.deployment",
+      "name": "Build, deploy and observe",
+      "summary": "Bundling, static hosting behind a reverse proxy, environment configuration, logs and health checks.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.web_development.server_framework",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "build",
+        "nginx",
+        "env",
+        "health check"
+      ]
+    }
+  ]
+}

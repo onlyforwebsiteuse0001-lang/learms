@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "nursing_fundamentals",
+  "field": "health_medicine",
+  "category": "nursing",
+  "title": "Fundamentals of Nursing",
+  "title_ur": "نرسنگ کے بنیادی اصول",
+  "description": "The Generic BSN first-year core: the nursing process, patient safety, and the clinical skills every subsequent rotation assumes.",
+  "level": "professional",
+  "estimated_hours": 11.8,
+  "accreditation": "Pakistan Nursing & Midwifery Council — Generic BSN Year 1",
+  "source": {
+    "name": "Pakistan Nursing & Midwifery Council, Generic BSN (4-year) curriculum",
+    "retrieved": "2026-09-30"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Apply the five-step nursing process to a patient scenario.",
+    "Perform and document vital sign assessment accurately.",
+    "Apply infection prevention and control precautions correctly.",
+    "Calculate and verify medication doses safely."
+  ],
+  "concepts": [
+    {
+      "id": "health_medicine.nursing_fundamentals.nursing_process",
+      "name": "The nursing process",
+      "summary": "Assessment, diagnosis, planning, implementation, evaluation as one continuous loop.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [],
+      "assessment": "case_study",
+      "keywords": [
+        "ADPIE",
+        "care plan"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.communication",
+      "name": "Therapeutic communication",
+      "summary": "Active listening, open questions, and communicating across a language or literacy gap.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.nursing_process",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "active listening",
+        "empathy"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.vitals",
+      "name": "Vital signs assessment",
+      "summary": "Temperature, pulse, respiration, blood pressure and SpO2: technique, normal ranges, and what a trend means.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.nursing_process",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "blood pressure",
+        "SpO2",
+        "pulse"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.physical_assessment",
+      "name": "Head-to-toe physical assessment",
+      "summary": "Systematic inspection, palpation, percussion and auscultation.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 75,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.vitals",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "auscultation",
+        "palpation"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.infection_control",
+      "name": "Infection prevention and control",
+      "summary": "Chain of infection, hand hygiene moments, PPE sequence, and standard vs transmission-based precautions.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [],
+      "assessment": "practical",
+      "keywords": [
+        "hand hygiene",
+        "PPE",
+        "asepsis"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.safety",
+      "name": "Patient safety and fall prevention",
+      "summary": "Risk assessment, identification checks, and the safe patient environment.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.infection_control",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "fall risk",
+        "identification"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.hygiene_mobility",
+      "name": "Hygiene, positioning and mobility",
+      "summary": "Bed bath, pressure area care, safe transfers and pressure ulcer prevention.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.safety",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "pressure ulcer",
+        "transfer",
+        "positioning"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.nutrition",
+      "name": "Nutrition and fluid balance",
+      "summary": "Dietary assessment, intake/output charting and recognising dehydration.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.vitals",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "intake output",
+        "dehydration"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.medication_admin",
+      "name": "Medication administration",
+      "summary": "The rights of administration, routes, and independent double-checking of high-risk drugs.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.safety",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "rights",
+        "route",
+        "double-check"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.dose_calculation",
+      "name": "Dosage calculation",
+      "summary": "Unit conversion, desired-over-have, IV flow rates and paediatric weight-based dosing.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.medication_admin",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "mg/kg",
+        "drip rate",
+        "conversion"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.wound_care",
+      "name": "Wound care and dressing",
+      "summary": "Wound assessment, healing stages and aseptic dressing technique.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.infection_control",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "debridement",
+        "aseptic",
+        "healing"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.documentation",
+      "name": "Documentation and handover",
+      "summary": "Legal record-keeping, objective charting and structured handover (SBAR).",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.nursing_process",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "SBAR",
+        "charting",
+        "legal record"
+      ]
+    },
+    {
+      "id": "health_medicine.nursing_fundamentals.ethics_nursing",
+      "name": "Ethics and professional conduct",
+      "summary": "Consent, confidentiality, patient autonomy and scope of practice.",
+      "bloom": "evaluate",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "health_medicine.nursing_fundamentals.documentation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "consent",
+        "confidentiality",
+        "autonomy"
+      ]
+    }
+  ]
+}

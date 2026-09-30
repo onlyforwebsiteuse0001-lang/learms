@@ -262,6 +262,9 @@ export const urLatn: Messages = {
   'library.noResults': 'Is talaash se kuch nahi mila.',
   'library.bloom': 'Bloom level',
   'library.back': 'Library par wapas',
+  'library.coverage': '{total} mein se {done} categories mein abhi course mojood hai.',
+  'library.comingSoon': 'Jald aa raha hai',
+  'library.plannedCategories': 'Is field mein planned categories',
 
   'state.loading': 'Load ho raha hai…',
   'state.retry': 'Dobara koshish karein',

@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "pharmacy_pharmaceutics",
+  "field": "health_medicine",
+  "category": "pharmacy",
+  "title": "Pharmaceutics & Pharmacology Foundations",
+  "title_ur": "فارماسیوٹکس و فارماکولوجی",
+  "description": "How a drug is formulated, how it moves through the body, and how it produces an effect — the Pharm-D core that dispensing and clinical practice rest on.",
+  "level": "professional",
+  "estimated_hours": 12.5,
+  "accreditation": "Pharmacy Council of Pakistan / HEC — Pharm-D core",
+  "source": {
+    "name": "Pharmacy Council of Pakistan / HEC Pharm-D (5-year) curriculum",
+    "retrieved": "2026-09-30"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Select a dosage form appropriate to a drug's properties and route.",
+    "Apply pharmacokinetic principles to explain a dosing regimen.",
+    "Predict drug action from receptor and dose-response relationships.",
+    "Identify clinically significant drug interactions."
+  ],
+  "concepts": [
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.dosage_forms",
+      "name": "Dosage forms and routes",
+      "summary": "Solids, liquids, semi-solids and parenterals; matching form to route and to patient.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "tablet",
+        "parenteral",
+        "suspension"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.pharmaceutical_calc",
+      "name": "Pharmaceutical calculations",
+      "summary": "Percentage strength, dilution, alligation, isotonicity and millimoles.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.dosage_forms",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "alligation",
+        "w/v",
+        "isotonic"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.physical_pharmacy",
+      "name": "Physical pharmacy",
+      "summary": "Solubility, partition coefficient, dissolution, stability and shelf life.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.dosage_forms",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "solubility",
+        "logP",
+        "dissolution"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.formulation",
+      "name": "Formulation and excipients",
+      "summary": "Why excipients exist and how they change release and bioavailability.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.physical_pharmacy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "excipient",
+        "bioavailability",
+        "release"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.absorption",
+      "name": "Absorption and bioavailability",
+      "summary": "Membrane crossing, first-pass metabolism, and bioavailability differences between routes.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.formulation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "first-pass",
+        "F",
+        "absorption"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.distribution",
+      "name": "Distribution and protein binding",
+      "summary": "Volume of distribution, protein binding and barrier penetration.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.absorption",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "Vd",
+        "protein binding",
+        "BBB"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.metabolism_excretion",
+      "name": "Metabolism and excretion",
+      "summary": "Phase I/II reactions, cytochrome P450, renal and biliary clearance.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.distribution",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "CYP450",
+        "clearance",
+        "conjugation"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.kinetics",
+      "name": "Pharmacokinetic modelling",
+      "summary": "Half-life, steady state, loading and maintenance dose; zero vs first-order kinetics.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.metabolism_excretion",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "half-life",
+        "steady state",
+        "loading dose"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.receptors",
+      "name": "Receptor pharmacology",
+      "summary": "Agonists, antagonists, partial agonism, affinity and efficacy.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "agonist",
+        "antagonist",
+        "affinity"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.dose_response",
+      "name": "Dose-response relationships",
+      "summary": "EC50, therapeutic index, and the practical meaning of a narrow window.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.receptors",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "EC50",
+        "therapeutic index"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.autonomic_drugs",
+      "name": "Autonomic pharmacology",
+      "summary": "Cholinergic and adrenergic agents and their predictable side-effect profiles.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.dose_response",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "adrenergic",
+        "cholinergic"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.antimicrobials",
+      "name": "Antimicrobial chemotherapy",
+      "summary": "Mechanisms, spectrum, resistance and the principles of stewardship.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.dose_response",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "resistance",
+        "spectrum",
+        "stewardship"
+      ]
+    },
+    {
+      "id": "health_medicine.pharmacy_pharmaceutics.interactions",
+      "name": "Drug interactions and adverse reactions",
+      "summary": "Pharmacokinetic vs pharmacodynamic interactions; ADR classification and reporting.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.kinetics",
+          "strength": "hard"
+        },
+        {
+          "id": "health_medicine.pharmacy_pharmaceutics.autonomic_drugs",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "interaction",
+        "ADR",
+        "pharmacovigilance"
+      ]
+    }
+  ]
+}

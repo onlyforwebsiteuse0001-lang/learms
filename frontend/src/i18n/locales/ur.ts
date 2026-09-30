@@ -264,6 +264,9 @@ export const ur: Messages = {
   'library.noResults': 'اس تلاش سے کچھ نہیں ملا۔',
   'library.bloom': 'بلوم سطح',
   'library.back': 'لائبریری پر واپس',
+  'library.coverage': '{total} میں سے {done} زمروں میں ابھی کورس موجود ہے۔',
+  'library.comingSoon': 'جلد آ رہا ہے',
+  'library.plannedCategories': 'اس شعبے میں مجوزہ زمرے',
 
   'state.loading': 'لوڈ ہو رہا ہے…',
   'state.retry': 'دوبارہ کوشش کریں',

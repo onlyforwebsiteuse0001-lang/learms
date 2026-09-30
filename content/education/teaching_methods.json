@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "teaching_methods",
+  "field": "education",
+  "category": "b_ed_teaching",
+  "title": "B.Ed — General Methods of Teaching",
+  "title_ur": "طریقۂ تدریس",
+  "description": "Planning, delivering and assessing a lesson: the professional core of teacher education, grounded in how people actually learn.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 3,
+    "lab": 0
+  },
+  "estimated_hours": 10.8,
+  "accreditation": "HEC — B.Ed (Hons) Elementary professional core",
+  "source": {
+    "name": "HEC revised curriculum — B.Ed (Hons) Elementary / ADE",
+    "retrieved": "2026-09-30",
+    "url": "https://www.hec.gov.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Write measurable learning objectives at appropriate cognitive levels.",
+    "Plan a lesson with aligned objectives, activities and assessment.",
+    "Select teaching methods suited to content, learners and resources.",
+    "Use formative assessment to adjust instruction."
+  ],
+  "concepts": [
+    {
+      "id": "education.teaching_methods.learning_theories",
+      "name": "Theories of learning",
+      "summary": "Behaviourist, cognitive, constructivist and social learning views, and what each implies for a classroom.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [],
+      "assessment": "essay",
+      "keywords": [
+        "behaviourism",
+        "constructivism",
+        "Vygotsky"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.objectives",
+      "name": "Writing learning objectives",
+      "summary": "Bloom's taxonomy, observable verbs, and the difference between an aim and an objective.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.learning_theories",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "Bloom",
+        "SMART",
+        "observable"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.lesson_planning",
+      "name": "Lesson planning",
+      "summary": "Constructive alignment of objective, activity and assessment; timing and contingency.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.objectives",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "alignment",
+        "lesson plan",
+        "sequencing"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.teaching_methods",
+      "name": "Teaching methods and strategies",
+      "summary": "Lecture, demonstration, inquiry, discussion, cooperative learning, and how to choose.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.lesson_planning",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "inquiry",
+        "cooperative learning",
+        "demonstration"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.questioning",
+      "name": "Questioning techniques",
+      "summary": "Open vs closed questions, wait time, and distributing questions across a class.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.teaching_methods",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "wait time",
+        "probing",
+        "open question"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.classroom_management",
+      "name": "Classroom management",
+      "summary": "Rules and routines, preventive management, and responding to disruption without escalation.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.teaching_methods",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "routine",
+        "discipline",
+        "engagement"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.differentiation",
+      "name": "Differentiated instruction",
+      "summary": "Adapting content, process and product for mixed-ability and multi-grade classes.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.classroom_management",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "differentiation",
+        "multi-grade",
+        "scaffolding"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.teaching_aids",
+      "name": "Instructional materials and AV aids",
+      "summary": "Choosing and making low-cost teaching aids; the cognitive load argument for restraint.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.teaching_methods",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "AV aid",
+        "low-cost",
+        "cognitive load"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.formative_assessment",
+      "name": "Formative assessment",
+      "summary": "Checking for understanding during a lesson and acting on what you find.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.objectives",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "exit ticket",
+        "feedback",
+        "checking understanding"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.summative_assessment",
+      "name": "Summative assessment and test construction",
+      "summary": "Item writing, table of specifications, validity and reliability.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.formative_assessment",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "table of specifications",
+        "validity",
+        "reliability"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.feedback",
+      "name": "Effective feedback",
+      "summary": "Task-level feedback that tells a learner what to do next, not just what was wrong.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.formative_assessment",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "feedback",
+        "feed-forward"
+      ]
+    },
+    {
+      "id": "education.teaching_methods.micro_teaching",
+      "name": "Micro-teaching and reflective practice",
+      "summary": "Practising a single skill, receiving critique, and structured reflection on teaching.",
+      "bloom": "evaluate",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "education.teaching_methods.lesson_planning",
+          "strength": "hard"
+        },
+        {
+          "id": "education.teaching_methods.questioning",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "micro-teaching",
+        "reflection",
+        "peer critique"
+      ]
+    }
+  ]
+}

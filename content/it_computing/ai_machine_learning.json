@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "ai_machine_learning",
+  "field": "it_computing",
+  "category": "data_science_ai",
+  "title": "Artificial Intelligence & Machine Learning",
+  "title_ur": "مصنوعی ذہانت و مشین لرننگ",
+  "description": "Supervised and unsupervised learning from first principles: how a model is fit, how it is honestly evaluated, and how it fails.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 3,
+    "lab": 0
+  },
+  "estimated_hours": 12.9,
+  "accreditation": "HEC/NCEAC Domain Core — Artificial Intelligence specialisation",
+  "source": {
+    "name": "HEC & NCEAC, Curriculum of Computing Disciplines (Revised 2023)",
+    "retrieved": "2026-09-30",
+    "url": "https://nceac.org.pk/Documents/Curriculums/BS%20Curriculm%20Computing%20Disciplines-2023.pdf"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Frame a problem as supervised, unsupervised or reinforcement learning.",
+    "Fit and tune standard models without leaking the test set.",
+    "Diagnose underfitting and overfitting from learning curves.",
+    "Report metrics appropriate to the class balance and the cost of each error."
+  ],
+  "concepts": [
+    {
+      "id": "it_computing.ai_machine_learning.ml_framing",
+      "name": "Framing a learning problem",
+      "summary": "Supervised vs unsupervised vs reinforcement; when a rule-based solution is simply better.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "short_answer",
+      "keywords": [
+        "supervised",
+        "unsupervised",
+        "framing"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.data_prep",
+      "name": "Data preparation and leakage",
+      "summary": "Cleaning, encoding, scaling — and why fitting a scaler before splitting leaks the test set.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.ml_framing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "encoding",
+        "scaling",
+        "leakage"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.train_test",
+      "name": "Train/validation/test and cross-validation",
+      "summary": "Why three splits, k-fold, and stratification for imbalanced targets.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.data_prep",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "holdout",
+        "k-fold",
+        "stratify"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.linear_regression",
+      "name": "Linear regression",
+      "summary": "Least squares, the normal equation vs gradient descent, and reading the residuals.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.train_test",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "least squares",
+        "residual",
+        "MSE"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.gradient_descent",
+      "name": "Gradient descent",
+      "summary": "Loss surfaces, learning rate, batch vs stochastic, and how to tell it is diverging.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.linear_regression",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "learning rate",
+        "SGD",
+        "convergence"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.logistic_regression",
+      "name": "Logistic regression and classification",
+      "summary": "The sigmoid, log-loss, decision thresholds, and why accuracy misleads on imbalanced data.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.gradient_descent",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "sigmoid",
+        "log-loss",
+        "threshold"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.evaluation",
+      "name": "Classification metrics",
+      "summary": "Confusion matrix, precision, recall, F1, ROC-AUC, and choosing by the cost of each error type.",
+      "bloom": "evaluate",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.logistic_regression",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "precision",
+        "recall",
+        "ROC",
+        "F1"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.bias_variance",
+      "name": "Bias, variance and regularisation",
+      "summary": "Diagnosing underfit vs overfit from learning curves; L1/L2 and what each does to weights.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.evaluation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "overfitting",
+        "L1",
+        "L2",
+        "learning curve"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.trees_ensembles",
+      "name": "Decision trees and ensembles",
+      "summary": "Impurity splitting, pruning, bagging vs boosting, and where random forests beat a single tree.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.bias_variance",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "gini",
+        "random forest",
+        "boosting"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.clustering",
+      "name": "Unsupervised learning and clustering",
+      "summary": "k-means, choosing k, hierarchical clustering, and why clusters are not labels.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.data_prep",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "k-means",
+        "elbow",
+        "silhouette"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.dim_reduction",
+      "name": "Dimensionality reduction",
+      "summary": "PCA as variance-preserving projection; when reduction helps and when it destroys signal.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.clustering",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "PCA",
+        "variance",
+        "projection"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.neural_nets",
+      "name": "Neural networks and backpropagation",
+      "summary": "Layers, activations, the chain rule through a computation graph, and vanishing gradients.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 75,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.gradient_descent",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "backprop",
+        "activation",
+        "layer"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.cnn_seq",
+      "name": "Convolutional and sequence models",
+      "summary": "Weight sharing for images; recurrence and attention for sequences.",
+      "bloom": "understand",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.neural_nets",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "CNN",
+        "RNN",
+        "attention"
+      ]
+    },
+    {
+      "id": "it_computing.ai_machine_learning.ml_ethics",
+      "name": "Evaluation ethics and dataset bias",
+      "summary": "Where bias enters, why a held-out metric is not a deployment guarantee, and documenting limits.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.ai_machine_learning.evaluation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "bias",
+        "fairness",
+        "model card"
+      ]
+    }
+  ]
+}

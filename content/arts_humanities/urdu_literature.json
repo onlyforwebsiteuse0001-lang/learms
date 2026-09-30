@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "urdu_literature",
+  "field": "arts_humanities",
+  "category": "urdu_literature",
+  "title": "Urdu Literature — Poetry and Prose",
+  "title_ur": "اردو ادب: شعر و نثر",
+  "description": "The development of Urdu literature from the classical ghazal to modern fiction, with the critical vocabulary needed to analyse a text.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 3,
+    "lab": 0
+  },
+  "estimated_hours": 12.7,
+  "accreditation": "HEC — BS Urdu core",
+  "source": {
+    "name": "HEC revised curriculum — BS Urdu",
+    "retrieved": "2026-09-30",
+    "url": "https://www.hec.gov.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Trace the historical development of Urdu poetic and prose forms.",
+    "Analyse a ghazal using conventional critical terminology.",
+    "Compare the work of major poets and prose writers in context.",
+    "Write a critical appreciation of an Urdu text."
+  ],
+  "concepts": [
+    {
+      "id": "arts_humanities.urdu_literature.origins",
+      "name": "Origins and development of Urdu",
+      "summary": "Urdu's emergence, the Dakhni period, and the shift of the literary centre to Delhi and Lucknow.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [],
+      "assessment": "essay",
+      "keywords": [
+        "Dakhni",
+        "Delhi",
+        "Lucknow"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.poetic_forms",
+      "name": "Poetic forms",
+      "summary": "Ghazal, nazm, qasida, marsiya, masnavi and rubai — form, occasion and convention.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.origins",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "ghazal",
+        "nazm",
+        "marsiya"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.arooz",
+      "name": "Prosody and metre",
+      "summary": "Arooz, bahr, taqti and the practical business of scanning a line.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.poetic_forms",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "bahr",
+        "taqti",
+        "arooz"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.poetic_devices",
+      "name": "Imagery and rhetorical devices",
+      "summary": "Tashbih, istiara, kinaya, and the conventional symbol set of the ghazal.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.poetic_forms",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "tashbih",
+        "istiara",
+        "symbol"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.classical_poets",
+      "name": "Classical poets",
+      "summary": "Mir, Sauda, Dard and Ghalib: sensibility, diction and their characteristic concerns.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.poetic_devices",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Mir",
+        "Ghalib",
+        "classical"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.iqbal",
+      "name": "Iqbal",
+      "summary": "Khudi, the reconstruction of self and community, and Iqbal's break with ghazal convention.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.classical_poets",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Iqbal",
+        "khudi",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.modern_poetry",
+      "name": "Modern and progressive poetry",
+      "summary": "Faiz, Josh, Rashid and Miraji; the Progressive Writers' Movement and free verse.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.iqbal",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Faiz",
+        "progressive",
+        "azad nazm"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.prose_beginnings",
+      "name": "Beginnings of Urdu prose",
+      "summary": "Fort William College, Ghalib's letters, and Sir Syed's reformist prose.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.origins",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Fort William",
+        "Sir Syed",
+        "letters"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.novel",
+      "name": "The Urdu novel",
+      "summary": "From Nazir Ahmad and Umrao Jan Ada to Aag ka Darya: the novel's changing social function.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.prose_beginnings",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "novel",
+        "Nazir Ahmad",
+        "Qurratulain Hyder"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.afsana",
+      "name": "The short story (afsana)",
+      "summary": "Premchand, Manto, Bedi and Chughtai; realism, censorship and the Partition story.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.novel",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Manto",
+        "afsana",
+        "Partition"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.drama_essay",
+      "name": "Drama and the essay",
+      "summary": "Urdu drama from Amanat to radio and television; the inshaiya and humorous essay.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.prose_beginnings",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "drama",
+        "inshaiya",
+        "Mushtaq Ahmed Yousufi"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.criticism",
+      "name": "Urdu literary criticism",
+      "summary": "Hali's Muqaddama, Shibli, and the movement from didactic to formal criticism.",
+      "bloom": "evaluate",
+      "difficulty": 5,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.classical_poets",
+          "strength": "hard"
+        },
+        {
+          "id": "arts_humanities.urdu_literature.novel",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Hali",
+        "Muqaddama",
+        "tanqeed"
+      ]
+    },
+    {
+      "id": "arts_humanities.urdu_literature.critical_appreciation",
+      "name": "Writing a critical appreciation",
+      "summary": "Close reading, situating a text in its period, and supporting a claim with the text itself.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "arts_humanities.urdu_literature.criticism",
+          "strength": "hard"
+        },
+        {
+          "id": "arts_humanities.urdu_literature.poetic_devices",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "close reading",
+        "appreciation",
+        "argument"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "electrical_circuit_analysis",
+  "field": "engineering",
+  "category": "electrical",
+  "title": "Electrical Engineering — Circuit Analysis",
+  "title_ur": "برقی سرکٹ تجزیہ",
+  "description": "Systematic analysis of DC and AC circuits: the laws, the systematic methods, transient response and steady-state phasor analysis.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 4,
+    "theory": 3,
+    "lab": 1
+  },
+  "estimated_hours": 13.2,
+  "accreditation": "PEC — BE Electrical Engineering core",
+  "source": {
+    "name": "Pakistan Engineering Council — accredited engineering curricula",
+    "retrieved": "2026-09-30",
+    "url": "https://www.pec.org.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Apply Kirchhoff's laws to analyse a circuit systematically.",
+    "Reduce a network using Thevenin and Norton equivalents.",
+    "Determine the transient response of first- and second-order circuits.",
+    "Analyse AC steady-state circuits using phasors and compute power."
+  ],
+  "concepts": [
+    {
+      "id": "engineering.electrical_circuit_analysis.circuit_elements",
+      "name": "Circuit variables and elements",
+      "summary": "Charge, current, voltage, power; resistors, capacitors, inductors and sources.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "current",
+        "voltage",
+        "passive sign convention"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.ohm_kirchhoff",
+      "name": "Ohm's and Kirchhoff's laws",
+      "summary": "KCL and KVL as conservation statements; series and parallel reduction.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.circuit_elements",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "KCL",
+        "KVL",
+        "equivalent resistance"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.divider",
+      "name": "Voltage and current division",
+      "summary": "Dividers, and loading effects that make the ideal formula wrong.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.ohm_kirchhoff",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "divider",
+        "loading"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.nodal_mesh",
+      "name": "Nodal and mesh analysis",
+      "summary": "Choosing the method with fewer equations; supernodes and supermeshes.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.ohm_kirchhoff",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "nodal",
+        "mesh",
+        "supernode"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.superposition",
+      "name": "Superposition and source transformation",
+      "summary": "Linearity, and when superposition does not apply to power.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.nodal_mesh",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "superposition",
+        "source transformation"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.thevenin_norton",
+      "name": "Thevenin and Norton equivalents",
+      "summary": "Equivalent networks and maximum power transfer.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.superposition",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "Thevenin",
+        "Norton",
+        "max power transfer"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.opamp",
+      "name": "Operational amplifiers",
+      "summary": "Ideal op-amp assumptions; inverting, non-inverting and summing configurations.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.thevenin_norton",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "op-amp",
+        "virtual short",
+        "gain"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.capacitor_inductor",
+      "name": "Capacitors and inductors",
+      "summary": "Energy storage, i-v relationships and series/parallel combination.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.circuit_elements",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "capacitance",
+        "inductance",
+        "energy"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.first_order",
+      "name": "First-order transients",
+      "summary": "RC and RL natural and step response; time constant and the 5τ rule.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.capacitor_inductor",
+          "strength": "hard"
+        },
+        {
+          "id": "engineering.electrical_circuit_analysis.thevenin_norton",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "time constant",
+        "step response"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.second_order",
+      "name": "Second-order transients",
+      "summary": "RLC response; damping ratio and the overdamped/critical/underdamped cases.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.first_order",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "damping",
+        "RLC",
+        "natural frequency"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.phasors",
+      "name": "Sinusoids and phasors",
+      "summary": "Representing sinusoidal steady state as complex amplitudes; impedance and admittance.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.capacitor_inductor",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "phasor",
+        "impedance",
+        "reactance"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.ac_power",
+      "name": "AC power analysis",
+      "summary": "Instantaneous, average, apparent and reactive power; power factor correction.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.phasors",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "power factor",
+        "reactive power",
+        "VA"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.three_phase",
+      "name": "Three-phase circuits",
+      "summary": "Balanced star and delta systems, line versus phase quantities, and three-phase power.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.ac_power",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "star",
+        "delta",
+        "line voltage"
+      ]
+    },
+    {
+      "id": "engineering.electrical_circuit_analysis.frequency_response",
+      "name": "Frequency response and resonance",
+      "summary": "Transfer functions, Bode plots, series/parallel resonance and Q factor.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "engineering.electrical_circuit_analysis.phasors",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "Bode",
+        "resonance",
+        "Q factor"
+      ]
+    }
+  ]
+}

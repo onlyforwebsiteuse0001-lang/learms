@@ -258,6 +258,9 @@ export const en = {
   'library.noResults': 'Nothing matched that search.',
   'library.bloom': 'Bloom level',
   'library.back': 'Back to library',
+  'library.coverage': '{done} of {total} categories have a curated course so far.',
+  'library.comingSoon': 'Coming soon',
+  'library.plannedCategories': 'Planned in this field',
 
   'state.loading': 'Loading…',
   'state.retry': 'Try again',

@@ -41,6 +41,27 @@ export function LibraryPage() {
     });
   }, [courses, fieldId, query]);
 
+  /**
+   * RULE 5 — say out loud how much of the taxonomy is actually filled in. The 68
+   * categories are a real plan, but only some of them have a curated course today, and a
+   * student should be able to see that without clicking through every field.
+   */
+  const coverage = useMemo(() => {
+    const fields = taxonomy.data?.fields ?? [];
+    const withCourses = new Set(courses.map((course) => course.category));
+    const all = fields.flatMap((field) => field.categories);
+    return { done: all.filter((category) => withCourses.has(category.id)).length, total: all.length };
+  }, [taxonomy.data, courses]);
+
+  /** Categories of the selected field that have nothing in them yet. */
+  const plannedCategories = useMemo(() => {
+    if (!fieldId) return [];
+    const field = taxonomy.data?.fields.find((candidate) => candidate.id === fieldId);
+    if (!field) return [];
+    const withCourses = new Set(courses.filter((course) => course.field === fieldId).map((c) => c.category));
+    return field.categories.filter((category) => !withCourses.has(category.id));
+  }, [taxonomy.data, courses, fieldId]);
+
   if (coursePath) {
     return <CourseDetail path={coursePath} onBack={() => setCoursePath(null)} />;
   }
@@ -72,6 +93,11 @@ export function LibraryPage() {
             dir="auto"
           />
         </label>
+        {coverage.total > 0 && (
+          <p className="small muted" style={{ marginBlockEnd: 0 }}>
+            {t('library.coverage', { done: coverage.done, total: coverage.total })}
+          </p>
+        )}
       </section>
 
       <div className="grid grid-2">
@@ -168,6 +194,24 @@ export function LibraryPage() {
               </ul>
             )}
           </AsyncState>
+
+          {plannedCategories.length > 0 && (
+            <>
+              <p className="eyebrow" style={{ marginBlockStart: 'var(--sp-5)' }}>
+                {t('library.plannedCategories')}
+              </p>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0, marginBlockStart: 'var(--sp-3)' }}>
+                {plannedCategories.map((category) => (
+                  <li key={category.id} className="item-row">
+                    <div className="item-main">
+                      <span className="muted">{localName(category.name, category.name_ur)}</span>
+                    </div>
+                    <span className="badge badge-neutral">{t('library.comingSoon')}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </section>
       </div>
     </>
