@@ -10,7 +10,8 @@
 | 2026-09-30 | Area 2 languages | Draft complete | Created 35 initial language profiles, comparison matrix, learning paths, and language source register entries S031-S072. Deepening pending. | efca7cf |
 | 2026-09-30 | Area 3 sub-domains | Draft started | Created 15 initial sub-domain deep-dive draft files and source entries S073-S078. Deepening pending. | 055c018 |
 | 2026-09-30 | Area 4 problems | Draft complete | Created 8 student-problem draft files using CS education, debugging, code-review, skill-gap, and Pakistan industry sources S079-S092. | e61d5b1 |
-| 2026-09-30 | Area 5 solutions | Draft complete | Created 6 solution drafts using active learning, spaced retrieval, deliberate practice, PBL, peer instruction, and Pakistan sources S093-S098. | pending |
+| 2026-09-30 | Area 5 solutions | Draft complete | Created 6 solution drafts using active learning, spaced retrieval, deliberate practice, PBL, peer instruction, and Pakistan sources S093-S098. | d3f1442 |
+| 2026-09-30 | Area 6 books | Draft started | Created 7 book-area drafts plus initial catalog; explicitly marked unsourced ISBN/chapter gaps. Source register through S104. | pending |
 
 ## Deliverable Status
 
@@ -66,13 +67,25 @@
 - [x] `solutions/MENTAL_HEALTH.md` draft v0.1.
 - [ ] Deepen with platform comparisons, HEC curriculum, bootcamps, and Pakistan resource validation.
 
+### Area 6 — Books
+
+- [x] `books/PROGRAMMING_BOOKS.md` draft v0.1 with 50+ title catalog and source-status labels.
+- [x] `books/CS_THEORY_BOOKS.md` draft v0.1.
+- [x] `books/AI_ML_BOOKS.md` draft v0.1.
+- [x] `books/CYBERSECURITY_BOOKS.md` draft v0.1.
+- [x] `books/CAREER_BOOKS.md` draft v0.1.
+- [x] `books/BOOK_SELECTION_RUBRIC.md` draft v0.1.
+- [x] `books/PAKISTAN_BOOK_ACCESS.md` draft v0.1.
+- [x] `books/BOOKS_CATALOG.csv` initial metadata rows.
+- [ ] Deepen with publisher/library metadata, ISBNs, chapters, pages, Pakistan access.
+
 ### Remaining Areas
 
 - [ ] Area 2 — Programming Languages deepening
 - [ ] Area 3 — IT Sub-Domains deepening
 - [ ] Area 4 — Student Problems deepening
 - [ ] Area 5 — Solutions deepening
-- [ ] Area 6 — Books
+- [ ] Area 6 — Books deepening
 - [ ] Area 7 — UI/UX for IT Learning
 - [ ] Area 8 — Pakistan IT Specific
 - [ ] Area 9 — Career Paths & Salaries

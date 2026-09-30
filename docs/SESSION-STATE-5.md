@@ -27,4 +27,5 @@
 - Area 3: IT Sub-Domains Deep Research — initial 15 draft files created; deepening pending.
 - Area 4: IT Students ke Masail — initial 8 draft files complete; deepening pending.
 - Area 5: Solutions — initial 6 draft files complete; deepening pending.
-- Area 6: Books — next.
+- Area 6: Books — initial catalog and rubric complete; ISBN/chapter deepening pending.
+- Area 7: UI/UX — next.
