@@ -18,7 +18,15 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"]
+    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"],
+    "baseUrl": ".",
+    // The repo-level `tests/frontend/` directory sits above this package, so Node-style
+    // resolution from those files never reaches `frontend/node_modules`. The automatic
+    // JSX runtime is injected into every .tsx file, so it has to resolve there too.
+    "paths": {
+      "react/jsx-runtime": ["./node_modules/@types/react/jsx-runtime"],
+      "react/jsx-dev-runtime": ["./node_modules/@types/react/jsx-dev-runtime"]
+    }
   },
   "include": ["src", "../tests/frontend"]
 }

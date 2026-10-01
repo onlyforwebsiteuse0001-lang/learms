@@ -7,3 +7,4 @@ coverage/
 *.local
 .vite/
 public/content/
+*.tsbuildinfo

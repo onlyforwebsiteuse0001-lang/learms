@@ -1,6 +1,7 @@
 import { HttpResponse, http } from 'msw';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { server } from '../test/mocks/server';
+import { expectApiError } from '../test/utils';
 import { api, apiUrl, configureClient, request } from './client';
 import { ApiError } from './errors';
 
@@ -79,7 +80,7 @@ describe('request', () => {
         ),
       ),
     );
-    const error = await request('/api/v1/boom').catch((e) => e as ApiError);
+    const error = await expectApiError(request('/api/v1/boom'));
     expect(error).toBeInstanceOf(ApiError);
     expect(error.status).toBe(409);
     expect(error.code).toBe('conflict');
@@ -96,7 +97,7 @@ describe('request', () => {
         }),
       ),
     );
-    const error = await request('/api/v1/gateway', { retryable: false }).catch((e) => e as ApiError);
+    const error = await expectApiError(request('/api/v1/gateway', { retryable: false }));
     expect(error.code).toBe('bad_gateway');
     expect(error.messageKey).toBe('error.badGateway');
   });
@@ -107,12 +108,12 @@ describe('request', () => {
         HttpResponse.json({ error: 'not_found', message: 'Not Found' }, { status: 404 }),
       ),
     );
-    const error = await api.post('/api/v1/tutor/message', {}).catch((e) => e as ApiError);
+    const error = await expectApiError(api.post('/api/v1/tutor/message', {}));
     expect(error.isNotImplemented).toBe(true);
   });
 
   it('leaves a 404 on a deployed endpoint as an ordinary not-found', async () => {
-    const error = await request('/api/v1/documents/does-not-exist').catch((e) => e as ApiError);
+    const error = await expectApiError(request('/api/v1/documents/does-not-exist'));
     expect(error.status).toBe(404);
     expect(error.isNotImplemented).toBe(false);
   });
@@ -182,7 +183,7 @@ describe('request', () => {
 
   it('surfaces a transport failure as network_error', async () => {
     server.use(http.get('/api/v1/offline', () => HttpResponse.error()));
-    const error = await request('/api/v1/offline', { retryable: false }).catch((e) => e as ApiError);
+    const error = await expectApiError(request('/api/v1/offline', { retryable: false }));
     expect(error.code).toBe('network_error');
   });
 
@@ -206,7 +207,7 @@ describe('request', () => {
         return HttpResponse.json({ ok: true });
       }),
     );
-    const error = await request('/api/v1/hang', { timeoutMs: 30, retryable: false }).catch((e) => e as ApiError);
+    const error = await expectApiError(request('/api/v1/hang', { timeoutMs: 30, retryable: false }));
     expect(error.code).toBe('timeout');
   });
 

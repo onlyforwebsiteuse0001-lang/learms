@@ -51,6 +51,10 @@ export default defineConfig(({ mode }) => {
     server: {
       host: '0.0.0.0',
       port: 3000,
+      // The brief puts frontend tests in the repo-level `tests/frontend/` directory, which
+      // sits outside this Vite root. Vite refuses to load files above the root unless they
+      // are explicitly allowed, so widen it to the repository.
+      fs: { allow: ['..'] },
       // The Arena live preview is served from https://{port}-{sandbox}.e2b.app, so the dev
       // server must accept that Host header or Vite 6 answers with "Blocked request".
       allowedHosts: ['.e2b.app', 'localhost', '127.0.0.1'],
@@ -77,10 +81,16 @@ export default defineConfig(({ mode }) => {
         exclude: [
           'src/main.tsx',
           'src/test/**',
+          // Counting the tests themselves inflates the number and measures nothing.
+          'src/**/*.{test,spec}.{ts,tsx}',
           'src/**/*.d.ts',
           'src/**/index.ts',
+          // Type-only modules compile to nothing; v8 reports them as 0% forever.
+          'src/api/types.ts',
+          'src/content/types.ts',
           'src/i18n/locales/**',
         ],
+        thresholds: { statements: 80, branches: 80, functions: 70, lines: 80 },
       },
     },
   };

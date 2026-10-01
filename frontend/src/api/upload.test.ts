@@ -3,6 +3,7 @@ import {
   ACCEPTED_EXTENSIONS,
   ACCEPT_ATTRIBUTE,
   MAX_FILE_MB,
+  buildUploadForm,
   formatBytes,
   validateFiles,
 } from './upload';
@@ -107,5 +108,27 @@ describe('formatBytes', () => {
 
   it('handles zero', () => {
     expect(formatBytes(0)).toBe('0 B');
+  });
+});
+
+describe('buildUploadForm', () => {
+  it('uses the field name the API requires', () => {
+    // `upload_documents(files: list[UploadFile] = File(...))` — anything else 422s.
+    const form = buildUploadForm([fakeFile('a.pdf', 10)]);
+    expect([...form.keys()]).toEqual(['files']);
+  });
+
+  it('appends every file under the same repeated field', () => {
+    const form = buildUploadForm([fakeFile('a.pdf', 10), fakeFile('b.pdf', 10)]);
+    expect(form.getAll('files')).toHaveLength(2);
+  });
+
+  it('preserves the original filename, which the server stores and shows back', () => {
+    const form = buildUploadForm([fakeFile('لیکچر ۱.pdf', 10)]);
+    expect((form.get('files') as File).name).toBe('لیکچر ۱.pdf');
+  });
+
+  it('produces an empty body for an empty selection rather than throwing', () => {
+    expect([...buildUploadForm([]).keys()]).toEqual([]);
   });
 });

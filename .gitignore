@@ -1,0 +1,6 @@
+# Python bytecode from scripts/content and tests/content
+__pycache__/
+*.py[cod]
+
+# TypeScript incremental build metadata
+*.tsbuildinfo

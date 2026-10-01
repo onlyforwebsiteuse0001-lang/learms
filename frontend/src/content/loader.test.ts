@@ -2,6 +2,7 @@ import { HttpResponse, http } from 'msw';
 import { describe, expect, it } from 'vitest';
 import { ApiError } from '../api/errors';
 import { server } from '../test/mocks/server';
+import { expectApiError } from '../test/utils';
 import { loadCourse, loadIndex, loadTaxonomy } from './loader';
 
 describe('content loader', () => {
@@ -32,7 +33,7 @@ describe('content loader', () => {
 
   it('explains a 404 as an un-run sync rather than a generic error', async () => {
     server.use(http.get('/content/missing.json', () => new HttpResponse(null, { status: 404 })));
-    const error = await loadCourse('missing.json').catch((e) => e as ApiError);
+    const error = await expectApiError(loadCourse('missing.json'));
     expect(error).toBeInstanceOf(ApiError);
     expect(error.code).toBe('content_not_synced');
     // The message has to name the fix, because this only ever happens to a developer.
@@ -41,7 +42,7 @@ describe('content loader', () => {
 
   it('reports other HTTP failures distinctly', async () => {
     server.use(http.get('/content/broken.json', () => new HttpResponse(null, { status: 500 })));
-    const error = await loadCourse('broken.json').catch((e) => e as ApiError);
+    const error = await expectApiError(loadCourse('broken.json'));
     expect(error.code).toBe('http_500');
   });
 
@@ -51,13 +52,13 @@ describe('content loader', () => {
         HttpResponse.text('{not json', { headers: { 'Content-Type': 'application/json' } }),
       ),
     );
-    const error = await loadCourse('bad.json').catch((e) => e as ApiError);
+    const error = await expectApiError(loadCourse('bad.json'));
     expect(error.code).toBe('content_parse_error');
   });
 
   it('reports a transport failure as a network error', async () => {
     server.use(http.get('/content/offline.json', () => HttpResponse.error()));
-    const error = await loadCourse('offline.json').catch((e) => e as ApiError);
+    const error = await expectApiError(loadCourse('offline.json'));
     expect(error.code).toBe('network_error');
   });
 

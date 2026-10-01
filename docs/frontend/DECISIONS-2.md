@@ -54,3 +54,45 @@ backend error messages are bilingual English/Roman Urdu.
 ## D-009 — `content/` ships as versioned JSON in Git
 The files are small (tens of KB), are reviewable in a PR, and are configuration rather than data.
 No build artefacts or datasets are committed.
+
+## D-010 — Mock API server as a separate process, not MSW in the browser
+A browser-side MSW worker would have meant shipping mock handlers inside the application bundle and
+gating them on an env var — one mistake away from a build that serves fake data to a real student.
+A standalone Node server (`frontend/mock-server/server.mjs`) cannot leak into production, and it
+exercises the real network stack including the XHR upload path. It is labelled four ways at once:
+`X-Haafiz-Mock: 1` on every response, `service: "haafiz-mock-api"` from `/api/health`, the
+`VITE_DEMO_MODE` banner, and 404s on every endpoint Agent 1 has not built.
+Cost: a second terminal. Accepted.
+
+## D-011 — Mock and MSW reproduce Agent 1's real error envelope, not FastAPI's default
+Both initially returned `{"detail": …}`, which is FastAPI's default but NOT what this backend sends:
+`backend/app/main.py` serialises `{"error": code, "message": "English / Roman Urdu", "file"?, "details"?}`
+and puts 422 field paths in `details.fields`. They were rewritten to match. A mock that disagrees with
+the server it stands in for is worse than no mock — it makes green tests meaningless.
+
+## D-012 — Frontend tests live in two places, and that is deliberate
+Unit tests sit beside their source (`src/**/*.test.ts[x]`); page-level integration tests sit in the
+repository-level `tests/frontend/` named in the brief. Files outside the Vite root cannot resolve
+`msw` or `@testing-library/*`, because `node_modules` is in `frontend/`. Rather than symlink
+node_modules to the repo root (invisible, breaks on a fresh clone) or alias a dozen packages, those
+tests import everything through `src/test/harness.tsx`, which lives inside the root and re-exports
+what they need. Two `tsconfig` path entries cover the injected JSX runtime.
+
+## D-013 — The XHR transport is doubled in upload tests; nothing else is
+Sending a `FormData` containing a `File` through jsdom's XMLHttpRequest under MSW never settles — a
+plain-string body works, so it is jsdom's multipart serialisation, not our code. Rather than drop the
+coverage or leave a hanging test, `src/test/fakeXhr.ts` replaces the transport while the page, the
+validation, the toasts, the progress bar and the job polling all stay real. The multipart body itself
+is asserted directly against `buildUploadForm`, which was extracted for that purpose. The limitation
+is stated in MORNING_REPORT-2.md.
+
+## D-014 — The Library page states its own coverage
+20 of 68 categories have a course. The page says "20 of 68 categories have a curated course so far"
+and lists every empty category of the selected field with a "coming soon" badge. Hiding them would
+imply the taxonomy is complete; filling them with placeholder courses would be fabrication. Saying
+the number is the only honest option (RULE 5).
+
+## D-015 — Coverage thresholds are enforced in the config, not just reported
+`vite.config.ts` fails the run below 80% statements / 80% branches / 70% functions / 80% lines, and
+excludes the test files themselves, type-only modules and `main.tsx` from the measurement. Counting
+tests as covered code inflates the number and measures nothing.

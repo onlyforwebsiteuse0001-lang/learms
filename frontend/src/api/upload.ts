@@ -75,6 +75,21 @@ export interface UploadHandle {
 }
 
 /**
+ * Builds the multipart body.
+ *
+ * Split out from `uploadDocuments` because the field name IS the contract: Agent 1's
+ * handler is `upload_documents(files: list[UploadFile] = File(...))`, so anything other
+ * than `files` is a 422 that no amount of frontend retrying will fix. Having it as a pure
+ * function means that contract is asserted directly in a unit test instead of only
+ * implicitly, through a network call.
+ */
+export function buildUploadForm(files: File[]): FormData {
+  const form = new FormData();
+  for (const file of files) form.append('files', file, file.name);
+  return form;
+}
+
+/**
  * Uploads via XMLHttpRequest, not fetch.
  *
  * `fetch` gives no upload-progress events — there is no request-body streaming progress
@@ -93,9 +108,7 @@ export function uploadDocuments(
   const xhr = new XMLHttpRequest();
 
   const promise = new Promise<UploadBatchResponse>((resolve, reject) => {
-    const form = new FormData();
-    // Field name must be `files` — see `upload_documents(files: list[UploadFile] = File(...))`.
-    for (const file of files) form.append('files', file, file.name);
+    const form = buildUploadForm(files);
 
     xhr.open('POST', apiUrl('/api/v1/documents/upload'));
     xhr.responseType = 'text';

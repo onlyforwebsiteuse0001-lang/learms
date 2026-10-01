@@ -32,3 +32,15 @@ BLOCKERS:
   and refuses to overwrite curated files (D-007, RULE 5).
 - Library UI now states coverage honestly ("20 of 68 categories…") and lists the empty
   categories of the selected field as "coming soon".
+
+## Step 3-4 — mock API + tests (checkpoint)
+- `frontend/mock-server/server.mjs` — contract double for Agent 1's deployed endpoints,
+  using his real `{error, message, file, details}` envelope. Every response carries
+  `X-Haafiz-Mock: 1`; proposed endpoints 404 on purpose. Concept graph is read from the
+  curated library, not invented.
+- Test scaffolding: `src/test/{setup.ts,utils.tsx,harness.tsx,fakeXhr.ts,mocks/*}`.
+- 297 frontend tests across 17 files, **92.9% statement coverage** (thresholds enforced
+  in vite.config.ts at 80/80/70/80).
+- 36 Python tests in `tests/content/test_content_library.py` — library consistency,
+  builder determinism, generator refusal-without-key.
+- `npm run build` and `tsc --noEmit` both clean.

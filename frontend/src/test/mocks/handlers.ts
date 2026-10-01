@@ -40,6 +40,15 @@ export const tokenResponse: TokenResponse = {
   student_id: TEST_STUDENT_ID,
 };
 
+export const textPageFixture = {
+  text_id: 'text-1',
+  page_number: 1,
+  content: 'A limit describes the value a function approaches.',
+  char_count: 49,
+  extraction_method: 'pymupdf',
+  confidence: null,
+};
+
 export const documentFixture: DocumentRecord = {
   document_id: 'doc-1',
   original_name: 'calculus-notes.pdf',
@@ -185,7 +194,9 @@ export const handlers = [
 
   http.post('/api/v1/auth/login', async ({ request }) => {
     const body = (await request.json()) as { email?: string; password?: string };
-    if (body.password === 'wrong') {
+    // Any password beginning with "wrong" is rejected. It must still be >= 8 characters
+    // so it gets past the form's own client-side rule and actually reaches the server.
+    if ((body.password ?? '').startsWith('wrong')) {
       return apiError(401, 'invalid_credentials', 'Incorrect email or password / Email ya password ghalat hai');
     }
     return HttpResponse.json(tokenResponse);
@@ -201,24 +212,13 @@ export const handlers = [
     if (params.documentId !== documentFixture.document_id) {
       return apiError(404, 'not_found', 'Document not found / Document nahi mila');
     }
-    return HttpResponse.json({ ...documentFixture, text_pages: [] });
+    return HttpResponse.json({ ...documentFixture, text_pages: [textPageFixture] });
   }),
 
   http.get('/api/v1/documents/:documentId/text', ({ request }) => {
     const denied = requireAuth(request);
     if (denied) return denied;
-    return HttpResponse.json(
-      paginated([
-        {
-          text_id: 'text-1',
-          page_number: 1,
-          content: 'A limit describes the value a function approaches.',
-          char_count: 49,
-          extraction_method: 'pymupdf',
-          confidence: null,
-        },
-      ]),
-    );
+    return HttpResponse.json(paginated([textPageFixture]));
   }),
 
   http.delete('/api/v1/documents/:documentId', ({ request }) =>
@@ -303,6 +303,28 @@ export const handlers = [
       answers: [{ question_id: 'q-1', correct: true, mastery_before: 25, mastery_after: 71 }],
     }),
   ),
+
+  /*
+   * PROPOSED endpoints. Agent 1 has not built these, so they answer 404 here exactly as
+   * the real server does. That is what lets a page test assert the honest "pending
+   * backend" panel instead of a mocked feature that does not exist.
+   *
+   * They are declared (rather than left unhandled) only because `onUnhandledRequest:
+   * 'error'` would otherwise fail the run before the UI could react.
+   */
+  ...[
+    'tutor/message',
+    'quiz/next',
+    'quiz/answer',
+    'explain/grade',
+    'planner/schedule',
+    'planner/catchup',
+    'exam/start',
+  ].map((path) =>
+    http.post(`/api/v1/${path}`, () => apiError(404, 'not_found', 'Not Found')),
+  ),
+  http.post('/api/v1/exam/:examId/submit', () => apiError(404, 'not_found', 'Not Found')),
+  http.get('/api/v1/analytics/mastery-history', () => apiError(404, 'not_found', 'Not Found')),
 
   // The static content library. Tests import the same JSON the app ships.
   http.get('/content/taxonomy.json', () =>

@@ -1,5 +1,6 @@
 import type { ReactElement, ReactNode } from 'react';
 import { render, type RenderOptions, type RenderResult } from '@testing-library/react';
+import { ApiError } from '../api/errors';
 import { MemoryRouter } from 'react-router-dom';
 import { I18nProvider } from '../i18n';
 import type { Locale } from '../i18n';
@@ -65,3 +66,20 @@ export function renderWithProviders(ui: ReactElement, options: Options = {}): Re
 
 /** Let pending microtasks and any `setTimeout(0)` work flush. */
 export const tick = (ms = 0) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * Awaits a call that is expected to fail and returns the normalised error.
+ *
+ * `promise.catch((e) => e as ApiError)` types the result as a union of the success value
+ * and the error, which makes every later assertion a cast. This narrows properly and
+ * fails loudly if the call unexpectedly succeeds.
+ */
+export async function expectApiError(promise: Promise<unknown>): Promise<ApiError> {
+  try {
+    await promise;
+  } catch (caught) {
+    if (caught instanceof ApiError) return caught;
+    throw caught;
+  }
+  throw new Error('expected the call to reject with an ApiError, but it resolved');
+}
