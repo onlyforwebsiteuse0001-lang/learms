@@ -9,20 +9,20 @@
 | Phase | Name | State |
 |---|---|---|
 | 0 | Setup + Audit | ✅ DONE (see AUDIT-REPORT-8.md) |
-| 1 | Blocker triage | 🔄 IN PROGRESS |
-| 2 | Integration (security + research) | ⏳ |
-| 3 | Full test suite | ⏳ |
-| 4 | Docker / native runtime verification | ⏳ (Docker N/A → native fallback) |
-| 5 | CI/CD workflows | ⏳ |
-| 6 | Documentation | ⏳ |
-| 7 | Content verification | ⏳ |
-| 8 | v1.5.0 tag + GitHub release | ⏳ |
-| 9 | E2E verification | ⏳ |
-| 10 | Cleanup | ⏳ |
-| 11 | v1.6.0 roadmap + issues | ⏳ |
-| 12 | Load/security scans | ⏳ |
-| 13 | Morning report | ⏳ |
-| 14 | Final commit + push + PR | ⏳ |
+| 1 | Blocker triage | ✅ DONE |
+| 2 | Integration (security + research) | ✅ DONE |
+| 3 | Full test suite | ✅ DONE |
+| 4 | Docker / native runtime verification | ✅ DONE (native equivalent + static) |
+| 5 | CI/CD workflows | ✅ DONE |
+| 6 | Documentation | ✅ DONE |
+| 7 | Content verification | ✅ DONE |
+| 8 | v1.5.0 tag + GitHub release | ✅ DONE (v1.5.0 published) |
+| 9 | E2E verification | ✅ DONE |
+| 10 | Cleanup | ✅ DONE (PRs closed, branches kept) |
+| 11 | v1.6.0 roadmap + issues | ✅ DONE (#7–#16) |
+| 12 | Load/security scans | ✅ DONE |
+| 13 | Morning report | ✅ DONE |
+| 14 | Final commit + push + PR | ✅ DONE (PR #6 merged) |
 
 ## Key facts (do not re-derive)
 

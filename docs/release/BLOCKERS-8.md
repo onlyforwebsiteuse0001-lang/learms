@@ -8,3 +8,8 @@
 | B-4 | Briefing inaccuracies (PR#1 already merged; venv junk absent) | Low | RESOLVED | Real state recorded in AUDIT-REPORT-8 §6 |
 
 _GitHub auth: working (gh CLI OK). No credential blockers._
+
+## Closure (2026-10-01 09:05)
+- B-1 CLOSED-mitigated: native equivalent stack + static verification + docker.yml CI.
+- B-3 RESOLVED-by-decision: D-6 (library-level in v1.5.0, wiring in v1.6.0 #11).
+- No open blockers remain for v1.5.0.

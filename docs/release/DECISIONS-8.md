@@ -17,3 +17,13 @@ Sandbox lacks Docker → demo/readiness proven via native services + static insp
 
 ## D-6 (anticipated): Security package scope for v1.5.0
 Land `security/` as a tested library + document integration contract; do NOT hot-wire into `backend/app` mid-release without full regression capacity — verified during Phase 3 testing. (Final call recorded after test run.)
+
+## D-6 (final): Security package ships as tested library in v1.5.0
+Hot-wiring into backend request middleware deferred to v1.6.0 (issue #11) to avoid a
+mid-release regression risk. Rationale: package is proven (20/20), request-path changes
+need a dedicated regression pass + RLS design review.
+
+## D-7: Research PRs #2/#3/#4 closed unmerged
+Content consolidated tree-level into docs/research-all/ (PR #6). Root-based PRs would
+have erased backend/frontend/content if merged. Branches retained as archives; remote
+branch deletion left to repo owner (destructive, outside session-branch scope).
