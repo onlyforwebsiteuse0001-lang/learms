@@ -1,0 +1,543 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-30",
+  "fields": [
+    {
+      "id": "natural_sciences",
+      "name": "Natural Sciences",
+      "name_ur": "طبیعی علوم",
+      "description": "Physics, chemistry, biology, mathematics and the earth sciences.",
+      "categories": [
+        {
+          "id": "physics",
+          "name": "Physics",
+          "name_ur": "طبیعیات",
+          "courses": [
+            "physics_mechanics"
+          ]
+        },
+        {
+          "id": "chemistry",
+          "name": "Chemistry",
+          "name_ur": "کیمیا",
+          "courses": []
+        },
+        {
+          "id": "biology",
+          "name": "Biology",
+          "name_ur": "حیاتیات",
+          "courses": []
+        },
+        {
+          "id": "mathematics",
+          "name": "Mathematics",
+          "name_ur": "ریاضی",
+          "courses": []
+        },
+        {
+          "id": "environmental_science",
+          "name": "Environmental Science",
+          "name_ur": "ماحولیاتی سائنس",
+          "courses": []
+        },
+        {
+          "id": "earth_space_science",
+          "name": "Earth & Space Science",
+          "name_ur": "ارضی و فضائی سائنس",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "it_computing",
+      "name": "IT & Computing",
+      "name_ur": "آئی ٹی و کمپیوٹنگ",
+      "description": "Computing disciplines following the HEC/NCEAC Computing Curricula 2023 structure.",
+      "categories": [
+        {
+          "id": "computer_science",
+          "name": "Computer Science",
+          "name_ur": "کمپیوٹر سائنس",
+          "courses": [
+            "programming_fundamentals"
+          ]
+        },
+        {
+          "id": "software_engineering",
+          "name": "Software Engineering",
+          "name_ur": "سافٹ ویئر انجینئرنگ",
+          "courses": []
+        },
+        {
+          "id": "web_development",
+          "name": "Web Development",
+          "name_ur": "ویب ڈویلپمنٹ",
+          "courses": [
+            "web_development"
+          ]
+        },
+        {
+          "id": "data_science_ai",
+          "name": "Data Science & AI",
+          "name_ur": "ڈیٹا سائنس و مصنوعی ذہانت",
+          "courses": [
+            "ai_machine_learning",
+            "data_science"
+          ]
+        },
+        {
+          "id": "cyber_security",
+          "name": "Cyber Security",
+          "name_ur": "سائبر سیکیورٹی",
+          "courses": [
+            "cyber_security"
+          ]
+        },
+        {
+          "id": "networks_cloud",
+          "name": "Networks & Cloud",
+          "name_ur": "نیٹ ورکس و کلاؤڈ",
+          "courses": []
+        },
+        {
+          "id": "mobile_development",
+          "name": "Mobile Development",
+          "name_ur": "موبائل ڈویلپمنٹ",
+          "courses": []
+        },
+        {
+          "id": "database_systems",
+          "name": "Database Systems",
+          "name_ur": "ڈیٹابیس سسٹمز",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "health_medicine",
+      "name": "Health & Medicine",
+      "name_ur": "صحت و طب",
+      "description": "PMDC/PNC/PPC-regulated clinical and allied health programmes.",
+      "categories": [
+        {
+          "id": "mbbs_medicine",
+          "name": "MBBS & Medicine",
+          "name_ur": "ایم بی بی ایس و طب",
+          "courses": [
+            "mbbs_foundation"
+          ]
+        },
+        {
+          "id": "nursing",
+          "name": "Nursing",
+          "name_ur": "نرسنگ",
+          "courses": [
+            "nursing_fundamentals"
+          ]
+        },
+        {
+          "id": "pharmacy",
+          "name": "Pharmacy",
+          "name_ur": "فارمیسی",
+          "courses": [
+            "pharmacy_pharmaceutics"
+          ]
+        },
+        {
+          "id": "dentistry",
+          "name": "Dentistry",
+          "name_ur": "دندان سازی",
+          "courses": []
+        },
+        {
+          "id": "allied_health",
+          "name": "Allied Health Sciences",
+          "name_ur": "الائیڈ ہیلتھ سائنسز",
+          "courses": []
+        },
+        {
+          "id": "public_health",
+          "name": "Public Health",
+          "name_ur": "پبلک ہیلتھ",
+          "courses": []
+        },
+        {
+          "id": "physiotherapy",
+          "name": "Physiotherapy",
+          "name_ur": "فزیوتھراپی",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "business_accounting",
+      "name": "Business & Accounting",
+      "name_ur": "کاروبار و اکاؤنٹنگ",
+      "description": "Professional accountancy bodies (ACCA, ICMAP, ICAP) and university business programmes.",
+      "categories": [
+        {
+          "id": "accounting_acca",
+          "name": "ACCA",
+          "name_ur": "اے سی سی اے",
+          "courses": [
+            "acca_financial_accounting"
+          ]
+        },
+        {
+          "id": "management_accounting_cma",
+          "name": "CMA / ICMAP",
+          "name_ur": "سی ایم اے",
+          "courses": [
+            "cma_management_accounting"
+          ]
+        },
+        {
+          "id": "chartered_accountancy_ca",
+          "name": "CA / ICAP",
+          "name_ur": "سی اے",
+          "courses": [
+            "ca_financial_reporting"
+          ]
+        },
+        {
+          "id": "business_administration",
+          "name": "Business Administration",
+          "name_ur": "بزنس ایڈمنسٹریشن",
+          "courses": []
+        },
+        {
+          "id": "finance_banking",
+          "name": "Finance & Banking",
+          "name_ur": "فنانس و بینکنگ",
+          "courses": []
+        },
+        {
+          "id": "marketing",
+          "name": "Marketing",
+          "name_ur": "مارکیٹنگ",
+          "courses": []
+        },
+        {
+          "id": "economics_business",
+          "name": "Business Economics",
+          "name_ur": "کاروباری معاشیات",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering",
+      "name_ur": "انجینئرنگ",
+      "description": "PEC-accredited engineering disciplines.",
+      "categories": [
+        {
+          "id": "civil",
+          "name": "Civil Engineering",
+          "name_ur": "سول انجینئرنگ",
+          "courses": [
+            "civil_structural_analysis"
+          ]
+        },
+        {
+          "id": "mechanical",
+          "name": "Mechanical Engineering",
+          "name_ur": "مکینیکل انجینئرنگ",
+          "courses": [
+            "mechanical_thermodynamics"
+          ]
+        },
+        {
+          "id": "electrical",
+          "name": "Electrical Engineering",
+          "name_ur": "الیکٹریکل انجینئرنگ",
+          "courses": [
+            "electrical_circuit_analysis"
+          ]
+        },
+        {
+          "id": "electronics_telecom",
+          "name": "Electronics & Telecom",
+          "name_ur": "الیکٹرانکس و ٹیلی کام",
+          "courses": []
+        },
+        {
+          "id": "chemical",
+          "name": "Chemical Engineering",
+          "name_ur": "کیمیکل انجینئرنگ",
+          "courses": []
+        },
+        {
+          "id": "software_engineering_pec",
+          "name": "Software Engineering (PEC)",
+          "name_ur": "سافٹ ویئر انجینئرنگ",
+          "courses": []
+        },
+        {
+          "id": "mechatronics",
+          "name": "Mechatronics",
+          "name_ur": "میکاٹرانکس",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "name_ur": "قانون",
+      "description": "Five-year LLB under HEC and Pakistan Bar Council rules.",
+      "categories": [
+        {
+          "id": "llb_foundation",
+          "name": "LLB Foundation",
+          "name_ur": "ایل ایل بی بنیادی",
+          "courses": []
+        },
+        {
+          "id": "constitutional_law",
+          "name": "Constitutional Law",
+          "name_ur": "آئینی قانون",
+          "courses": [
+            "llb_constitutional_law"
+          ]
+        },
+        {
+          "id": "criminal_law",
+          "name": "Criminal Law",
+          "name_ur": "فوجداری قانون",
+          "courses": []
+        },
+        {
+          "id": "corporate_commercial_law",
+          "name": "Corporate & Commercial Law",
+          "name_ur": "کارپوریٹ و تجارتی قانون",
+          "courses": []
+        },
+        {
+          "id": "international_law",
+          "name": "International Law",
+          "name_ur": "بین الاقوامی قانون",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "name_ur": "تعلیم",
+      "description": "Teacher education and educational sciences.",
+      "categories": [
+        {
+          "id": "b_ed_teaching",
+          "name": "B.Ed & Teaching Methods",
+          "name_ur": "بی ایڈ و طریقۂ تدریس",
+          "courses": [
+            "teaching_methods"
+          ]
+        },
+        {
+          "id": "educational_psychology",
+          "name": "Educational Psychology",
+          "name_ur": "تعلیمی نفسیات",
+          "courses": []
+        },
+        {
+          "id": "curriculum_assessment",
+          "name": "Curriculum & Assessment",
+          "name_ur": "نصاب و جانچ",
+          "courses": []
+        },
+        {
+          "id": "special_education",
+          "name": "Special Education",
+          "name_ur": "خصوصی تعلیم",
+          "courses": []
+        },
+        {
+          "id": "educational_leadership",
+          "name": "Educational Leadership",
+          "name_ur": "تعلیمی قیادت",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "social_sciences",
+      "name": "Social Sciences",
+      "name_ur": "سماجی علوم",
+      "description": "Human behaviour, society, politics and development.",
+      "categories": [
+        {
+          "id": "psychology",
+          "name": "Psychology",
+          "name_ur": "نفسیات",
+          "courses": [
+            "intro_psychology"
+          ]
+        },
+        {
+          "id": "sociology",
+          "name": "Sociology",
+          "name_ur": "عمرانیات",
+          "courses": []
+        },
+        {
+          "id": "political_science",
+          "name": "Political Science",
+          "name_ur": "سیاسیات",
+          "courses": []
+        },
+        {
+          "id": "international_relations",
+          "name": "International Relations",
+          "name_ur": "بین الاقوامی تعلقات",
+          "courses": []
+        },
+        {
+          "id": "anthropology",
+          "name": "Anthropology",
+          "name_ur": "بشریات",
+          "courses": []
+        },
+        {
+          "id": "development_studies",
+          "name": "Development Studies",
+          "name_ur": "ترقیاتی مطالعات",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "arts_humanities",
+      "name": "Arts & Humanities",
+      "name_ur": "فنون و علومِ انسانی",
+      "description": "Literature, history, philosophy, religious studies and the fine arts.",
+      "categories": [
+        {
+          "id": "english_literature",
+          "name": "English Literature",
+          "name_ur": "انگریزی ادب",
+          "courses": []
+        },
+        {
+          "id": "urdu_literature",
+          "name": "Urdu Literature",
+          "name_ur": "اردو ادب",
+          "courses": [
+            "urdu_literature"
+          ]
+        },
+        {
+          "id": "history",
+          "name": "History",
+          "name_ur": "تاریخ",
+          "courses": []
+        },
+        {
+          "id": "philosophy",
+          "name": "Philosophy",
+          "name_ur": "فلسفہ",
+          "courses": []
+        },
+        {
+          "id": "islamic_studies",
+          "name": "Islamic Studies",
+          "name_ur": "اسلامیات",
+          "courses": []
+        },
+        {
+          "id": "fine_arts",
+          "name": "Fine Arts",
+          "name_ur": "فنونِ لطیفہ",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "agriculture_vet",
+      "name": "Agriculture & Veterinary",
+      "name_ur": "زراعت و حیوانیات",
+      "description": "Crop science, livestock, veterinary medicine and food systems.",
+      "categories": [
+        {
+          "id": "agronomy_crop_science",
+          "name": "Agronomy & Crop Science",
+          "name_ur": "زراعت و فصلیات",
+          "courses": [
+            "agronomy_principles"
+          ]
+        },
+        {
+          "id": "animal_husbandry",
+          "name": "Animal Husbandry",
+          "name_ur": "حیوانی پرورش",
+          "courses": []
+        },
+        {
+          "id": "veterinary_medicine",
+          "name": "Veterinary Medicine",
+          "name_ur": "ویٹرنری طب",
+          "courses": []
+        },
+        {
+          "id": "food_science",
+          "name": "Food Science & Technology",
+          "name_ur": "غذائی سائنس",
+          "courses": []
+        },
+        {
+          "id": "agricultural_economics",
+          "name": "Agricultural Economics",
+          "name_ur": "زرعی معاشیات",
+          "courses": []
+        }
+      ]
+    },
+    {
+      "id": "media_communication",
+      "name": "Media & Communication",
+      "name_ur": "ابلاغ و ذرائع ابلاغ",
+      "description": "Journalism, mass communication and digital media production.",
+      "categories": [
+        {
+          "id": "journalism",
+          "name": "Journalism",
+          "name_ur": "صحافت",
+          "courses": [
+            "journalism_reporting"
+          ]
+        },
+        {
+          "id": "mass_communication",
+          "name": "Mass Communication",
+          "name_ur": "ابلاغِ عامہ",
+          "courses": []
+        },
+        {
+          "id": "digital_media",
+          "name": "Digital Media",
+          "name_ur": "ڈیجیٹل میڈیا",
+          "courses": []
+        },
+        {
+          "id": "film_television",
+          "name": "Film & Television",
+          "name_ur": "فلم و ٹیلی ویژن",
+          "courses": []
+        },
+        {
+          "id": "public_relations",
+          "name": "Public Relations",
+          "name_ur": "تعلقاتِ عامہ",
+          "courses": []
+        },
+        {
+          "id": "advertising",
+          "name": "Advertising",
+          "name_ur": "اشتہارات",
+          "courses": []
+        }
+      ]
+    }
+  ]
+}

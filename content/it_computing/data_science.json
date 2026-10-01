@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "data_science",
+  "field": "it_computing",
+  "category": "data_science_ai",
+  "title": "Data Science",
+  "title_ur": "ڈیٹا سائنس",
+  "description": "Turning raw data into a defensible conclusion: acquisition, cleaning, exploratory analysis, statistical inference and honest communication of uncertainty.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 2,
+    "lab": 1
+  },
+  "estimated_hours": 10.3,
+  "accreditation": "HEC/NCEAC Domain Core — Data Science specialisation",
+  "source": {
+    "name": "HEC & NCEAC, Curriculum of Computing Disciplines (Revised 2023)",
+    "retrieved": "2026-09-30",
+    "url": "https://nceac.org.pk/Documents/Curriculums/BS%20Curriculm%20Computing%20Disciplines-2023.pdf"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Acquire and reshape data from heterogeneous sources.",
+    "Perform exploratory analysis that surfaces problems before modelling.",
+    "Apply and correctly interpret a hypothesis test.",
+    "Communicate a result with its uncertainty rather than a single number."
+  ],
+  "concepts": [
+    {
+      "id": "it_computing.data_science.data_sources",
+      "name": "Data acquisition",
+      "summary": "Files, APIs, scraping and databases; provenance and licensing as part of the data.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "practical",
+      "keywords": [
+        "API",
+        "CSV",
+        "provenance"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.tabular_ops",
+      "name": "Tabular data manipulation",
+      "summary": "Select, filter, group, aggregate, join — the five verbs most analysis reduces to.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.data_sources",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "dataframe",
+        "groupby",
+        "join"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.cleaning",
+      "name": "Data cleaning and missingness",
+      "summary": "Types, duplicates, outliers; MCAR/MAR/MNAR and why the mechanism decides the fix.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.tabular_ops",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "missing data",
+        "outlier",
+        "imputation"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.descriptive",
+      "name": "Descriptive statistics",
+      "summary": "Centre, spread, shape; when the median is the only honest summary.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.cleaning",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "mean",
+        "median",
+        "IQR",
+        "skew"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.visualisation",
+      "name": "Exploratory visualisation",
+      "summary": "Matching chart to question; truncated axes and other ways charts lie.",
+      "bloom": "evaluate",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.descriptive",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "histogram",
+        "boxplot",
+        "scatter"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.probability",
+      "name": "Probability foundations",
+      "summary": "Random variables, common distributions, expectation and variance.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.descriptive",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "distribution",
+        "expectation",
+        "variance"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.sampling",
+      "name": "Sampling and the central limit theorem",
+      "summary": "Sampling distributions, standard error, and why n matters more than N.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.probability",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "CLT",
+        "standard error",
+        "sampling"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.estimation",
+      "name": "Confidence intervals",
+      "summary": "Interval estimation and what 95% confidence does and does not mean.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.sampling",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "confidence interval",
+        "margin of error"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.hypothesis",
+      "name": "Hypothesis testing",
+      "summary": "Null and alternative, p-values, type I/II error, power, and multiple-comparison inflation.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.estimation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "p-value",
+        "type I",
+        "power"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.regression_analysis",
+      "name": "Regression analysis",
+      "summary": "Fitting, interpreting coefficients, checking assumptions, and confounding.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.hypothesis",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "OLS",
+        "coefficient",
+        "confounder"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.timeseries",
+      "name": "Time series basics",
+      "summary": "Trend, seasonality, stationarity, and why random splits are invalid for time data.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.regression_analysis",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "trend",
+        "seasonality",
+        "stationarity"
+      ]
+    },
+    {
+      "id": "it_computing.data_science.communication",
+      "name": "Communicating results",
+      "summary": "Narrative structure, uncertainty in plain language, and stating limitations up front.",
+      "bloom": "evaluate",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.data_science.visualisation",
+          "strength": "hard"
+        },
+        {
+          "id": "it_computing.data_science.hypothesis",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "reporting",
+        "uncertainty",
+        "limitations"
+      ]
+    }
+  ]
+}

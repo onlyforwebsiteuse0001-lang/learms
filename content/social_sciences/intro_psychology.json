@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "intro_psychology",
+  "field": "social_sciences",
+  "category": "psychology",
+  "title": "Introduction to Psychology",
+  "title_ur": "نفسیات کا تعارف",
+  "description": "The scientific study of behaviour and mental processes: perspectives, methods, and the core findings of each major subfield.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 3,
+    "lab": 0
+  },
+  "estimated_hours": 12.8,
+  "accreditation": "HEC — BS Psychology core",
+  "source": {
+    "name": "HEC revised curriculum — BS Psychology",
+    "retrieved": "2026-09-30",
+    "url": "https://www.hec.gov.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Compare the major theoretical perspectives in psychology.",
+    "Evaluate the design of a psychological study.",
+    "Explain memory, learning and motivation using established models.",
+    "Distinguish normal variation from clinically significant behaviour."
+  ],
+  "concepts": [
+    {
+      "id": "social_sciences.intro_psychology.what_is_psychology",
+      "name": "Psychology as a science",
+      "summary": "Goals of psychology, and what separates it from folk explanation of behaviour.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "description",
+        "prediction",
+        "explanation"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.perspectives",
+      "name": "Theoretical perspectives",
+      "summary": "Biological, behavioural, cognitive, psychodynamic, humanistic and sociocultural views.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.what_is_psychology",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "psychodynamic",
+        "cognitive",
+        "humanistic"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.research_methods",
+      "name": "Research methods",
+      "summary": "Experiment, correlation, case study and survey; operational definitions and control.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.what_is_psychology",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "variable",
+        "control group",
+        "correlation"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.ethics_research",
+      "name": "Research ethics",
+      "summary": "Informed consent, deception, debriefing and the harm principle.",
+      "bloom": "evaluate",
+      "difficulty": 3,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.research_methods",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "consent",
+        "debriefing",
+        "IRB"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.biological_basis",
+      "name": "Biological basis of behaviour",
+      "summary": "Neurons, neurotransmitters, brain structures and the nervous system divisions.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.perspectives",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "neuron",
+        "synapse",
+        "cortex"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.sensation_perception",
+      "name": "Sensation and perception",
+      "summary": "Transduction, thresholds, Gestalt organisation and perceptual constancy.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.biological_basis",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "threshold",
+        "Gestalt",
+        "constancy"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.learning",
+      "name": "Learning",
+      "summary": "Classical and operant conditioning, reinforcement schedules and observational learning.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.perspectives",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "conditioning",
+        "reinforcement",
+        "modelling"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.memory",
+      "name": "Memory",
+      "summary": "Encoding, storage and retrieval; working memory, long-term memory and forgetting.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.learning",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "working memory",
+        "encoding",
+        "retrieval"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.cognition",
+      "name": "Thinking, language and intelligence",
+      "summary": "Problem solving, heuristics and bias, language acquisition, and measuring intelligence.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.memory",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "heuristic",
+        "bias",
+        "IQ"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.motivation_emotion",
+      "name": "Motivation and emotion",
+      "summary": "Drive, incentive and humanistic accounts; theories of emotion.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.learning",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "intrinsic",
+        "Maslow",
+        "James-Lange"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.development",
+      "name": "Developmental psychology",
+      "summary": "Piaget's stages, attachment, and development across the lifespan.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.learning",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Piaget",
+        "attachment",
+        "lifespan"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.personality",
+      "name": "Personality",
+      "summary": "Trait, psychodynamic and humanistic theories; the Big Five and personality assessment.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.perspectives",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "Big Five",
+        "trait",
+        "assessment"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.social_psychology",
+      "name": "Social psychology",
+      "summary": "Attitudes, conformity, obedience, group influence and attribution.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.perspectives",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "conformity",
+        "attribution",
+        "obedience"
+      ]
+    },
+    {
+      "id": "social_sciences.intro_psychology.abnormal",
+      "name": "Psychological disorders",
+      "summary": "Defining abnormality, major diagnostic categories, and the stigma problem.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "social_sciences.intro_psychology.personality",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "DSM",
+        "abnormality",
+        "stigma"
+      ]
+    }
+  ]
+}

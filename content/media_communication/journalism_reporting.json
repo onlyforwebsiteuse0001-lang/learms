@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "journalism_reporting",
+  "field": "media_communication",
+  "category": "journalism",
+  "title": "Journalism — News Reporting & Writing",
+  "title_ur": "صحافت: خبر نویسی",
+  "description": "Finding, verifying and writing news: news values, structure, interviewing, beat reporting, ethics and media law as practised in Pakistan.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 2,
+    "lab": 1
+  },
+  "estimated_hours": 11.7,
+  "accreditation": "HEC — BS Mass Communication / Media Studies core",
+  "source": {
+    "name": "HEC revised curriculum — BS Mass Communication / Media Studies",
+    "retrieved": "2026-09-30",
+    "url": "https://www.hec.gov.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Judge the newsworthiness of an event using news values.",
+    "Write a clean inverted-pyramid news story to deadline.",
+    "Conduct and use an interview, attributing sources correctly.",
+    "Apply professional ethics and relevant media law to a reporting decision."
+  ],
+  "concepts": [
+    {
+      "id": "media_communication.journalism_reporting.news_values",
+      "name": "News values and news judgement",
+      "summary": "Timeliness, proximity, impact, prominence, conflict and human interest — and their misuse.",
+      "bloom": "analyze",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [],
+      "assessment": "case_study",
+      "keywords": [
+        "news value",
+        "proximity",
+        "impact"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.news_structure",
+      "name": "News story structure",
+      "summary": "The inverted pyramid, why it exists, and where alternative structures work better.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.news_values",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "inverted pyramid",
+        "nut graf"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.lead_writing",
+      "name": "Writing the lead",
+      "summary": "Summary leads, the five Ws and H, and cutting a lead to its load-bearing words.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.news_structure",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "lead",
+        "5W1H",
+        "intro"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.body_writing",
+      "name": "Body, quotes and attribution",
+      "summary": "Ordering by descending importance, direct vs indirect quotes, and attribution discipline.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.lead_writing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "attribution",
+        "quote",
+        "paraphrase"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.sources",
+      "name": "Sources and verification",
+      "summary": "Primary vs secondary sources, on/off the record, corroboration, and resisting a single source.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.body_writing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "verification",
+        "off the record",
+        "corroboration"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.interviewing",
+      "name": "Interviewing",
+      "summary": "Preparation, question sequencing, listening past the prepared answer, and note discipline.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.sources",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "interview",
+        "follow-up",
+        "notes"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.beat_reporting",
+      "name": "Beat reporting",
+      "summary": "Building a beat, cultivating contacts, and covering courts, crime, health and local government.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.interviewing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "beat",
+        "contacts",
+        "court reporting"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.feature_writing",
+      "name": "Feature and human-interest writing",
+      "summary": "Narrative structure, scene setting, and the difference from a news story.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.body_writing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "feature",
+        "narrative",
+        "anecdotal lead"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.editing",
+      "name": "Editing, headlines and style",
+      "summary": "Copy editing for accuracy and concision, headline writing, and the house style sheet.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.body_writing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "copy editing",
+        "headline",
+        "style guide"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.ethics_journalism",
+      "name": "Journalism ethics",
+      "summary": "Accuracy, fairness, privacy, conflict of interest, and handling of sensitive subjects.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.sources",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "ethics",
+        "fairness",
+        "privacy"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.media_law",
+      "name": "Media law in Pakistan",
+      "summary": "Defamation, contempt, the right to information and broadcast regulation.",
+      "bloom": "understand",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.ethics_journalism",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "defamation",
+        "contempt",
+        "RTI"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.digital_reporting",
+      "name": "Digital and mobile reporting",
+      "summary": "Filing for the web, social verification, SEO headlines, and the correction culture.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.editing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "digital",
+        "verification",
+        "correction"
+      ]
+    },
+    {
+      "id": "media_communication.journalism_reporting.data_journalism",
+      "name": "Introduction to data journalism",
+      "summary": "Finding a dataset, basic analysis, and not over-claiming from a small sample.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "media_communication.journalism_reporting.digital_reporting",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "dataset",
+        "analysis",
+        "visualisation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "mbbs_foundation",
+  "field": "health_medicine",
+  "category": "mbbs_medicine",
+  "title": "MBBS Foundation: Anatomy, Physiology & Biochemistry",
+  "title_ur": "ایم بی بی ایس بنیادی علوم",
+  "description": "The first-year integrated basic sciences block. Normal structure and normal function first, because every pathology later is described as a deviation from it.",
+  "level": "professional",
+  "estimated_hours": 17.6,
+  "accreditation": "PM&DC — MBBS Year 1 (integrated modular)",
+  "source": {
+    "name": "PM&DC undergraduate MBBS curriculum framework (integrated modular)",
+    "retrieved": "2026-09-30"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Describe gross and microscopic structure of the major organ systems.",
+    "Explain homeostatic control of the cardiovascular, respiratory and renal systems.",
+    "Relate biochemical pathways to their clinical consequences when disrupted.",
+    "Interpret basic normal values and recognise clinically significant deviation."
+  ],
+  "concepts": [
+    {
+      "id": "health_medicine.mbbs_foundation.cell_biology",
+      "name": "Cell structure and transport",
+      "summary": "Membranes, organelles, diffusion, osmosis and active transport as the basis of all physiology.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 60,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "membrane",
+        "osmosis",
+        "ATPase"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.tissues",
+      "name": "General histology",
+      "summary": "The four basic tissue types and how structure follows function in each.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.cell_biology",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "epithelium",
+        "connective",
+        "muscle",
+        "nervous"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.musculoskeletal",
+      "name": "Musculoskeletal anatomy",
+      "summary": "Bones, joints and muscle groups of the limbs; attachments, actions and innervation.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 90,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.tissues",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "origin",
+        "insertion",
+        "innervation"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.cardio_anatomy",
+      "name": "Cardiovascular anatomy",
+      "summary": "Chambers, valves, coronary circulation and the conducting system.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.tissues",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "atrium",
+        "ventricle",
+        "coronary"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.cardio_physiology",
+      "name": "Cardiovascular physiology",
+      "summary": "Cardiac cycle, output, blood pressure regulation and the baroreceptor reflex.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 80,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.cardio_anatomy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "cardiac output",
+        "preload",
+        "baroreceptor"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.respiratory",
+      "name": "Respiratory structure and function",
+      "summary": "Airways, mechanics of ventilation, gas exchange and the oxygen dissociation curve.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 75,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.cardio_physiology",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "ventilation",
+        "V/Q",
+        "dissociation curve"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.renal",
+      "name": "Renal physiology",
+      "summary": "Nephron function, GFR, tubular handling and acid-base balance.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 80,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.cardio_physiology",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "GFR",
+        "nephron",
+        "acid-base"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.gi_system",
+      "name": "Gastrointestinal system",
+      "summary": "Motility, secretion, digestion and absorption along the tract.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.tissues",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "peristalsis",
+        "absorption",
+        "bile"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.neuro",
+      "name": "Neuroanatomy and neurophysiology",
+      "summary": "CNS organisation, ascending and descending tracts, the reflex arc, action potential.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 90,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.cell_biology",
+          "strength": "hard"
+        },
+        {
+          "id": "health_medicine.mbbs_foundation.tissues",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "action potential",
+        "tract",
+        "reflex arc"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.endocrine",
+      "name": "Endocrine regulation",
+      "summary": "Hormone classes, receptor mechanisms and negative feedback axes.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.cell_biology",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "hormone",
+        "feedback",
+        "receptor"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.carbohydrate_metab",
+      "name": "Carbohydrate metabolism",
+      "summary": "Glycolysis, TCA cycle, oxidative phosphorylation and regulation of blood glucose.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 75,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.cell_biology",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "glycolysis",
+        "TCA",
+        "insulin"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.protein_lipid_metab",
+      "name": "Protein and lipid metabolism",
+      "summary": "Amino acid handling, the urea cycle, beta-oxidation and lipoprotein transport.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.carbohydrate_metab",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "urea cycle",
+        "beta-oxidation",
+        "LDL"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.molecular_genetics",
+      "name": "Molecular biology and genetics",
+      "summary": "DNA replication, transcription, translation and the basis of inherited disease.",
+      "bloom": "understand",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.cell_biology",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "replication",
+        "transcription",
+        "mutation"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.immunology",
+      "name": "Basic immunology",
+      "summary": "Innate and adaptive immunity, antigen presentation, and hypersensitivity classes.",
+      "bloom": "understand",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.tissues",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "antibody",
+        "T cell",
+        "hypersensitivity"
+      ]
+    },
+    {
+      "id": "health_medicine.mbbs_foundation.clinical_correlation",
+      "name": "Clinical correlation and normal values",
+      "summary": "Reading common investigations and recognising clinically significant deviation.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "health_medicine.mbbs_foundation.renal",
+          "strength": "hard"
+        },
+        {
+          "id": "health_medicine.mbbs_foundation.cardio_physiology",
+          "strength": "hard"
+        },
+        {
+          "id": "health_medicine.mbbs_foundation.carbohydrate_metab",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "reference range",
+        "interpretation"
+      ]
+    }
+  ]
+}

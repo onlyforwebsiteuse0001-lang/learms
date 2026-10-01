@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "physics_mechanics",
+  "field": "natural_sciences",
+  "category": "physics",
+  "title": "Physics — Classical Mechanics",
+  "title_ur": "کلاسیکی میکانیات",
+  "description": "Motion and the forces that cause it, built up from kinematics to the conservation laws and rotational dynamics.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 4,
+    "theory": 3,
+    "lab": 1
+  },
+  "estimated_hours": 13.8,
+  "accreditation": "HEC — BS Physics core",
+  "source": {
+    "name": "HEC revised curriculum — BS Physics",
+    "retrieved": "2026-09-30",
+    "url": "https://www.hec.gov.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Resolve vectors and apply them to motion in two dimensions.",
+    "Apply Newton's laws to multi-body systems with friction.",
+    "Solve problems using conservation of energy and momentum.",
+    "Analyse rotational motion using torque and angular momentum."
+  ],
+  "concepts": [
+    {
+      "id": "natural_sciences.physics_mechanics.units_vectors",
+      "name": "Units, dimensions and vectors",
+      "summary": "SI units, dimensional analysis as an error check, vector components and products.",
+      "bloom": "apply",
+      "difficulty": 1,
+      "estimated_minutes": 50,
+      "prerequisites": [],
+      "assessment": "numerical",
+      "keywords": [
+        "dimensional analysis",
+        "dot product",
+        "cross product"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.kinematics_1d",
+      "name": "Kinematics in one dimension",
+      "summary": "Displacement, velocity, acceleration and the equations of uniformly accelerated motion.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.units_vectors",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "velocity",
+        "acceleration",
+        "SUVAT"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.kinematics_2d",
+      "name": "Motion in two dimensions",
+      "summary": "Projectile motion and uniform circular motion.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.kinematics_1d",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "projectile",
+        "centripetal",
+        "range"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.newton_laws",
+      "name": "Newton's laws of motion",
+      "summary": "Inertia, F = ma, action-reaction, and free-body diagrams for connected bodies.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.kinematics_2d",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "free body",
+        "net force",
+        "tension"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.friction",
+      "name": "Friction and drag",
+      "summary": "Static versus kinetic friction, the coefficient of friction, and motion on an incline.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.newton_laws",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "friction",
+        "normal force",
+        "incline"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.work_energy",
+      "name": "Work and kinetic energy",
+      "summary": "Work by constant and variable forces, and the work-energy theorem.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.newton_laws",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "work",
+        "kinetic energy",
+        "power"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.potential_energy",
+      "name": "Potential energy and conservation",
+      "summary": "Conservative forces, potential energy functions and mechanical energy conservation.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.work_energy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "conservative force",
+        "mechanical energy"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.momentum",
+      "name": "Linear momentum and impulse",
+      "summary": "Impulse-momentum theorem and conservation of momentum in isolated systems.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.work_energy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "impulse",
+        "momentum conservation"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.collisions",
+      "name": "Collisions",
+      "summary": "Elastic and inelastic collisions in one and two dimensions; the coefficient of restitution.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.momentum",
+          "strength": "hard"
+        },
+        {
+          "id": "natural_sciences.physics_mechanics.potential_energy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "elastic",
+        "inelastic",
+        "restitution"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.com",
+      "name": "Centre of mass",
+      "summary": "Locating the centre of mass and the motion of a system of particles.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.momentum",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "centre of mass",
+        "system of particles"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.rotational_kinematics",
+      "name": "Rotational kinematics",
+      "summary": "Angular displacement, velocity and acceleration; rolling without slipping.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.kinematics_2d",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "angular velocity",
+        "rolling"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.torque_inertia",
+      "name": "Torque and moment of inertia",
+      "summary": "Rotational analogue of Newton's second law; the parallel axis theorem.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.rotational_kinematics",
+          "strength": "hard"
+        },
+        {
+          "id": "natural_sciences.physics_mechanics.newton_laws",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "torque",
+        "moment of inertia",
+        "parallel axis"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.angular_momentum",
+      "name": "Angular momentum",
+      "summary": "Conservation of angular momentum and gyroscopic behaviour.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.torque_inertia",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "angular momentum",
+        "conservation"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.shm",
+      "name": "Simple harmonic motion",
+      "summary": "Restoring force, period, energy in SHM, the pendulum, and damping.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.potential_energy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "SHM",
+        "period",
+        "damping"
+      ]
+    },
+    {
+      "id": "natural_sciences.physics_mechanics.gravitation",
+      "name": "Gravitation",
+      "summary": "Newton's law of gravitation, orbital motion and Kepler's laws.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "natural_sciences.physics_mechanics.angular_momentum",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "gravitation",
+        "orbit",
+        "Kepler"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "acca_financial_accounting",
+  "field": "business_accounting",
+  "category": "accounting_acca",
+  "title": "ACCA FA — Financial Accounting",
+  "title_ur": "اے سی سی اے مالیاتی اکاؤنٹنگ",
+  "description": "Double entry through to a set of published financial statements, including consolidation basics and interpretation.",
+  "level": "professional",
+  "estimated_hours": 13.2,
+  "accreditation": "ACCA Applied Knowledge — Financial Accounting (FA/F3)",
+  "source": {
+    "name": "ACCA Financial Accounting (FA/F3) syllabus and study guide",
+    "retrieved": "2026-09-30",
+    "url": "https://www.accaglobal.com/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Record transactions using double-entry bookkeeping.",
+    "Prepare a trial balance and correct errors found through it.",
+    "Prepare a statement of profit or loss and a statement of financial position.",
+    "Interpret financial statements using standard ratios."
+  ],
+  "concepts": [
+    {
+      "id": "business_accounting.acca_financial_accounting.accounting_framework",
+      "name": "The regulatory framework",
+      "summary": "Purpose of financial reporting, IFRS, and the qualitative characteristics of useful information.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "IFRS",
+        "relevance",
+        "faithful representation"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.accounting_equation",
+      "name": "The accounting equation",
+      "summary": "Assets = capital + liabilities, and why every transaction preserves it.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.accounting_framework",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "assets",
+        "liabilities",
+        "capital"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.double_entry",
+      "name": "Double-entry bookkeeping",
+      "summary": "Debits and credits, ledger accounts, and balancing off.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.accounting_equation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "debit",
+        "credit",
+        "ledger"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.books_of_prime_entry",
+      "name": "Books of prime entry and control accounts",
+      "summary": "Day books, the cash book, and reconciling receivables/payables control accounts.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.double_entry",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "day book",
+        "control account"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.trial_balance",
+      "name": "Trial balance and error correction",
+      "summary": "Errors the trial balance catches, errors it cannot, and the suspense account.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.double_entry",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "suspense",
+        "compensating error"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.accruals",
+      "name": "Accruals and prepayments",
+      "summary": "The accruals concept and matching expense to the period it belongs to.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.trial_balance",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "accrual",
+        "prepayment",
+        "matching"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.depreciation",
+      "name": "Non-current assets and depreciation",
+      "summary": "Capital vs revenue expenditure, straight-line and reducing balance, and disposal.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.accruals",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "depreciation",
+        "carrying amount",
+        "disposal"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.inventory",
+      "name": "Inventory valuation",
+      "summary": "Lower of cost and net realisable value; FIFO and AVCO.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.accruals",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "FIFO",
+        "AVCO",
+        "NRV"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.receivables",
+      "name": "Receivables and irrecoverable debts",
+      "summary": "Irrecoverable debts, allowances, and the effect on profit.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.accruals",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "allowance",
+        "irrecoverable"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.bank_rec",
+      "name": "Bank reconciliation",
+      "summary": "Timing differences, unpresented cheques, and correcting the cash book.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.books_of_prime_entry",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "reconciliation",
+        "unpresented"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.financial_statements",
+      "name": "Preparing financial statements",
+      "summary": "From adjusted trial balance to statement of profit or loss and financial position.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 80,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.depreciation",
+          "strength": "hard"
+        },
+        {
+          "id": "business_accounting.acca_financial_accounting.inventory",
+          "strength": "hard"
+        },
+        {
+          "id": "business_accounting.acca_financial_accounting.receivables",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "SOFP",
+        "SOPL",
+        "statement of changes in equity"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.cash_flow",
+      "name": "Statement of cash flows",
+      "summary": "Operating, investing and financing; the indirect method reconciliation.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.financial_statements",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "indirect method",
+        "operating activities"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.consolidation",
+      "name": "Introduction to consolidation",
+      "summary": "Control, goodwill on acquisition, and non-controlling interests.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.financial_statements",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "goodwill",
+        "NCI",
+        "control"
+      ]
+    },
+    {
+      "id": "business_accounting.acca_financial_accounting.interpretation",
+      "name": "Interpreting financial statements",
+      "summary": "Profitability, liquidity, efficiency and gearing ratios, and their limitations.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "business_accounting.acca_financial_accounting.financial_statements",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "ROCE",
+        "current ratio",
+        "gearing"
+      ]
+    }
+  ]
+}

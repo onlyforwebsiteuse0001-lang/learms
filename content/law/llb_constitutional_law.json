@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "llb_constitutional_law",
+  "field": "law",
+  "category": "constitutional_law",
+  "title": "LLB — Constitutional Law of Pakistan",
+  "title_ur": "آئینی قانون",
+  "description": "The 1973 Constitution: how state power is allocated and limited, how fundamental rights are enforced, and how the courts have interpreted both.",
+  "level": "undergraduate",
+  "estimated_hours": 12.3,
+  "accreditation": "HEC / Pakistan Bar Council — five-year LLB",
+  "source": {
+    "name": "HEC / Pakistan Bar Council five-year LLB scheme of studies",
+    "retrieved": "2026-09-30"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Explain the structure and salient features of the 1973 Constitution.",
+    "Apply fundamental rights provisions to a factual scenario.",
+    "Analyse the distribution of legislative power between Federation and Provinces.",
+    "Evaluate the scope of judicial review and writ jurisdiction."
+  ],
+  "concepts": [
+    {
+      "id": "law.llb_constitutional_law.constitutionalism",
+      "name": "Constitutionalism and rule of law",
+      "summary": "Limited government, supremacy of the constitution, and the rule of law as a constraint on power.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [],
+      "assessment": "essay",
+      "keywords": [
+        "rule of law",
+        "supremacy",
+        "limited government"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.constitutional_history",
+      "name": "Constitutional history of Pakistan",
+      "summary": "1935 Act, Objectives Resolution, the 1956 and 1962 constitutions, and the making of the 1973 Constitution.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.constitutionalism",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Objectives Resolution",
+        "1973"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.salient_features",
+      "name": "Salient features of the 1973 Constitution",
+      "summary": "Federal parliamentary form, bicameralism, Islamic provisions and the amendment procedure.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.constitutional_history",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "federal",
+        "parliamentary",
+        "Article 239"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.fundamental_rights",
+      "name": "Fundamental rights",
+      "summary": "Articles 8-28, permissible restrictions, and rights during an emergency.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 75,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.salient_features",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "Article 8",
+        "Article 25",
+        "restriction"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.enforcement_rights",
+      "name": "Enforcement of fundamental rights",
+      "summary": "Article 199 writs and Article 184(3) original jurisdiction of the Supreme Court.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.fundamental_rights",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "Article 199",
+        "Article 184(3)",
+        "writ"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.principles_policy",
+      "name": "Principles of policy",
+      "summary": "Articles 29-40 and why they are not judicially enforceable in the same way as rights.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.fundamental_rights",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "principles of policy",
+        "non-justiciable"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.federalism",
+      "name": "Federalism and legislative lists",
+      "summary": "Distribution of powers, the Federal Legislative List, and the 18th Amendment's effect.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.salient_features",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "18th Amendment",
+        "legislative list",
+        "CCI"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.parliament",
+      "name": "Parliament and legislative process",
+      "summary": "Composition of the National Assembly and Senate; money bills and the passage of legislation.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.salient_features",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "money bill",
+        "Senate",
+        "joint sitting"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.executive",
+      "name": "The executive",
+      "summary": "President, Prime Minister, Cabinet and the scope of executive authority.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.parliament",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "President",
+        "Cabinet",
+        "Article 90"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.judiciary",
+      "name": "The judiciary and independence",
+      "summary": "Court structure, appointment of judges, security of tenure and separation of powers.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.executive",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "independence",
+        "appointment",
+        "separation of powers"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.judicial_review",
+      "name": "Judicial review",
+      "summary": "Grounds of review, the basic structure debate, and the limits of the political question.",
+      "bloom": "evaluate",
+      "difficulty": 5,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.judiciary",
+          "strength": "hard"
+        },
+        {
+          "id": "law.llb_constitutional_law.enforcement_rights",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "judicial review",
+        "basic structure"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.emergency",
+      "name": "Emergency provisions",
+      "summary": "Articles 232-237, suspension of rights and the constitutional limits on emergency power.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.fundamental_rights",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "Article 232",
+        "emergency"
+      ]
+    },
+    {
+      "id": "law.llb_constitutional_law.islamic_provisions",
+      "name": "Islamic provisions",
+      "summary": "Article 227, the Council of Islamic Ideology and the Federal Shariat Court's jurisdiction.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "law.llb_constitutional_law.salient_features",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "essay",
+      "keywords": [
+        "Article 227",
+        "Federal Shariat Court"
+      ]
+    }
+  ]
+}

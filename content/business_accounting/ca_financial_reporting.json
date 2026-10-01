@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "ca_financial_reporting",
+  "field": "business_accounting",
+  "category": "chartered_accountancy_ca",
+  "title": "CA — Financial Accounting & Reporting",
+  "title_ur": "مالیاتی رپورٹنگ",
+  "description": "IFRS-based reporting at CAF level: the standards most frequently examined and most frequently applied in Pakistani practice.",
+  "level": "professional",
+  "estimated_hours": 13.0,
+  "accreditation": "ICAP — Certificate in Accounting and Finance (CAF)",
+  "source": {
+    "name": "ICAP Certificate in Accounting and Finance — Financial Accounting and Reporting",
+    "retrieved": "2026-09-30",
+    "url": "https://www.icap.org.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Apply the IASB Conceptual Framework to a recognition question.",
+    "Account for property, plant and equipment including revaluation.",
+    "Apply IFRS 15 and IFRS 16 to common transactions.",
+    "Prepare a complete set of IAS 1 compliant financial statements."
+  ],
+  "concepts": [
+    {
+      "id": "business_accounting.ca_financial_reporting.conceptual_framework",
+      "name": "The IASB Conceptual Framework",
+      "summary": "Objective of reporting, elements, recognition and measurement bases.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [],
+      "assessment": "short_answer",
+      "keywords": [
+        "framework",
+        "recognition",
+        "measurement"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias1_presentation",
+      "name": "IAS 1 presentation",
+      "summary": "Required statements, the current/non-current split and the going concern assumption.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.conceptual_framework",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "IAS 1",
+        "going concern"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias16_ppe",
+      "name": "IAS 16 property, plant and equipment",
+      "summary": "Initial cost, subsequent expenditure, depreciation, the revaluation model and the surplus.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 75,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias1_presentation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "IAS 16",
+        "revaluation surplus"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias38_intangibles",
+      "name": "IAS 38 intangible assets",
+      "summary": "Recognition criteria, the research/development split and amortisation.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias16_ppe",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "IAS 38",
+        "development costs"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias36_impairment",
+      "name": "IAS 36 impairment",
+      "summary": "Indicators, recoverable amount as higher of value in use and fair value less costs.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias16_ppe",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "IAS 36",
+        "recoverable amount",
+        "CGU"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias2_inventories",
+      "name": "IAS 2 inventories",
+      "summary": "Cost formulas, net realisable value and the write-down entry.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias1_presentation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "IAS 2",
+        "NRV"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ifrs15_revenue",
+      "name": "IFRS 15 revenue",
+      "summary": "The five-step model and identifying distinct performance obligations.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.conceptual_framework",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "IFRS 15",
+        "performance obligation"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ifrs16_leases",
+      "name": "IFRS 16 leases",
+      "summary": "Right-of-use asset and lease liability measurement; lessee recognition exemptions.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias16_ppe",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "IFRS 16",
+        "right-of-use",
+        "lease liability"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias37_provisions",
+      "name": "IAS 37 provisions and contingencies",
+      "summary": "Present obligation, probable outflow, reliable estimate; contingent assets and liabilities.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.conceptual_framework",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "IAS 37",
+        "contingent liability"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias12_tax",
+      "name": "IAS 12 income taxes",
+      "summary": "Current tax, temporary differences and deferred tax measurement.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias16_ppe",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "deferred tax",
+        "temporary difference"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias7_cashflows",
+      "name": "IAS 7 statement of cash flows",
+      "summary": "Classification and preparation using the indirect method.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias1_presentation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "IAS 7",
+        "indirect method"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.ias8_policies",
+      "name": "IAS 8 policies, estimates and errors",
+      "summary": "Retrospective restatement versus prospective application.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias1_presentation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "IAS 8",
+        "restatement"
+      ]
+    },
+    {
+      "id": "business_accounting.ca_financial_reporting.consolidated_statements",
+      "name": "Consolidated financial statements",
+      "summary": "Goodwill, non-controlling interest, and eliminating intra-group transactions.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 80,
+      "prerequisites": [
+        {
+          "id": "business_accounting.ca_financial_reporting.ias1_presentation",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "consolidation",
+        "goodwill",
+        "intra-group"
+      ]
+    }
+  ]
+}

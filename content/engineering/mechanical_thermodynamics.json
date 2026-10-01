@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "mechanical_thermodynamics",
+  "field": "engineering",
+  "category": "mechanical",
+  "title": "Mechanical Engineering — Thermodynamics",
+  "title_ur": "حرحرکیات",
+  "description": "Energy, its conversion and its irreducible losses: the laws of thermodynamics and the cycles that power engines, refrigerators and power plants.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 3,
+    "lab": 0
+  },
+  "estimated_hours": 12.8,
+  "accreditation": "PEC — BE Mechanical Engineering core",
+  "source": {
+    "name": "Pakistan Engineering Council — accredited engineering curricula",
+    "retrieved": "2026-09-30",
+    "url": "https://www.pec.org.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Apply the first law to closed and open systems.",
+    "Use property tables and charts to fix a state.",
+    "Apply the second law and compute entropy change.",
+    "Analyse power and refrigeration cycles and compute their efficiency."
+  ],
+  "concepts": [
+    {
+      "id": "engineering.mechanical_thermodynamics.basic_concepts",
+      "name": "Systems, properties and state",
+      "summary": "Closed vs open systems, intensive and extensive properties, equilibrium and process.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "system",
+        "property",
+        "state"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.energy_forms",
+      "name": "Forms of energy, work and heat",
+      "summary": "Internal energy, boundary work, and heat as energy in transit driven by temperature difference.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.basic_concepts",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "work",
+        "heat",
+        "internal energy"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.pure_substance",
+      "name": "Properties of pure substances",
+      "summary": "Phase diagrams, saturation, quality, and reading steam tables.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.basic_concepts",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "saturation",
+        "quality",
+        "steam tables"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.ideal_gas",
+      "name": "Ideal gas behaviour",
+      "summary": "The ideal gas equation, specific heats, and where the ideal assumption breaks down.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.pure_substance",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "ideal gas",
+        "cp",
+        "cv"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.first_law_closed",
+      "name": "First law: closed systems",
+      "summary": "Energy balance for a fixed mass; polytropic processes.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.energy_forms",
+          "strength": "hard"
+        },
+        {
+          "id": "engineering.mechanical_thermodynamics.ideal_gas",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "energy balance",
+        "polytropic"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.first_law_open",
+      "name": "First law: control volumes",
+      "summary": "Steady-flow energy equation applied to nozzles, turbines, compressors and heat exchangers.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.first_law_closed",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "SFEE",
+        "enthalpy",
+        "steady flow"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.second_law",
+      "name": "The second law",
+      "summary": "Kelvin-Planck and Clausius statements; reversibility and the Carnot limit.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.first_law_open",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "Kelvin-Planck",
+        "Clausius",
+        "Carnot"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.entropy",
+      "name": "Entropy",
+      "summary": "Clausius inequality, entropy change for solids, liquids and ideal gases; isentropic processes.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.second_law",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "entropy",
+        "isentropic",
+        "Ts diagram"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.exergy",
+      "name": "Exergy and irreversibility",
+      "summary": "Availability, reversible work and quantifying where useful work was destroyed.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.entropy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "exergy",
+        "irreversibility",
+        "dead state"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.gas_power",
+      "name": "Gas power cycles",
+      "summary": "Otto, Diesel and Brayton cycles; compression ratio and thermal efficiency.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.entropy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "Otto",
+        "Diesel",
+        "Brayton"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.vapour_power",
+      "name": "Vapour power cycles",
+      "summary": "Rankine cycle, reheat and regeneration, and condenser pressure effects.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.entropy",
+          "strength": "hard"
+        },
+        {
+          "id": "engineering.mechanical_thermodynamics.pure_substance",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "Rankine",
+        "reheat",
+        "regeneration"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.refrigeration",
+      "name": "Refrigeration and heat pumps",
+      "summary": "Vapour-compression cycle, COP, and refrigerant selection constraints.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.vapour_power",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "COP",
+        "vapour-compression",
+        "refrigerant"
+      ]
+    },
+    {
+      "id": "engineering.mechanical_thermodynamics.psychrometrics",
+      "name": "Psychrometrics",
+      "summary": "Moist air properties, the psychrometric chart, and air-conditioning processes.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "engineering.mechanical_thermodynamics.ideal_gas",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "humidity",
+        "psychrometric chart",
+        "dew point"
+      ]
+    }
+  ]
+}

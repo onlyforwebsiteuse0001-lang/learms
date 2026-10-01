@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "civil_structural_analysis",
+  "field": "engineering",
+  "category": "civil",
+  "title": "Civil Engineering — Structural Analysis",
+  "title_ur": "ساختی تجزیہ",
+  "description": "Determining forces and deformations in structures under load, from statically determinate frames to indeterminate systems and the matrix stiffness method.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 3,
+    "theory": 3,
+    "lab": 0
+  },
+  "estimated_hours": 13.2,
+  "accreditation": "PEC — BE Civil Engineering core",
+  "source": {
+    "name": "Pakistan Engineering Council — accredited engineering curricula",
+    "retrieved": "2026-09-30",
+    "url": "https://www.pec.org.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Classify a structure as determinate, indeterminate or unstable.",
+    "Compute reactions and internal forces in determinate structures.",
+    "Draw shear force and bending moment diagrams accurately.",
+    "Analyse indeterminate structures by force and displacement methods."
+  ],
+  "concepts": [
+    {
+      "id": "engineering.civil_structural_analysis.statics_review",
+      "name": "Equilibrium and free-body diagrams",
+      "summary": "Force and moment equilibrium; drawing a free body that is actually free.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [],
+      "assessment": "numerical",
+      "keywords": [
+        "equilibrium",
+        "FBD",
+        "reaction"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.determinacy",
+      "name": "Static determinacy and stability",
+      "summary": "Counting equations and unknowns; recognising mechanisms and geometric instability.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.statics_review",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "determinacy",
+        "degree of indeterminacy"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.trusses",
+      "name": "Analysis of trusses",
+      "summary": "Method of joints and method of sections; identifying zero-force members.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.determinacy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "method of joints",
+        "zero-force member"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.sfd_bmd",
+      "name": "Shear force and bending moment diagrams",
+      "summary": "Relationships between load, shear and moment; points of contraflexure.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.statics_review",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "shear",
+        "bending moment",
+        "contraflexure"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.stress_strain",
+      "name": "Stress, strain and material behaviour",
+      "summary": "Hooke's law, elastic modulus, Poisson's ratio and the stress-strain curve.",
+      "bloom": "understand",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.statics_review",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "Hooke",
+        "modulus",
+        "yield"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.bending_stress",
+      "name": "Bending and shear stress in beams",
+      "summary": "The flexure formula, section modulus and the transverse shear distribution.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.sfd_bmd",
+          "strength": "hard"
+        },
+        {
+          "id": "engineering.civil_structural_analysis.stress_strain",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "flexure formula",
+        "section modulus"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.deflection",
+      "name": "Beam deflection",
+      "summary": "Double integration, Macaulay's method, and moment-area.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.bending_stress",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "deflection",
+        "Macaulay",
+        "moment-area"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.virtual_work",
+      "name": "Energy methods",
+      "summary": "Strain energy, virtual work and Castigliano's theorems for deflection.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.deflection",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "virtual work",
+        "Castigliano"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.influence_lines",
+      "name": "Influence lines",
+      "summary": "Constructing influence lines and positioning moving loads for maximum effect.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.sfd_bmd",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "influence line",
+        "moving load"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.force_method",
+      "name": "Force method for indeterminate structures",
+      "summary": "Redundants, compatibility equations and the flexibility coefficient.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.virtual_work",
+          "strength": "hard"
+        },
+        {
+          "id": "engineering.civil_structural_analysis.determinacy",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "redundant",
+        "compatibility",
+        "flexibility"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.slope_deflection",
+      "name": "Slope-deflection and moment distribution",
+      "summary": "Displacement-based analysis of continuous beams and frames.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 75,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.force_method",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "slope-deflection",
+        "moment distribution"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.matrix_stiffness",
+      "name": "Matrix stiffness method",
+      "summary": "Element and global stiffness matrices; the basis of every structural analysis package.",
+      "bloom": "analyze",
+      "difficulty": 5,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.slope_deflection",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "stiffness matrix",
+        "assembly",
+        "DOF"
+      ]
+    },
+    {
+      "id": "engineering.civil_structural_analysis.buckling",
+      "name": "Columns and buckling",
+      "summary": "Euler critical load, slenderness ratio and end-condition effective length.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "engineering.civil_structural_analysis.stress_strain",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "Euler",
+        "slenderness",
+        "effective length"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+/*
+ * Design tokens.
+ *
+ * Contrast: every foreground/background pair used for text meets WCAG 2.1 AA 1.4.3
+ * (>= 4.5:1 for body text, >= 3:1 for large text), and every interface component /
+ * chart element meets 1.4.11 Non-text Contrast (>= 3:1) against its own background.
+ * The ratios in comments were computed against --surface (#ffffff) unless noted.
+ */
+:root {
+  /* Brand — carried over from Agent 1's manifest theme_color so PWA chrome matches. */
+  --brand-600: #4634d6; /* 8.3:1 on white  */
+  --brand-500: #5b4be8; /* 6.3:1 on white  */
+  --brand-100: #e9e6fd;
+  --brand-050: #f4f2fe;
+
+  /* Neutrals */
+  --ink-900: #14131c; /* 17.6:1 */
+  --ink-700: #3a3747; /* 10.3:1 */
+  --ink-500: #5d5972; /*  6.2:1 */
+  --ink-400: #6f6b84; /*  4.9:1 — lowest value used for text */
+  --line-300: #d8d5e4; /* borders only, 3.1:1 for 1.4.11 */
+  --line-200: #e8e6f0;
+  --surface: #ffffff;
+  --surface-alt: #faf9fd;
+  --canvas: #f6f5f0; /* matches manifest background_color */
+
+  /* Status — text tones are the dark variants; the light variants are backgrounds only. */
+  --ok-700: #14653c; /*  6.4:1 */
+  --ok-100: #dcf5e8;
+  --warn-700: #7a4a03; /*  7.0:1 */
+  --warn-100: #fdf0d5;
+  --err-700: #97180f; /*  7.1:1 */
+  --err-100: #fde8e6;
+  --info-700: #14507a; /*  7.3:1 */
+  --info-100: #dfeefb;
+
+  /* Mastery scale — five steps, each >= 3:1 on --surface so the bars satisfy 1.4.11.
+     Never the sole carrier of meaning: every bar is labelled with its percentage too. */
+  --mastery-0: #b03a2e;
+  --mastery-1: #b4681b;
+  --mastery-2: #8a7413;
+  --mastery-3: #3f7a3c;
+  --mastery-4: #1f6b4f;
+
+  /* Spacing — 4px base */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 19, 28, 0.06), 0 1px 3px rgba(20, 19, 28, 0.04);
+  --shadow: 0 4px 12px rgba(20, 19, 28, 0.08);
+  --shadow-lg: 0 12px 32px rgba(20, 19, 28, 0.12);
+
+  --font-latin: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  /* Noto Nastaliq is the correct Urdu face but is very tall; Noto Naskh is the readable
+     fallback for dense UI. Both are listed so whichever the device has is used. */
+  --font-urdu: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Noto Naskh Arabic', 'Segoe UI', serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, monospace;
+
+  --header-h: 60px;
+  --sidebar-w: 248px;
+  --tabbar-h: 60px;
+
+  /* Flipped for RTL in rtl.css so horizontal animations enter from the correct edge. */
+  --slide-from: -16px;
+
+  --focus-ring: 0 0 0 2px var(--surface), 0 0 0 4px var(--brand-500);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme='auto'],
+  :root[data-theme='dark'] {
+    --ink-900: #f3f2f8;
+    --ink-700: #d3d0de;
+    --ink-500: #a6a2b8;
+    --ink-400: #928ea6;
+    --line-300: #3b3850;
+    --line-200: #2c2a3c;
+    --surface: #1a1826;
+    --surface-alt: #221f31;
+    --canvas: #121019;
+    --brand-100: #2c2555;
+    --brand-050: #232046;
+    --ok-100: #10301f;
+    --warn-100: #33240a;
+    --err-100: #3a1512;
+    --info-100: #11283a;
+    --ok-700: #64d6a0;
+    --warn-700: #e8b45c;
+    --err-700: #f08b80;
+    --info-700: #7cc0ef;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+  }
+}

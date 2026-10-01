@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "programming_fundamentals",
+  "field": "it_computing",
+  "category": "computer_science",
+  "title": "Programming Fundamentals (Python)",
+  "title_ur": "پروگرامنگ کے بنیادی اصول",
+  "description": "The Computing Core entry course. Problem decomposition, control flow, data structures built into the language, and writing programs that are correct before they are clever.",
+  "level": "undergraduate",
+  "credit_hours": {
+    "total": 4,
+    "theory": 3,
+    "lab": 1
+  },
+  "estimated_hours": 11.0,
+  "accreditation": "HEC/NCEAC Computing Core (CS1xx)",
+  "source": {
+    "name": "HEC & NCEAC, Curriculum of Computing Disciplines (Revised 2023)",
+    "retrieved": "2026-09-30",
+    "url": "https://nceac.org.pk/Documents/Curriculums/BS%20Curriculm%20Computing%20Disciplines-2023.pdf"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Translate a stated problem into an algorithm before writing any code.",
+    "Implement programs using selection, iteration and functions.",
+    "Choose an appropriate built-in data structure for a given task.",
+    "Trace and debug a program's execution without a debugger."
+  ],
+  "concepts": [
+    {
+      "id": "it_computing.programming_fundamentals.values_types",
+      "name": "Values, variables and data types",
+      "summary": "Integers, floats, strings and booleans; assignment as binding a name to a value, not a memory cell.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "int",
+        "float",
+        "str",
+        "bool",
+        "assignment"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.operators",
+      "name": "Arithmetic, comparison and logical operators",
+      "summary": "Operator precedence, integer vs float division, short-circuit evaluation of and/or.",
+      "bloom": "apply",
+      "difficulty": 1,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.values_types",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "precedence",
+        "short-circuit",
+        "modulo"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.io_basics",
+      "name": "Input and output",
+      "summary": "Reading input, converting types, formatting output for humans.",
+      "bloom": "apply",
+      "difficulty": 1,
+      "estimated_minutes": 30,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.values_types",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "input",
+        "print",
+        "f-string"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.conditionals",
+      "name": "Conditional statements",
+      "summary": "if/elif/else, nesting, and why a chain of conditions is often a lookup table in disguise.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.operators",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "mcq",
+      "keywords": [
+        "if",
+        "elif",
+        "branching"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.loops",
+      "name": "Repetition and loop control",
+      "summary": "for vs while, loop invariants, break and continue, and off-by-one errors.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.conditionals",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "for",
+        "while",
+        "break",
+        "invariant"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.lists",
+      "name": "Lists and indexing",
+      "summary": "Ordered mutable sequences, slicing, and how list memory organisation affects cost.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.loops",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "list",
+        "slice",
+        "index",
+        "mutable"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.nested_lists",
+      "name": "Multi-dimensional lists",
+      "summary": "Lists of lists, row/column traversal, and the aliasing trap when copying them.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.lists",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "matrix",
+        "nested",
+        "aliasing"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.strings",
+      "name": "Strings and string operations",
+      "summary": "Immutability, slicing, common methods, and why concatenation in a loop is quadratic.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.lists",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "immutable",
+        "split",
+        "join"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.functions",
+      "name": "Functions and modular programming",
+      "summary": "Definition, arguments, return values, scope, and designing a function with one job.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.loops",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "parameter",
+        "return",
+        "scope"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.call_stack",
+      "name": "The call stack",
+      "summary": "How calls nest, what a stack frame holds, and what recursion costs.",
+      "bloom": "understand",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.functions",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "stack frame",
+        "recursion",
+        "unwinding"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.dicts_sets",
+      "name": "Dictionaries and sets",
+      "summary": "Key-value mapping, hashing intuition, and choosing a dict over a list of pairs.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.lists",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "dict",
+        "set",
+        "hash",
+        "key"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.file_io",
+      "name": "File input and output",
+      "summary": "Reading and writing text files, context managers, and handling missing files.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 40,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.strings",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "open",
+        "with",
+        "read",
+        "write"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.errors",
+      "name": "Errors and exception handling",
+      "summary": "Syntax vs runtime vs logic errors; try/except that catches what you can actually handle.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 45,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.functions",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "short_answer",
+      "keywords": [
+        "exception",
+        "traceback",
+        "try"
+      ]
+    },
+    {
+      "id": "it_computing.programming_fundamentals.debugging",
+      "name": "Systematic debugging",
+      "summary": "Reproduce, isolate, hypothesise, test. Reading a traceback from the bottom up.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "it_computing.programming_fundamentals.errors",
+          "strength": "hard"
+        },
+        {
+          "id": "it_computing.programming_fundamentals.call_stack",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "practical",
+      "keywords": [
+        "traceback",
+        "bisect",
+        "print debugging"
+      ]
+    }
+  ]
+}

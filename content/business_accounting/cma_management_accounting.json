@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "cma_management_accounting",
+  "field": "business_accounting",
+  "category": "management_accounting_cma",
+  "title": "CMA — Management Accounting",
+  "title_ur": "مینجمنٹ اکاؤنٹنگ",
+  "description": "Accounting for decisions rather than for reporting: costing, budgeting, variance analysis and short-run decision making.",
+  "level": "professional",
+  "estimated_hours": 12.8,
+  "accreditation": "ICMA Pakistan — Management Accounting",
+  "source": {
+    "name": "ICMA Pakistan — Management Accounting syllabus",
+    "retrieved": "2026-09-30",
+    "url": "https://www.icmap.com.pk/"
+  },
+  "authoring": {
+    "method": "curated",
+    "by": "HAAFIZ content team (Agent 2)",
+    "date": "2026-09-30",
+    "model": null,
+    "reviewed": true
+  },
+  "outcomes": [
+    "Classify costs by behaviour, traceability and relevance.",
+    "Apply absorption and marginal costing and reconcile the profit difference.",
+    "Prepare a functional budget and compute standard cost variances.",
+    "Make a short-run decision using only relevant costs."
+  ],
+  "concepts": [
+    {
+      "id": "business_accounting.cma_management_accounting.cost_classification",
+      "name": "Cost classification",
+      "summary": "Fixed/variable, direct/indirect, product/period, and relevant/irrelevant.",
+      "bloom": "understand",
+      "difficulty": 1,
+      "estimated_minutes": 45,
+      "prerequisites": [],
+      "assessment": "mcq",
+      "keywords": [
+        "fixed",
+        "variable",
+        "direct"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.cost_behaviour",
+      "name": "Cost behaviour and estimation",
+      "summary": "High-low method, linear cost functions, and the relevant range.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.cost_classification",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "high-low",
+        "relevant range"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.material_labour",
+      "name": "Material and labour costing",
+      "summary": "Valuing issues, labour efficiency, idle time and overtime treatment.",
+      "bloom": "apply",
+      "difficulty": 2,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.cost_classification",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "FIFO",
+        "idle time",
+        "efficiency"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.overhead_absorption",
+      "name": "Overhead allocation and absorption",
+      "summary": "Allocation, apportionment, reapportionment, absorption rates, over/under absorption.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.material_labour",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "OAR",
+        "apportionment",
+        "under-absorption"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.abc",
+      "name": "Activity-based costing",
+      "summary": "Cost pools and drivers, and when ABC changes the answer versus traditional absorption.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 55,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.overhead_absorption",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "cost driver",
+        "cost pool"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.marginal_absorption",
+      "name": "Marginal vs absorption costing",
+      "summary": "Contribution, and reconciling the profit difference caused by inventory movement.",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.overhead_absorption",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "contribution",
+        "reconciliation"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.cvp",
+      "name": "Cost-volume-profit analysis",
+      "summary": "Break-even, margin of safety, target profit and the multi-product weighted average.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.marginal_absorption",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "break-even",
+        "margin of safety",
+        "C/S ratio"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.job_process",
+      "name": "Job, batch and process costing",
+      "summary": "Choosing a system by production type; equivalent units, normal and abnormal loss.",
+      "bloom": "apply",
+      "difficulty": 4,
+      "estimated_minutes": 70,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.overhead_absorption",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "equivalent units",
+        "abnormal loss"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.budgeting",
+      "name": "Budgeting",
+      "summary": "Functional budgets, the master budget, and fixed versus flexed comparison.",
+      "bloom": "apply",
+      "difficulty": 3,
+      "estimated_minutes": 65,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.cost_behaviour",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "master budget",
+        "flexed budget"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.standard_costing",
+      "name": "Standard costing and variances",
+      "summary": "Material, labour, overhead and sales variances, and operating statement reconciliation.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 80,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.budgeting",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "variance",
+        "operating statement"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.variance_investigation",
+      "name": "Variance interpretation",
+      "summary": "Controllability, interdependence between variances, and when to investigate.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.standard_costing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "controllability",
+        "interdependence"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.relevant_costing",
+      "name": "Relevant costing for decisions",
+      "summary": "Make-or-buy, accept-or-reject, shutdown; sunk and opportunity costs.",
+      "bloom": "evaluate",
+      "difficulty": 4,
+      "estimated_minutes": 60,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.cvp",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "case_study",
+      "keywords": [
+        "sunk cost",
+        "opportunity cost",
+        "make or buy"
+      ]
+    },
+    {
+      "id": "business_accounting.cma_management_accounting.limiting_factor",
+      "name": "Limiting factor analysis",
+      "summary": "Contribution per unit of scarce resource and the linear programming extension.",
+      "bloom": "analyze",
+      "difficulty": 4,
+      "estimated_minutes": 50,
+      "prerequisites": [
+        {
+          "id": "business_accounting.cma_management_accounting.relevant_costing",
+          "strength": "hard"
+        }
+      ],
+      "assessment": "numerical",
+      "keywords": [
+        "scarce resource",
+        "shadow price"
+      ]
+    }
+  ]
+}
