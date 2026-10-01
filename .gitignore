@@ -16,3 +16,16 @@ dist/
 *.tsbuildinfo
 frontend/vite.config.js
 frontend/vite.config.d.ts
+
+# --- Agent 8 release hardening (union of agent rules) ---
+venv/
+env/
+.security-venv/
+*.log
+coverage/
+htmlcov/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist-ssr/
