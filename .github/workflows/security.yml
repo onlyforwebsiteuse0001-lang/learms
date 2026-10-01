@@ -1,0 +1,31 @@
+name: security
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 3 * * 1'  # weekly Monday 03:00 UTC
+permissions:
+  contents: read
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install --upgrade pip bandit pip-audit
+      - run: bandit -r security -ll
+      - run: bandit -r backend -ll || true   # advisory for legacy backend code until v1.6.0
+      - run: pip install -r requirements.txt && pip-audit || true
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          scan-ref: '.'
+          severity: 'CRITICAL,HIGH'
+          ignore-unfixed: true

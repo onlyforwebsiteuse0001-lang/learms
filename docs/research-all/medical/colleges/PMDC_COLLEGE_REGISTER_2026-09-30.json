@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "title": "PM&DC college directory evidence capture",
+  "captured_at": "2026-09-30",
+  "geography": "Pakistan",
+  "authority": "Pakistan Medical and Dental Council",
+  "scope_note": "The official rendered directories exposed category totals and only the first 10 displayed rows during this capture. This artifact is deliberately not represented as a complete row-level mirror.",
+  "entry_total": 178,
+  "entry_total_semantics": "Sum of program-sector directory entries, not unique institutions",
+  "categories": [
+    {
+      "program": "medical",
+      "sector": "public",
+      "source_id": "MED-051",
+      "source_url": "https://pmdc.pk/Colleges/PublicMedicalColleges",
+      "reported_entry_count": 50,
+      "captured_row_count": 10,
+      "complete_row_capture": false,
+      "visible_rows": [
+        {"province": "AJK", "college_name": "Azad Jammu & Kashmir Medical College", "city": "Muzaffarabad-AJ&K", "seat_allocation": 100},
+        {"province": "AJK", "college_name": "Mohtarma Benazir Bhutto Shaheed Medical College", "city": "Mirpur-AJ&K", "seat_allocation": 100},
+        {"province": "AJK", "college_name": "Poonch Medical College", "city": "Rawalakot", "seat_allocation": 100},
+        {"province": "BALOCHISTAN", "college_name": "Bolan Medical College", "city": "Quetta", "seat_allocation": 300},
+        {"province": "BALOCHISTAN", "college_name": "Jhalawan Medical College", "city": "Khuzdar", "seat_allocation": 50},
+        {"province": "BALOCHISTAN", "college_name": "Loralai Medical College", "city": "Loralai", "seat_allocation": 100},
+        {"province": "BALOCHISTAN", "college_name": "Makran Medical College", "city": "Turbat", "seat_allocation": 50},
+        {"province": "KPK", "college_name": "Ayub Medical College", "city": "Abbottabad", "seat_allocation": 250},
+        {"province": "KPK", "college_name": "Bacha Khan Medical College", "city": "Mardan", "seat_allocation": 150},
+        {"province": "KPK", "college_name": "Bannu Medical College", "city": "Bannu", "seat_allocation": 100}
+      ]
+    },
+    {
+      "program": "medical",
+      "sector": "private",
+      "source_id": "MED-052",
+      "source_url": "https://pmdc.pk/Colleges/PrivateMedicalColleges",
+      "reported_entry_count": 71,
+      "captured_row_count": 10,
+      "complete_row_capture": false,
+      "visible_rows": [
+        {"province": "AJK", "college_name": "Mohiuddin Islamic Medical College", "city": "Mirpur-AJ&K", "seat_allocation": 100},
+        {"province": "BALOCHISTAN", "college_name": "Quetta Institute of Medical Sciences", "city": "Quetta-Cantt", "seat_allocation": 150},
+        {"province": "KPK", "college_name": "Abbottabad International Medical College", "city": "Abbottabad", "seat_allocation": 100},
+        {"province": "KPK", "college_name": "Frontier Medical College", "city": "Abbottabad", "seat_allocation": 100},
+        {"province": "KPK", "college_name": "Jinnah Medical College", "city": "Peshawar", "seat_allocation": 100},
+        {"province": "KPK", "college_name": "Kabir Medical College", "city": "Peshawar", "seat_allocation": 100},
+        {"province": "KPK", "college_name": "Muhammad College of Medicine", "city": "Peshawar", "seat_allocation": 100},
+        {"province": "KPK", "college_name": "Northwest School of Medicine", "city": "Peshawar", "seat_allocation": 150},
+        {"province": "KPK", "college_name": "Pak International Medical College", "city": "Peshawar", "seat_allocation": 150},
+        {"province": "KPK", "college_name": "Peshawar Medical College", "city": "Peshawar", "seat_allocation": 150}
+      ]
+    },
+    {
+      "program": "dental",
+      "sector": "public",
+      "source_id": "MED-053",
+      "source_url": "https://pmdc.pk/Colleges/PublicDentalColleges",
+      "reported_entry_count": 17,
+      "captured_row_count": 10,
+      "complete_row_capture": false,
+      "visible_rows": [
+        {"province": "BALOCHISTAN", "college_name": "Dental Section, Bolan Medical College", "city": "Quetta", "seat_allocation": 25},
+        {"province": "KPK", "college_name": "Bacha Khan Dental College", "city": "Mardan", "seat_allocation": 25},
+        {"province": "KPK", "college_name": "Dental College, Ayub Medical College", "city": "Abbottabad", "seat_allocation": 25},
+        {"province": "KPK", "college_name": "Khyber College of Dentistry", "city": "Peshawar", "seat_allocation": 80},
+        {"province": "KPK", "college_name": "KMU Institute of Dental Sciences/ KIDS", "city": "Kohat", "seat_allocation": 50},
+        {"province": "KPK", "college_name": "Saidu College of Dentistry", "city": "Swat", "seat_allocation": 50},
+        {"province": "PUNJAB", "college_name": "de'Montmorency College of Dentistry", "city": "Lahore", "seat_allocation": 100},
+        {"province": "PUNJAB", "college_name": "Dental Section, Army Medical College", "city": "Rawalpindi", "seat_allocation": 50},
+        {"province": "PUNJAB", "college_name": "Dental Section, Punjab Medical College", "city": "Faisalabad", "seat_allocation": 50},
+        {"province": "PUNJAB", "college_name": "Institute of Dentistry, Nishtar Medical College", "city": "Multan", "seat_allocation": 50}
+      ]
+    },
+    {
+      "program": "dental",
+      "sector": "private",
+      "source_id": "MED-054",
+      "source_url": "https://pmdc.pk/Colleges/PrivateDentalColleges",
+      "reported_entry_count": 40,
+      "captured_row_count": 10,
+      "complete_row_capture": false,
+      "visible_rows": [
+        {"province": "KPK", "college_name": "Dental Section,Abbottabad International Medical College", "city": "Abbottabad", "seat_allocation": 50},
+        {"province": "KPK", "college_name": "Dental Section,Women Medical College", "city": "Abbottabad", "seat_allocation": 50},
+        {"province": "KPK", "college_name": "Peshawar Dental College", "city": "Peshawar", "seat_allocation": 50},
+        {"province": "KPK", "college_name": "Rehman College of Dentistry", "city": "Peshawar", "seat_allocation": 75},
+        {"province": "KPK", "college_name": "Sardar Begum Dental College", "city": "Peshawar.", "seat_allocation": 75},
+        {"province": "PUNJAB", "college_name": "Avicenna Dental College", "city": "Lahore", "seat_allocation": 50},
+        {"province": "PUNJAB", "college_name": "College of Dentistry, Bakhtawar Amin Medical & Dental College", "city": "Multan", "seat_allocation": 50},
+        {"province": "PUNJAB", "college_name": "College of Dentistry, Sharif Medical & Dental College", "city": "Lahore", "seat_allocation": 50},
+        {"province": "PUNJAB", "college_name": "Dental College, Akhtar Saeed Medical & Dental College", "city": "Lahore", "seat_allocation": 75},
+        {"province": "PUNJAB", "college_name": "Dental College, FMH College of Medicine & Dentistry", "city": "Lahore", "seat_allocation": 75}
+      ]
+    }
+  ],
+  "quality_flags": [
+    "official_directory_is_mutable",
+    "rendered_capture_is_paginated",
+    "row_level_capture_is_incomplete",
+    "seat_allocation_requires_point_of_use_refresh",
+    "directory_entry_does_not_establish_session_intake_permission",
+    "court_or_stop_admission_status_not_comprehensively_captured"
+  ],
+  "do_not_infer": [
+    "ranking",
+    "educational_quality",
+    "current_admission_permission",
+    "uninterrupted_recognition",
+    "university_affiliation",
+    "hospital_capacity"
+  ]
+}

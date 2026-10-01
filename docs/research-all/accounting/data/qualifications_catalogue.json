@@ -1,0 +1,245 @@
+{
+  "$comment": "Machine-readable catalogue of accounting qualifications relevant to Pakistan. Companion to taxonomy/PROGRAMS_COMPLETE.md. DATA ONLY - no loader. All fee figures carry an explicit currency and as_of date; none are converted between currencies (see BLOCKERS-7.md B-011).",
+  "schema_version": "1.0.0",
+  "generated_by": "agent7_accounting_research",
+  "generated_utc": "2026-09-30",
+  "field_notes": {
+    "relevance_pk": "Agent 7 judgement of relevance to a Pakistani accounting learner: high | medium | low. The task brief listed EA and CFP as peers to CA; this catalogue disagrees and marks them low, with reasons.",
+    "verification": "tier_a = fetched from the awarding body this session; tier_c = triangulated secondary sources; not_verified = listed for completeness, figures not gathered.",
+    "null_policy": "null means NOT RESEARCHED or NOT PUBLISHED - it never means zero. Where a body does not publish a datum at all, published=false is stated explicitly.",
+    "fees_policy": "Fees are first-attempt, body-payable amounts only. They exclude books, coaching (except where mandatory and bundled), travel and retakes. ICMAP totals are modelled (Tier E) on Tier-A inputs."
+  },
+  "qualifications": [
+    {
+      "key": "icmap.cma",
+      "name": "Chartered Management Accountant",
+      "short": "CMA",
+      "body": "Institute of Cost and Management Accountants of Pakistan (ICMAP)",
+      "country": "Pakistan",
+      "url": "https://www.icmap.com.pk/",
+      "relevance_pk": "high",
+      "verification": "tier_a",
+      "scheme": "Study Scheme-2025, effective 2025-07-16",
+      "structure": {
+        "levels": ["Operational (O1-O6)", "Managerial (M1-M6)", "Strategic (S1-S6)", "Practical Training Modules (PTM1-PTM6)"],
+        "level_duration_months": 6,
+        "exam_mode": "CBE",
+        "exam_duration_hours": 3,
+        "marks_per_paper": 100,
+        "sittings_per_year": 2,
+        "max_courses_per_sitting": 6,
+        "sequential": true,
+        "intermediate_award": "Associate Financial Accountant (AFA)"
+      },
+      "entry_routes": [
+        { "prior_education_years": 12, "entry_point": "OL-1", "courses": 18, "ptm": 6, "min_years": 4.0,  "modelled_body_cost_pkr": 727300, "cost_basis": "2025 rates; 2026 rates approx 756100" },
+        { "prior_education_years": 14, "entry_point": "ML-1", "courses": 12, "ptm": 3, "min_years": 2.5,  "modelled_body_cost_pkr": 549200, "cost_basis": "2025 rates" },
+        { "prior_education_years": 16, "entry_point": "ML-2", "courses": 9,  "ptm": 3, "min_years": 2.0,  "modelled_body_cost_pkr": 463900, "cost_basis": "2025 rates" }
+      ],
+      "tuition": { "mandatory": true, "routes": ["coaching (min 60% attendance + presentation)", "Distance Learning Programme (presentation only)"], "bundled_in_fee": true },
+      "practical_training": { "required": true, "form": "6 Practical Training Modules", "paid_to_student": false, "cost_to_student_pkr_per_module": 21100, "cost_to_student_pkr_total": 126600 },
+      "transparency": {
+        "pass_rates_published": false,
+        "pass_mark_published": false,
+        "attempt_cap_published": false,
+        "time_limit_published": false,
+        "completion_stats_published": false,
+        "note": "See BLOCKERS-7.md B-003 and B-007. Do not assert a 50% pass mark for Scheme-2025."
+      },
+      "financial_aid": { "means_tested_scheme_found": false, "note": "No published needs-based scheme located. Absence of evidence, stated as such." },
+      "exam_cities_count": 9,
+      "remote_exam": { "available": true, "fee_multiplier": 1.5 },
+      "overseas_exam_fee_usd_per_course": 100,
+      "recognition": ["Pakistan", "GCC"],
+      "outbound_pathways_pkr": {
+        "acca_fcca_mpp": [13200, 73700, 20400],
+        "cima_llg_acma": 63500,
+        "cima_llg_fcma": 53200,
+        "cpa_canada": [32600, 11800, 120200]
+      }
+    },
+    {
+      "key": "icap.ca",
+      "name": "Chartered Accountant",
+      "short": "CA",
+      "body": "Institute of Chartered Accountants of Pakistan (ICAP)",
+      "country": "Pakistan",
+      "url": "https://icap.org.pk/",
+      "relevance_pk": "high",
+      "verification": "tier_a",
+      "scheme": "Education Scheme 2025",
+      "structure": {
+        "levels": ["PRC (3 papers)", "CAF (8 papers, Groups A and B)", "CFAP (6 papers)", "Strategic Case Study"],
+        "additional": ["2 Hands-on Courses", "2 Integrated Modules"],
+        "sittings_per_year": 2,
+        "caf_max_papers_per_sitting": 4,
+        "cfap_min_papers_per_sitting": 2,
+        "cfap_time_limit_note": "4 CFAP papers within 10 years (Directive 1.01)",
+        "abolished_in_2025": ["MSA-1", "MSA-2", "SPM"],
+        "new_in_2025": ["CFAP-03 Sustainability Reporting and Assurance"],
+        "legacy_last_sitting": "Winter 2026",
+        "caf_paper_list_captured": false
+      },
+      "fees_pkr": {
+        "as_of": "2026-07-01",
+        "registration": 22000,
+        "registration_on_probation": 26700,
+        "annual_subscription": 6500,
+        "per_paper_prc": 6100,
+        "per_paper_caf": 7400,
+        "per_paper_cfap": 11300,
+        "hands_on_course": 7500,
+        "integrated_module": 7500,
+        "strategic_case_study": 31900,
+        "exam_prc_first": 7500, "exam_prc_additional": 7500,
+        "exam_caf_first": 7000, "exam_caf_additional": 4600,
+        "exam_cfap_first": 14400, "exam_cfap_additional": 5700,
+        "exam_scs": 31900,
+        "yoy_increase_pct": 10
+      },
+      "exemption_fees_pkr": { "pipfa": 7400, "pipfa_prior": 13500, "icmap": 59200, "cima": 37000, "icaew_icai_icas_caanz_cpacanada": 200500 },
+      "practical_training": {
+        "required": true,
+        "paid_to_student": true,
+        "durations_years": [3.0, 3.5, 4.0, 2.5],
+        "note": "2.5-year uninterrupted route forbids sitting exams during training; 3-year post-CFAP route also available",
+        "stipend_pkr_per_month": {
+          "as_of": "2026-07-01",
+          "track_3_5_year": { "commencement": 27500, "after_4_cfap": 38500, "qualified_gt_6mo_left": 55000, "qualified_le_6mo_left": 93500 },
+          "track_2_5_year": { "commencement": 27500, "mid": 35200, "final": 44000 },
+          "sdai_rdai": { "commencement": 34100, "mid": 41800, "final": 49500 },
+          "associate_14_year": 24200,
+          "prior_year_3_5_track": [25000, 35000, 50000, 85000]
+        }
+      },
+      "financial_aid": {
+        "means_tested_scheme_found": true,
+        "schemes": [
+          { "name": "CA Talent Students Financial Support (CAT-SFS)", "criteria": { "hssc_min_pct": 80, "family_income_max_pkr_per_month": 100000 }, "benefits": { "tuition_discount_min_pct": 75, "registration_pkr": 2000, "exam_fee_pkr_per_subject": 1000 }, "url": "https://icap.org.pk/students/scholarships/students-financial-support-sfs-program/" },
+          { "name": "Students Endowment Fund", "criteria": "merit gates; need assessed by Ihsan Trust", "url": "https://icap.org.pk/students/scholarships/students-endowment-fund/" }
+        ]
+      },
+      "transparency": { "pass_rates_published": null, "pass_mark_published": null, "note": "Not captured this session." },
+      "recognition": ["Pakistan", "GCC"]
+    },
+    {
+      "key": "acca",
+      "name": "ACCA Qualification",
+      "short": "ACCA",
+      "body": "Association of Chartered Certified Accountants",
+      "country": "United Kingdom (global)",
+      "url": "https://www.accaglobal.com/pk/en/",
+      "relevance_pk": "high",
+      "verification": "tier_a",
+      "pakistan_pricing_note": "CONFIRMED: ACCA publishes the same GBP fees for Pakistan as globally. There is no regional discount.",
+      "structure": {
+        "levels": ["Applied Knowledge (BT, MA, FA)", "Applied Skills (LW, PM, TX, FR, AA, FM)", "Strategic Professional (SBL, SBR + 2 of AFM/APM/ATX/AAA)"],
+        "additional": ["Ethics and Professional Skills Module (EPSM)", "Practical Experience Requirement (36 months)"],
+        "total_exams": 13,
+        "sittings_per_year": 4,
+        "sitting_months": ["March", "June", "September", "December"],
+        "max_papers_per_sitting": null,
+        "pass_mark_pct": 50
+      },
+      "fees_gbp": {
+        "as_of": "2026",
+        "currency": "GBP",
+        "registration": 89,
+        "re_registration": 89,
+        "annual_subscription": 140,
+        "exemption_applied_knowledge": 86,
+        "exemption_applied_skills": 114,
+        "exam_applied_knowledge": null,
+        "exam_applied_knowledge_note": "Set by CBE centres, not by ACCA. Not comparable across centres.",
+        "exam_applied_skills_standard": 160,
+        "exam_applied_skills_late": 409,
+        "exam_epsm": 83,
+        "exam_sbl_standard": 282, "exam_sbl_late": 467,
+        "exam_sbr_standard": 208, "exam_sbr_late": 467,
+        "exam_options_standard": 208, "exam_options_late": 467,
+        "late_surcharge_pct_range": [125, 156],
+        "modelled_total_no_exemptions": 2458,
+        "modelled_total_four_exemptions": 2670,
+        "modelled_total_note": "Excludes Applied Knowledge exam fees. Exemptions do NOT save money: an Applied Skills exemption costs GBP 114 versus a GBP 160 exam."
+      },
+      "currency_risk": { "denominated_in": "GBP", "pakistani_student_exposure": "unhedged over 3+ years", "pkr_total_asserted": false, "reason": "No Tier-A exchange rate captured. See BLOCKERS-7.md B-011." },
+      "transparency": {
+        "pass_rates_published": true,
+        "pass_rates_url": "https://www.accaglobal.com/us/en/student/exam-support-resources/pass-rates-for-acca-qualifications.html",
+        "pass_rates_pct": {
+          "2026-03": { "PM": 45, "TX": 53, "FR": 50, "AA": 43, "FM": 50, "SBL": 52, "SBR": 50, "AFM": 44, "APM": 40, "ATX": 50, "AAA": 42 },
+          "2025-12": { "BT": 87, "MA": 64, "FA": 68, "LW": 82, "PM": 40, "TX": 55, "FR": 51, "AA": 46, "FM": 48, "SBL": 50, "SBR": 48, "AFM": 45, "APM": 41, "ATX": 50, "AAA": 38 },
+          "2025-06": { "BT": 88, "MA": 64, "FA": 68, "LW": 81, "PM": 43, "TX": 54, "FR": 50, "AA": 44, "FM": 48 }
+        },
+        "key_finding": "The difficulty cliff is at Applied Skills (BT 87% -> PM 40%), not at Strategic Professional. PM is harder than 4 of the 6 Strategic Professional papers. Rates are stable within +/-3 points across sessions, so a fixed per-paper prior is safe for BKT seeding."
+      },
+      "practical_training": { "required": true, "form": "36 months Practical Experience Requirement", "paid_to_student": null, "note": "No stipend is mandated by ACCA; pay depends entirely on the student's own employment." },
+      "recognition": ["~180 markets"]
+    },
+    {
+      "key": "ima.cma",
+      "name": "Certified Management Accountant",
+      "short": "CMA (USA)",
+      "body": "Institute of Management Accountants (IMA)",
+      "country": "United States",
+      "url": "https://www.imanet.org/",
+      "relevance_pk": "medium",
+      "verification": "tier_c",
+      "verification_note": "No IMA page fetched this session. Triangulated across five secondary sources. See BLOCKERS-7.md B-012.",
+      "structure": {
+        "parts": ["Part 1: Financial Planning, Performance and Analytics", "Part 2: Strategic Financial Management"],
+        "total_exams": 2,
+        "exam_duration_hours": 4,
+        "format": "100 MCQ + 2 essay scenarios",
+        "pass_mark": "360 of 500 scaled",
+        "sequential": false,
+        "testing_windows": ["Jan-Feb", "May-Jun", "Sep-Oct"],
+        "completion_window_years": 3
+      },
+      "entry_requirement": "Bachelor's degree from an accredited institution, or a recognised professional certification",
+      "entry_requirement_note": "This CLOSES the IMA CMA to ICMAP's 12-year and 14-year entrants. The two qualifications are not open to the same population.",
+      "fees_usd": {
+        "as_of": "2026",
+        "membership_professional_annual": 295,
+        "membership_student_annual": 49,
+        "membership_academic_annual": 160,
+        "entrance_fee_professional": 300,
+        "entrance_fee_student": 225,
+        "exam_per_part_professional": 495,
+        "exam_per_part_student": null,
+        "exam_per_part_student_note": "NOT ASSERTED. Four sources give 370 / 407 / 415 / 480.26 - a 30% spread. See CONTRADICTIONS.md C-013.",
+        "first_year_total_professional": 1585,
+        "confidence": "moderate-high for professional rates (4-5 source agreement); rejected for student rates"
+      },
+      "practical_training": { "required": true, "form": "2 continuous years in management accounting or financial management", "paid_to_student": true, "note": "Satisfied by ordinary paid employment, completable before or up to 7 years after passing. Contrast ICMAP, where the student pays for training modules." },
+      "transparency": { "pass_rates_published": null, "pass_rate_claim_pct": [40, 45], "pass_rate_claim_tier": "C", "pass_rate_claim_note": "Single unattributed secondary claim. NOT comparable to ACCA's published per-paper rates and must not be used to rank the two." },
+      "recognition": ["~150 countries", "strong in US multinationals and GCC"]
+    },
+    { "key": "icmai.cma",  "name": "Cost and Management Accountant", "short": "CMA (India)",      "body": "Institute of Cost Accountants of India (ICMAI)",        "country": "India",      "url": "https://icmai.in/",        "relevance_pk": "low",    "verification": "not_verified", "structure": { "levels": ["Foundation", "Intermediate", "Final"] }, "warning": "Dominates English-language search results for 'CMA fees'. Pollutes any un-scoped query. ICMAI is NOT ICMAP." },
+    { "key": "icmab.cma",  "name": "Cost and Management Accountant", "short": "CMA (Bangladesh)", "body": "Institute of Cost and Management Accountants of Bangladesh (ICMAB)", "country": "Bangladesh", "url": "https://icmab.gov.bd/fees-and-charges/", "relevance_pk": "low", "verification": "tier_c", "fees_bdt": { "admission": 22500, "per_level": 5500 }, "note": "Order of magnitude below ICMAP. Included as a regional cost benchmark, not as a route." },
+    { "key": "cima",       "name": "Chartered Global Management Accountant / ACMA-FCMA", "short": "CIMA", "body": "Chartered Institute of Management Accountants", "country": "United Kingdom", "url": "https://www.aicpa-cima.com/", "relevance_pk": "medium", "verification": "not_verified", "warning": "CIMA's 'Chartered Management Accountant' designation now COLLIDES with ICMAP's 2025 rebrand, while ICMAP simultaneously sells a CIMA conversion pathway.", "icmap_pathway_fee_pkr": { "acma": 63500, "fcma": 53200 } },
+    { "key": "pipfa",      "name": "Public Finance Accountant", "short": "PIPFA", "body": "Pakistan Institute of Public Finance Accountants", "country": "Pakistan", "url": "https://www.pipfa.org.pk/", "relevance_pk": "high", "verification": "tier_c", "note": "ICAP cut the PIPFA exemption fee to PKR 7,400 in 2026, down 45% from 13,500. This makes PIPFA -> CA the cheapest documented laddered route into chartered status - a deliberate pro-domestic signal, given ICAP raised the ICAEW/ICAI/ICAS/CAANZ/CPA-Canada exemption 30% to PKR 200,500 in the same revision." },
+    { "key": "cfa",        "name": "Chartered Financial Analyst", "short": "CFA", "body": "CFA Institute", "country": "United States", "url": "https://www.cfainstitute.org/", "relevance_pk": "medium", "verification": "not_verified", "note": "Investment management rather than accounting. Relevant to Track C (corporate finance / advisory) in taxonomy/SPECIALIZATIONS.md." },
+    { "key": "cpa.us",     "name": "Certified Public Accountant", "short": "CPA (US)", "body": "State boards / AICPA", "country": "United States", "url": "https://www.aicpa-cima.com/", "relevance_pk": "medium", "verification": "not_verified", "note": "State-by-state eligibility rules make this materially harder for Pakistani candidates than headline comparisons suggest. Not researched in detail." },
+    { "key": "cpa.canada", "name": "Chartered Professional Accountant", "short": "CPA (Canada)", "body": "CPA Canada", "country": "Canada", "url": "https://www.cpacanada.ca/", "relevance_pk": "medium", "verification": "tier_a_partial", "icmap_pathway_fee_pkr": [32600, 11800, 120200], "note": "ICMAP prices a CPA Canada conversion route totalling PKR 164,600 - strong evidence of member demand to qualify abroad. See pakistan/BRAIN_DRAIN.md." },
+    { "key": "icaew",      "name": "Associate Chartered Accountant", "short": "ACA", "body": "ICAEW", "country": "United Kingdom", "url": "https://www.icaew.com/", "relevance_pk": "low", "verification": "not_verified", "note": "ICAP charges PKR 200,500 to exempt an ICAEW member - a 30% increase in 2026." },
+    { "key": "cia",        "name": "Certified Internal Auditor", "short": "CIA", "body": "Institute of Internal Auditors", "country": "United States", "url": "https://www.theiia.org/", "relevance_pk": "medium", "verification": "not_verified", "note": "Post-qualification specialisation rather than an entry route." },
+    { "key": "cfe",        "name": "Certified Fraud Examiner", "short": "CFE", "body": "Association of Certified Fraud Examiners", "country": "United States", "url": "https://www.acfe.com/", "relevance_pk": "low", "verification": "not_verified", "note": "Forensic accounting. Demand in Pakistan is asserted in careers content but was not evidenced in this research." },
+    { "key": "ea",         "name": "Enrolled Agent", "short": "EA", "body": "US Internal Revenue Service", "country": "United States", "url": "https://www.irs.gov/", "relevance_pk": "low", "verification": "not_verified", "relevance_note": "The task brief listed EA as a peer to CA. It is not. An EA is licensed to represent taxpayers before the US IRS. It has essentially no application to a Pakistani accountant working in Pakistan, beyond outsourcing roles serving US clients." },
+    { "key": "cfp",        "name": "Certified Financial Planner", "short": "CFP", "body": "CFP Board / FPSB affiliates", "country": "United States (and affiliates)", "url": "https://www.cfp.net/", "relevance_pk": "low", "verification": "not_verified", "relevance_note": "The task brief listed CFP as a peer to CA. It is a personal financial planning credential serving retail wealth management - a market that barely exists at scale in Pakistan. Low relevance." }
+  ],
+  "catalogue_notes": {
+    "count": 16,
+    "high_relevance_pk": ["icmap.cma", "icap.ca", "acca", "pipfa"],
+    "brief_disagreements": [
+      "The brief presented EA and CFP as peer qualifications to CA. This catalogue marks both low-relevance for Pakistan, with reasons stated in their relevance_note fields.",
+      "The brief's CA structure (AFC/CAF/CFAP+MSA) is obsolete under ICAP Education Scheme 2025. See CONTRADICTIONS.md C-011.",
+      "The brief's CMA cost of 'PKR 93,000 per module' conflates a 6-month LEVEL of three subjects with a single course. See CONTRADICTIONS.md C-004."
+    ],
+    "naming_collisions": [
+      "CMA: ICMAP (Pakistan) / IMA (USA) / ICMAI (India) / ICMAB (Bangladesh)",
+      "Chartered Management Accountant: ICMAP (2025 rebrand) / CIMA (ACMA, FCMA)",
+      "ICMAP: also the International Class of Management and Accounting Program, Indonesia - a documented false positive in academic literature search"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "status": "draft_v0_1",
+  "date_accessed": "2026-09-30 UTC",
+  "source_register": "docs/it-research/sources/SOURCE_REGISTER.csv",
+  "node_types": [
+    "RootDomain",
+    "SubDomain",
+    "Concept",
+    "Language",
+    "Tool",
+    "CareerRole",
+    "Project",
+    "Assessment",
+    "Source",
+    "MarketEvidence",
+    "LearnerProblem",
+    "Intervention"
+  ],
+  "edge_types": [
+    "HAS_SUBDOMAIN",
+    "REQUIRES_CONCEPT",
+    "RECOMMENDED_LANGUAGE",
+    "USES_TOOL",
+    "ASSESSED_BY",
+    "EVIDENCED_BY",
+    "PREPARES_FOR_ROLE",
+    "HAS_MARKET_EVIDENCE",
+    "ADDRESSES_PROBLEM",
+    "INTERVENTION_SUPPORTED_BY"
+  ],
+  "seed_nodes": [
+    {"id": "domain.programming_foundations", "type": "RootDomain", "label": "Programming Foundations"},
+    {"id": "domain.web_development", "type": "RootDomain", "label": "Web Development"},
+    {"id": "domain.data_ai", "type": "RootDomain", "label": "Data and AI"},
+    {"id": "domain.cybersecurity", "type": "RootDomain", "label": "Cybersecurity"},
+    {"id": "domain.cloud_devops", "type": "RootDomain", "label": "Cloud and DevOps"},
+    {"id": "problem.cs1_programming", "type": "LearnerProblem", "label": "CS1 independent programming struggle", "source_ids": ["S079", "S080", "S081"]},
+    {"id": "problem.debugging", "type": "LearnerProblem", "label": "Novice debugging difficulty", "source_ids": ["S084", "S085", "S086"]},
+    {"id": "intervention.active_learning", "type": "Intervention", "label": "Active learning", "source_ids": ["S093"]},
+    {"id": "intervention.spaced_retrieval", "type": "Intervention", "label": "Spaced retrieval practice", "source_ids": ["S094"]},
+    {"id": "intervention.project_milestones", "type": "Intervention", "label": "Milestone-based projects", "source_ids": ["S096"]},
+    {"id": "role.full_stack_developer", "type": "CareerRole", "label": "Full-Stack Developer"},
+    {"id": "role.data_analyst", "type": "CareerRole", "label": "Data Analyst"},
+    {"id": "role.cybersecurity_analyst", "type": "CareerRole", "label": "Cybersecurity Analyst"}
+  ],
+  "seed_edges": [
+    {"from": "intervention.active_learning", "type": "ADDRESSES_PROBLEM", "to": "problem.cs1_programming"},
+    {"from": "intervention.spaced_retrieval", "type": "ADDRESSES_PROBLEM", "to": "problem.cs1_programming"},
+    {"from": "intervention.project_milestones", "type": "ADDRESSES_PROBLEM", "to": "problem.cs1_programming"},
+    {"from": "domain.web_development", "type": "PREPARES_FOR_ROLE", "to": "role.full_stack_developer"},
+    {"from": "domain.data_ai", "type": "PREPARES_FOR_ROLE", "to": "role.data_analyst"},
+    {"from": "domain.cybersecurity", "type": "PREPARES_FOR_ROLE", "to": "role.cybersecurity_analyst"}
+  ],
+  "confidence_policy": {
+    "high": "official curriculum/standard or peer-reviewed study directly relevant to claim",
+    "medium": "official report or credible survey with scope caveats",
+    "low": "indirect evidence, community term, or hypothesis pending validation",
+    "not_found": "no adequate source captured yet"
+  }
+}

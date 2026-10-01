@@ -1,0 +1,15 @@
+exam,component,discipline_scope,event_date,status_at_2026_09_30,authority,source_id,notes
+MDCAT,admission test,MBBS/BDS,2026-09-20,scheduled_date_elapsed_completion_not_verified,PM&DC,MED-071,"Rescheduled from 2026-08-16; no completion/result notice reviewed"
+NRE,Step-I,medical/dental foreign graduates,2026-10-11,scheduled_upcoming,PM&DC through NUMS,MED-075,Step-II date not found in reviewed current notices
+FCPS-I,theory,all subjects,2026-01-05,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Public schedule date; exact candidate date/admit card controls
+FCPS-I,theory,all subjects,2026-04-07,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Public schedule date; exact candidate date/admit card controls
+FCPS-I,theory,all subjects,2026-07-07,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Public schedule date; exact candidate date/admit card controls
+FCPS-I,theory,all subjects,2026-10-06,scheduled_upcoming,CPSP,MED-078,Public schedule date; exact candidate date/admit card controls
+IMM,theory,applicable FCPS disciplines,2026-02-16,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Clinical/TOACS timing not inferred
+IMM,theory,applicable FCPS disciplines,2026-08-04,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Clinical/TOACS timing not inferred
+MCPS,theory,current MCPS disciplines,2026-02-10,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Clinical timing separate
+MCPS,theory,current MCPS disciplines,2026-08-04,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Clinical timing separate
+FCPS-II,theory major subjects,Medicine/Surgery/Paediatrics/Obstetrics and Gynaecology/Ophthalmology,2026-02-16,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Clinical timing separate
+FCPS-II,theory major subjects,Medicine/Surgery/Paediatrics/Obstetrics and Gynaecology/Ophthalmology,2026-09-29,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Clinical timing separate
+FCPS-II,theory other subjects,other subjects per CPSP notification,2026-02-10,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Discipline-specific notification controls
+FCPS-II,theory other subjects,other subjects per CPSP notification,2026-08-04,scheduled_date_elapsed_completion_not_verified,CPSP,MED-078,Discipline-specific notification controls

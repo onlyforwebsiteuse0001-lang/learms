@@ -1,180 +1,82 @@
-# HAAFIZ EDU
+# HAAFIZ EDU (Learms)
 
-Pakistan-first AI-powered personalized learning system. Development follows the approved ordered build plan: each step is implemented, tested, and reported before the next begins. The repository never returns fake AI or learning results when a dependency is unavailable.
+**Pakistan-first, AI-powered personalized learning system.** Upload your notes, the
+pipeline extracts concepts, diagnoses what you know (BKT), and builds a learning
+path — with honest capability reporting: the system never returns fake AI or
+learning results when a dependency is unavailable.
 
-## Build status
+## Status — v1.5.0 (Foundation Release, 2026-10-01)
 
-| Step | Deliverable | Status |
-|---|---|---|
-| 1 | Project structure, PostgreSQL/Redis/Celery, React PWA, Docker | **Complete** |
-| 2 | Authenticated uploads, extraction/OCR, durable jobs and source library UI | **Complete** |
-| 3 | AI + deterministic concept extraction and knowledge graph | Not started |
-| 4+ | Diagnostic, BKT, paths, FSRS, tutor, quizzes, planner, mock exams | Ordered backlog |
+| Component | State |
+|---|---|
+| Backend (FastAPI, PostgreSQL, Redis, Celery) | ✅ Built, tested (277 tests), verified end-to-end |
+| Extraction pipeline (PDF/DOCX/PPTX/images + OCR) | ✅ Live-verified |
+| Concept extraction + knowledge graph foundations | ✅ Working (source-grounded, deterministic) |
+| Diagnostic + BKT mastery + learning path API | ✅ Working (BKT posterior updates verified) |
+| Frontend (React 18 + TS + Vite PWA, en/ur) | ✅ 297 tests, production build green |
+| Security package (auth/authz/validators/LLM guardrails) | ✅ Integrated, 20 tests |
+| Content library | 🟡 21 courses / 280 concepts across 11 fields (taxonomy has gaps — see `content/INDEX.md`) |
+| Tutor / Quiz / Planner / Mock exams | ⏳ v1.6.0 (frontend shells exist as pending pages) |
+| FSRS scheduling | ⏳ v1.6.0 (dependency pinned, engine not wired yet) |
 
-## Step 2 capabilities
-
-- Multi-file authenticated upload with a configurable count and per-file size limit
-- PDF, DOCX, PPTX, JPG/JPEG, PNG, TIFF and BMP validation
-- Corrupt, empty, oversized and mismatched-container rejection before queueing
-- Private UUID-based storage paths separated by student
-- Celery batch fan-out with one resilient task per document
-- Digital PDF extraction through `pdfplumber`, then `pypdf`
-- Scanned PDF and image OCR through Tesseract (`eng+urd`, 300 DPI by default)
-- DOCX paragraph/table extraction and PPTX slide/table extraction
-- Gemini Vision only as a configured fallback after local image/PDF extraction failure
-- Repeated header/footer and page-number cleaning without rewriting source content
-- English, Urdu, mixed-script and unknown language detection
-- Durable page-level method/confidence provenance
-- Pollable job counters and explicit `queued`, `processing`, `partial`, `success`, `failed` states
-- Student-owned list, detail, paginated text and delete endpoints
-- Mobile-first React authentication, upload progress and private source library UI
-
-## Repository structure
-
-```text
-backend/app/api/v1/       Authentication and document routes
-backend/app/models/       SQLAlchemy source-document models
-backend/app/schemas/      Pydantic API contracts
-backend/app/services/     Extraction, OCR, cleaning, and document operations
-backend/app/tasks.py      Celery extraction and batch tasks
-frontend/                 React 18 + TypeScript + Vite PWA
-database/migrations/      Alembic migrations
-ai_services/              Explicit external provider adapters
-tests/fixtures/           Small PDF, DOCX, and image examples
-```
-
-See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for security and component boundaries.
-
-## Docker setup
-
-Prerequisites: Docker Engine 24+ and Docker Compose v2.
+## Quick start (Docker)
 
 ```bash
-cp .env.example .env
-# Set POSTGRES_PASSWORD, SECRET_KEY and HAAFIZ_ADMIN_PASSWORD in .env
+git clone https://github.com/onlyforwebsiteuse0001-lang/learms.git
+cd learns
+cp .env.example .env           # set POSTGRES_PASSWORD and SECRET_KEY
 docker compose up --build
 ```
 
-Open:
+- API + Swagger docs: http://localhost:8000/docs
+- Frontend: http://localhost:3000
 
-- Frontend: <http://localhost:3000>
-- API: <http://localhost:8000>
-- OpenAPI in non-production: <http://localhost:8000/docs>
-
-The backend container runs `alembic upgrade head` before Uvicorn starts. PostgreSQL and Redis are not exposed to the host. Source files persist in the `upload_data` named volume. The Celery worker mounts the same private volume.
-
-## Native setup
-
-Install PostgreSQL 15+, Redis 7+, Poppler, Tesseract, and English/Urdu language packs, then:
+## Quick start (no Docker — dev sandbox)
 
 ```bash
-cp .env.example .env
-make setup
-alembic upgrade head
-make dev
+python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt pgserver
+.venv/bin/python scripts/dev/run_demo_db.py      # real PostgreSQL, no root needed
+cp .env.example .env                              # point DATABASE_URL at the printed URI
+.venv/bin/alembic upgrade head
+.venv/bin/uvicorn backend.app.main:app --reload   # API on :8000
+.venv/bin/celery -A backend.app.worker.celery worker --loglevel=INFO   # worker
+cd frontend && npm ci && VITE_DEV_API_TARGET=http://localhost:8000 npm run dev  # UI on :3000
 ```
 
-Run Celery and React separately:
+## What the student journey looks like
 
-```bash
-.venv/bin/celery -A backend.app.worker.celery worker --loglevel=INFO
-cd frontend && npm run dev
+1. Register / login (JWT)
+2. Upload notes (PDF, DOCX, PPTX, JPG/PNG/TIFF/BMP) — validated, stored privately per student
+3. Background extraction (Celery): digital text → OCR fallback → cleaning → language detection
+4. Source-grounded concepts appear (no invented content without a configured AI provider)
+5. Diagnostic questions → BKT mastery estimate per concept
+6. Personalized learning path (topological prerequisites + bandit ordering), with reasons
+
+## Repository map
+
+```
+backend/app/          FastAPI: auth, documents, learning APIs; BKT/bandits/graph services
+backend/app/tasks.py  Celery extraction tasks (NullPool worker engine — see TEST-REPORT-8)
+frontend/             React 18 + TypeScript + Vite PWA (same-origin /api, i18n en/ur)
+security/             Standalone security library: auth, authz, validators, LLM guardrails
+content/              11 fields, 21 courses, 280 concepts (+ validator script)
+database/             Alembic migrations, init scripts
+ai_services/          Vision/router services for configured AI providers
+docs/                 Architecture, operations, security, per-agent session records
+docs/release/         Agent 8 release documentation (audit, tests, docker, morning report)
+docs/research-all/    Consolidated research: general, IT, medical, accounting
 ```
 
-## Authenticate and upload
+## Docs
 
-Register:
+- Architecture: `docs/ARCHITECTURE.md` · Deployment: `docs/DEPLOYMENT.md`
+- Security design: `docs/security/` · Security policy: `SECURITY.md`
+- Release evidence: `docs/release/TEST-REPORT-8.md`, `docs/release/DOCKER-REPORT-8.md`
+- Contributing: `CONTRIBUTING.md` · Changelog: `CHANGELOG.md`
 
-```bash
-curl -X POST http://localhost:8000/api/v1/auth/register \
-  -H 'Content-Type: application/json' \
-  -d '{"name":"Ali Khan","email":"ali@example.com","password":"a-secure-password"}'
-```
+## Principles
 
-Copy `access_token`, then upload one or more files:
-
-```bash
-curl -X POST http://localhost:8000/api/v1/documents/upload \
-  -H "Authorization: Bearer $TOKEN" \
-  -F 'files=@tests/fixtures/sample-digital.pdf' \
-  -F 'files=@tests/fixtures/sample.docx'
-```
-
-The upload returns HTTP `202` with `job_id` and file IDs. Poll the job:
-
-```bash
-curl http://localhost:8000/api/v1/jobs/$JOB_ID \
-  -H "Authorization: Bearer $TOKEN"
-```
-
-List documents or fetch extracted text:
-
-```bash
-curl http://localhost:8000/api/v1/documents \
-  -H "Authorization: Bearer $TOKEN"
-
-curl 'http://localhost:8000/api/v1/documents/'$DOCUMENT_ID'/text?page=1&page_size=20' \
-  -H "Authorization: Bearer $TOKEN"
-```
-
-## Upload and OCR configuration
-
-| Variable | Default | Purpose |
-|---|---:|---|
-| `MAX_UPLOAD_MB` | `50` | Limit per file |
-| `MAX_FILES_PER_UPLOAD` | `10` | Limit per request |
-| `UPLOAD_DIR` | `/app/data/uploads` in Docker | Private source storage |
-| `TESSERACT_LANGUAGES` | `eng+urd` | English and Urdu OCR |
-| `OCR_DPI` | `300` | PDF rasterization/OCR DPI |
-| `GEMINI_API_KEY` | blank | Optional final vision fallback |
-
-No Gemini key is required for digital PDF, DOCX, PPTX or local OCR. If local OCR fails and no Gemini key exists, the document is marked failed with an explicit unavailable message. It is never marked successful without meaningful extracted text.
-
-## API endpoints delivered in Step 2
-
-- `POST /api/v1/auth/register`
-- `POST /api/v1/auth/login`
-- `POST /api/v1/documents/upload`
-- `GET /api/v1/documents`
-- `GET /api/v1/documents/{document_id}`
-- `DELETE /api/v1/documents/{document_id}`
-- `GET /api/v1/documents/{document_id}/text`
-- `GET /api/v1/jobs/{job_id}`
-- `GET /api/health`
-
-## Quality checks
-
-```bash
-.venv/bin/pytest -q
-.venv/bin/ruff check backend/app ai_services tests
-.venv/bin/alembic upgrade head --sql
-cd frontend && npm run build
-```
-
-## Honest limitations at Step 2
-
-- The sandbox does not provide Docker, PostgreSQL, Redis, Tesseract, or Urdu trained data, so full container-to-container execution could not be performed here. Docker images install Tesseract `eng` and `urd`; Compose wiring is defined for deployment verification on a Docker host.
-- PDF/DOCX parsing tests use real generated files. OCR routing/failure tests mock the Tesseract process because the sandbox has no Tesseract binary; real OCR runs inside the backend Docker image.
-- Handwriting, formulas, and complex tables depend on source quality. Gemini is attempted only when configured and still may fail; failure remains explicit.
-- WebSocket notifications are not implemented. The required polling endpoint is implemented.
-- Concept extraction and knowledge graph construction are deliberately not included; those are ordered Step 3.
-
-## Concept, diagnostic, mastery, and path APIs
-
-Uploaded documents now feed an evidence-gated concept pipeline. Configured AI order is Gemini, Groq, then OpenRouter; without working keys the system labels and uses a conservative deterministic source-only extractor.
-
-Authenticated endpoints:
-
-- `POST /api/v1/jobs/{job_id}/retry`
-- `GET /api/v1/concepts?course={course_key}`
-- `GET /api/v1/concepts/{concept_id}/prerequisites`
-- `POST /api/v1/diagnostic/start`
-- `POST /api/v1/diagnostic/{session_id}/answer`
-- `GET /api/v1/diagnostic/{session_id}/result`
-- `GET /api/v1/mastery/{student_id}`
-- `GET /api/v1/mastery/{student_id}/concept/{concept_id}`
-- `POST /api/v1/path/generate`
-- `GET /api/v1/path/current`
-- `GET /api/v1/path/why/{concept_id}`
-
-Diagnostics explicitly return unavailable when fewer than three source-grounded questions exist. Mastery is exact online BKT (`p_know * 100`); defaults are not represented as fitted. Paths enforce prerequisite topology before Thompson Sampling.
+1. **No fake results.** Missing model/key/tool ⇒ explicit honest status, not fabricated output.
+2. **Student data isolation.** Per-student UUID storage paths, auth on every learning record.
+3. **Same-origin frontend.** The browser only calls relative `/api/...`; dev proxy or nginx forward it.
+4. **Bilingual by default.** Errors and UI copy ship in English + Urdu.

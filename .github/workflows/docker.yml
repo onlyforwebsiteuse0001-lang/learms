@@ -1,0 +1,39 @@
+name: docker
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+
+jobs:
+  compose-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate compose configuration
+        run: |
+          cp .env.example .env
+          echo "POSTGRES_PASSWORD=ci-validation-only" >> .env
+          docker compose config --quiet
+      - name: Build all images
+        run: |
+          cp .env.example .env
+          echo "POSTGRES_PASSWORD=ci-validation-only" >> .env
+          docker compose build
+      - name: Compose smoke test (backend health)
+        run: |
+          cp .env.example .env
+          echo "POSTGRES_PASSWORD=ci-validation-only" >> .env
+          echo "SECRET_KEY=ci-only-secret-key-min-32-characters-long" >> .env
+          docker compose up -d
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:8000/api/health > /dev/null 2>&1; then
+              echo "backend healthy"; break
+            fi
+            [ "$i" = "30" ] && { echo "backend never became healthy"; docker compose logs; exit 1; }
+            sleep 5
+          done
+          curl -fsS http://localhost:8000/api/health
+          docker compose logs --tail=50 backend worker
+          docker compose down -v

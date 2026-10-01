@@ -10,8 +10,10 @@ from pathlib import Path
 import structlog
 from celery import group
 from sqlalchemy import delete, select
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+from sqlalchemy.pool import NullPool
 
-from backend.app.database import SessionFactory
+from backend.app.core.config import get_settings
 from backend.app.models.document import (
     Document,
     DocumentStatus,
@@ -24,6 +26,14 @@ from backend.app.services.text_cleaner import detect_language
 from backend.app.worker import celery
 
 logger = structlog.get_logger(__name__)
+
+# Celery forks reuse this module across tasks, and every task runs its own
+# ``asyncio.run()`` loop. The shared API engine would hand a connection that is
+# already bound to a previous loop to the next task ("attached to a different
+# loop"). Workers therefore use their own engine with NullPool: every checkout
+# opens a fresh connection on the *current* loop and closes it on checkin.
+_task_engine = create_async_engine(get_settings().database_url, poolclass=NullPool)
+SessionFactory = async_sessionmaker(_task_engine, expire_on_commit=False, class_=AsyncSession)
 
 
 async def _update_job(session, job_id: uuid.UUID) -> None:

@@ -1,5 +1,13 @@
 # HAAFIZ EDU architecture
 
+> **v1.5.0 update (Agent 8, 2026-10-01):** Steps 3–4 backends shipped and verified
+> live: concept extraction (source-grounded), diagnostic + BKT mastery, learning-path
+> generation (topological + bandit ordering). Agent 3's `security/` library integrated
+> (auth/authz/validators/LLM guardrails, tested: 20/20). Worker pool bug fixed
+> (`backend/app/tasks.py` NullPool engine). Full evidence: `docs/release/TEST-REPORT-8.md`,
+> `docs/release/DOCKER-REPORT-8.md`. Remaining for v1.6.0: tutor/quiz/planner engines,
+> FSRS wiring, security-package hot-wiring into request middleware, content expansion.
+
 ## Ordered delivery status
 
 - **Step 1 — project foundation:** complete

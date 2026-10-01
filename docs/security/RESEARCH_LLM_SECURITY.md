@@ -1,0 +1,3 @@
+# LLM security research
+
+OWASP 2025 risks include prompt injection, sensitive disclosure, supply chain, poisoning, improper output handling, excessive agency, prompt leakage, vector weaknesses, misinformation, and unbounded consumption. Defenses are layered: isolate retrieved content from instructions, minimize tool permissions, require typed output validation and human approval for side effects, redact PII, cap input/output/token/cost, rate-limit, log hashes rather than raw prompts, and evaluate with adversarial fixtures. No detector can prove an input is safe; policy enforcement must remain outside the model.

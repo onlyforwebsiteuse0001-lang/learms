@@ -1,0 +1,3 @@
+# OWASP Top 10 coverage
+
+A01 access control: RBAC/ABAC/RLS and IDOR tests. A02 crypto: TLS, Argon2id, AES-GCM, KMS. A03 injection: strict schemas, bound SQL, command/path/SSRF controls. A04 insecure design: STRIDE and abuse cases. A05 misconfiguration: headers, default deny, hardened containers. A06 vulnerable components: pip-audit/Trivy/Dependabot. A07 authentication: MFA, rotation, throttling. A08 integrity: signed images, lockfiles, webhook HMAC, audit chain. A09 logging: centralized redacted events and alerts. A10 SSRF: allowlists, DNS/IP checks, egress firewall. Evidence is required per release; this document is a coverage map, not proof of security.
