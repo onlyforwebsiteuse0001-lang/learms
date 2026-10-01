@@ -1,6 +1,18 @@
-# Python bytecode from scripts/content and tests/content
+# Python
 __pycache__/
 *.py[cod]
+.venv/
+backend/*.db
 
-# TypeScript incremental build metadata
+# Environment and editors
+.env
+.vscode/
+.idea/
+.DS_Store
+
+# Frontend
+node_modules/
+dist/
 *.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
