@@ -1,0 +1,44 @@
+status: draft_v0_1
+date_accessed: "2026-09-30 UTC"
+source_register: docs/it-research/sources/SOURCE_REGISTER.csv
+recommendations:
+  - id: R001
+    title: Build a prerequisite knowledge graph
+    priority: P0
+    evidence: [S001, S003, S004, S005, S006, S009]
+    agents: [Agent1]
+  - id: R002
+    title: Use active coding and retrieval practice in every module
+    priority: P0
+    evidence: [S093, S094, S079, S081]
+    agents: [Agent1, Agent2]
+  - id: R003
+    title: Create an error-message and debugging explainer
+    priority: P0
+    evidence: [S084, S085, S086, S105]
+    agents: [Agent1, Agent2]
+  - id: R004
+    title: Add low-data accessible UX
+    priority: P0
+    evidence: [S106, S107, S111, S112]
+    agents: [Agent2]
+  - id: R005
+    title: Separate Pakistan local evidence from global evidence
+    priority: P0
+    evidence: [S034, S035, S036, S111, S112, S122]
+    agents: [Agent1, Agent2]
+  - id: R006
+    title: Use private mastery dashboards, not shame leaderboards
+    priority: P1
+    evidence: [S088, S089, S090, S110]
+    agents: [Agent2]
+  - id: R007
+    title: Include code review, Git, testing, and documentation early
+    priority: P1
+    evidence: [S003, S092, S121, S127]
+    agents: [Agent1, Agent2]
+  - id: R008
+    title: Use AI tutors with staged hints and privacy guardrails
+    priority: P2
+    evidence: [S031, S032, S033, S123]
+    agents: [Agent2, Agent3]

@@ -1,0 +1,198 @@
+{
+  "artifact": "student_problem_ontology",
+  "version": "2026-09-30",
+  "evidence_cutoff": "2026-09-30",
+  "purpose": "A non-diagnostic concept map for research, learner-controlled support discovery, and product safety review.",
+  "population_boundary": "Undergraduate medical students unless an evidence object says otherwise.",
+  "nodes": [
+    {
+      "id": "problem.depression_symptoms",
+      "label": "Depression or depressive symptoms",
+      "kind": "problem_domain",
+      "do_not_equate_with": ["clinical diagnosis", "suicidal ideation", "ordinary sadness"],
+      "sources": ["MED-087", "MED-092", "MED-094"]
+    },
+    {
+      "id": "problem.anxiety_symptoms",
+      "label": "Anxiety symptoms",
+      "kind": "problem_domain",
+      "do_not_equate_with": ["clinical diagnosis", "exam concern"],
+      "sources": ["MED-088", "MED-094"]
+    },
+    {
+      "id": "problem.suicidal_ideation",
+      "label": "Suicidal ideation",
+      "kind": "safety_critical_domain",
+      "do_not_equate_with": ["depression screen", "acute-risk level", "suicide attempt"],
+      "sources": ["MED-087", "MED-104"]
+    },
+    {
+      "id": "problem.burnout",
+      "label": "Burnout and its measured dimensions",
+      "kind": "problem_domain",
+      "do_not_equate_with": ["depression", "fatigue alone", "missed goals"],
+      "sources": ["MED-089", "MED-095", "MED-096", "MED-100", "MED-107", "MED-108"]
+    },
+    {
+      "id": "problem.sleep_fatigue",
+      "label": "Poor sleep, daytime sleepiness and fatigue",
+      "kind": "problem_domain",
+      "do_not_equate_with": ["sleep disorder diagnosis", "laziness"],
+      "sources": ["MED-090", "MED-099"]
+    },
+    {
+      "id": "problem.mistreatment",
+      "label": "Mistreatment, bullying, harassment and discrimination",
+      "kind": "safety_and_policy_domain",
+      "do_not_equate_with": ["mental-health symptom", "adjudicated violation"],
+      "sources": ["MED-091", "MED-097", "MED-098", "MED-105"]
+    },
+    {
+      "id": "problem.academic_pressure",
+      "label": "Academic workload and assessment pressure",
+      "kind": "context_domain",
+      "do_not_equate_with": ["mental illness", "individual weakness"],
+      "sources": ["MED-093", "MED-095", "MED-099", "MED-100"]
+    },
+    {
+      "id": "problem.financial_pressure",
+      "label": "Financial pressure",
+      "kind": "context_domain",
+      "do_not_equate_with": ["income", "debt", "ability to pay"],
+      "sources": ["MED-095", "MED-096", "MED-102"]
+    },
+    {
+      "id": "problem.career_uncertainty",
+      "label": "Career and postgraduate-pathway uncertainty",
+      "kind": "context_domain",
+      "do_not_equate_with": ["unemployment probability", "salary forecast"],
+      "sources": ["MED-095", "MED-102"]
+    },
+    {
+      "id": "problem.digital_overuse",
+      "label": "Problematic smartphone use or digital distraction",
+      "kind": "behavior_domain",
+      "do_not_equate_with": ["total device time", "educational use", "addiction diagnosis"],
+      "sources": ["MED-101"]
+    },
+    {
+      "id": "problem.help_seeking_barrier",
+      "label": "Help-seeking and disclosure barriers",
+      "kind": "access_domain",
+      "do_not_equate_with": ["treatment refusal", "absence of need"],
+      "sources": ["MED-087", "MED-095", "MED-103", "MED-109"]
+    }
+  ],
+  "evidence_edges": [
+    {
+      "from": "problem.academic_pressure",
+      "to": "problem.sleep_fatigue",
+      "relation_type": "cross_sectional_association",
+      "geography": "one private medical school in Lahore",
+      "source_ids": ["MED-099"],
+      "causal_interpretation_allowed": false
+    },
+    {
+      "from": "problem.financial_pressure",
+      "to": "problem.burnout",
+      "relation_type": "cross_sectional_association",
+      "geography": "one medical college in Islamabad",
+      "source_ids": ["MED-096"],
+      "causal_interpretation_allowed": false
+    },
+    {
+      "from": "problem.digital_overuse",
+      "to": "problem.sleep_fatigue",
+      "relation_type": "meta_analytic_correlation",
+      "reported_effect": "r=0.30 between smartphone-addiction and PSQI scores",
+      "source_ids": ["MED-101"],
+      "causal_interpretation_allowed": false
+    },
+    {
+      "from": "problem.help_seeking_barrier",
+      "to": "support.professional_care",
+      "relation_type": "negative_association_in_mixed_populations",
+      "reported_effect": "median d=-0.27 for stigma and help-seeking",
+      "source_ids": ["MED-109"],
+      "causal_interpretation_allowed": false
+    },
+    {
+      "from": "problem.mistreatment",
+      "to": "support.institutional_reporting",
+      "relation_type": "policy_route",
+      "source_ids": ["MED-105"],
+      "causal_interpretation_allowed": false
+    },
+    {
+      "from": "support.institutional_services",
+      "to": "support.counselling",
+      "relation_type": "accreditation_requirement",
+      "source_ids": ["MED-001", "MED-106"],
+      "implementation_verified_nationally": false
+    }
+  ],
+  "support_nodes": [
+    {
+      "id": "support.professional_care",
+      "label": "Qualified human mental-health care",
+      "learms_role": "verified discovery and handoff only unless separately clinically governed"
+    },
+    {
+      "id": "support.counselling",
+      "label": "Institutional psychological, academic or career counselling",
+      "learms_role": "display first-party route, scope, confidentiality terms and verification date"
+    },
+    {
+      "id": "support.institutional_reporting",
+      "label": "HEI harassment reporting and inquiry route",
+      "learms_role": "explain and link; do not imply adjudicatory authority"
+    },
+    {
+      "id": "support.independent_advice",
+      "label": "Independent support or advice",
+      "learms_role": "only display after jurisdictional and operational verification"
+    },
+    {
+      "id": "support.emergency",
+      "label": "Local emergency or crisis support",
+      "learms_role": "prominent human routing; Pakistan-wide contact dataset not verified in Area 4"
+    }
+  ],
+  "product_constraints": [
+    {
+      "id": "constraint.no_diagnosis",
+      "rule": "Do not infer or present a diagnosis from behavior, academic data, self-description or a research screening estimate."
+    },
+    {
+      "id": "constraint.no_composite_risk",
+      "rule": "Do not sum prevalence estimates or create a wellbeing, burnout or suicide-risk score without separate clinical governance and validation."
+    },
+    {
+      "id": "constraint.no_causal_rewrite",
+      "rule": "Preserve cross-sectional association and qualitative theme labels; do not rewrite them as causes."
+    },
+    {
+      "id": "constraint.no_college_ranking",
+      "rule": "Do not rank colleges using non-comparable convenience or cross-sectional wellbeing samples."
+    },
+    {
+      "id": "constraint.no_unverified_confidentiality",
+      "rule": "Do not label a route confidential without source-backed terms describing operator, access, disclosure and retention."
+    },
+    {
+      "id": "constraint.no_app_substitution",
+      "rule": "Do not substitute learning content, a chatbot or engagement workflow for human clinical assessment, emergency response or a formal harassment process."
+    },
+    {
+      "id": "constraint.no_penalty",
+      "rule": "Wellbeing prompts, breaks, quiet hours and support routes must not penalize progress or streaks."
+    }
+  ],
+  "open_gaps": [
+    "Representative national longitudinal Pakistan medical-student data",
+    "Current national counselling capacity, utilization and outcome data",
+    "Verified Pakistan-wide crisis contacts and operational ownership",
+    "Current harassment reporting, retaliation, outcome and trust data",
+    "Comparable evidence for underserved and under-described student groups"
+  ]
+}
