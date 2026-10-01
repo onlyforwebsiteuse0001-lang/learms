@@ -1,0 +1,288 @@
+{
+  "_meta": {
+    "title": "Learms Pakistan Fields Taxonomy (machine-readable)",
+    "version": "1.0.0",
+    "generated": "2026-09-30",
+    "agent": "Agent 4 (research)",
+    "source_of_truth": "docs/research/PAKISTAN_FIELDS_TAXONOMY.md",
+    "warning": "The 11-field grouping is a Learms mapping over HEC's discipline inventory, NOT an official HEC taxonomy. Do not label it as official in UI copy.",
+    "primary_sources": [
+      "https://www.hec.gov.pk/english/services/universities/RevisedCurricula/Pages/default.aspx",
+      "https://www.hec.gov.pk/english/services/universities/pqf/Documents/National%20Qualification%20Framework%20of%20Pakistan.pdf",
+      "https://www.pec.org.pk/curriculum-fee-structure/all-curriculums/"
+    ],
+    "legend": { "hec_verified_recent": "HEC curriculum PDF published 2023-2026" }
+  },
+  "nqf": [
+    { "level": 5, "name": "Associate Degree", "years": 2, "credit_hours": [60, 72] },
+    { "level": 6, "name": "Bachelor (4-year BS)", "years": 4, "credit_hours": [122, 140], "semesters": 8, "cr_per_semester": [15, 18], "semester_weeks": [16, 18] },
+    { "level": 6, "name": "Bachelor with licensure (5-year)", "years": 5, "credit_hours": [160, 200] },
+    { "level": 7, "name": "MS / MPhil", "years": 2, "credit_hours": [30, 30], "thesis_cr": 6 },
+    { "level": 8, "name": "PhD", "credit_hours": [18, 18], "dissertation": true }
+  ],
+  "gen_ed_core": {
+    "total_credit_hours": 30,
+    "total_courses": 12,
+    "applies_to": "all undergraduate programs including associate degrees",
+    "courses": [
+      { "name": "Arts and Humanities", "cr": 2, "priority": "P2" },
+      { "name": "Natural Sciences", "cr": 3, "priority": "P1" },
+      { "name": "Social Sciences", "cr": 2, "priority": "P2" },
+      { "name": "Functional English", "cr": 3, "priority": "P0" },
+      { "name": "Expository Writing", "cr": 3, "priority": "P0" },
+      { "name": "Quantitative Reasoning I", "cr": 3, "priority": "P0" },
+      { "name": "Quantitative Reasoning II", "cr": 3, "priority": "P0" },
+      { "name": "Islamic Studies (or Ethics/Religious Education for non-Muslims)", "cr": 2, "priority": "P1" },
+      { "name": "Ideology and Constitution of Pakistan", "cr": 2, "priority": "P1" },
+      { "name": "Applications of Information and Communication Technologies", "cr": 3, "priority": "P1" },
+      { "name": "Entrepreneurship", "cr": 2, "priority": "P2" },
+      { "name": "Civics and Community Engagement", "cr": 2, "priority": "P2" }
+    ]
+  },
+  "fields": [
+    {
+      "id": "pre-university",
+      "name": "Pre-University (Matric / Intermediate / O-A Level / Entry Tests)",
+      "official_hec_field": false,
+      "note": "Not part of HEC's NQF tree but the largest Learms addressable cohort.",
+      "categories": [
+        { "id": "matric", "name": "Matric / SSC (Grade 9-10)", "roots": ["Science (Biology group)", "Science (Computer group)", "Arts / General", "Commerce"] },
+        { "id": "intermediate", "name": "Intermediate / HSSC (Grade 11-12)", "roots": ["Pre-Medical", "Pre-Engineering", "ICS", "I.Com", "F.A.", "General Science"] },
+        { "id": "cambridge", "name": "O Level / A Level", "roots": ["CAIE O Level", "CAIE A Level", "Edexcel IGCSE"] },
+        { "id": "entry-tests", "name": "Entry Tests", "roots": ["MDCAT", "ECAT", "NUST NET", "NTS NAT", "GAT General", "LAT / Law-GAT"] }
+      ]
+    },
+    {
+      "id": "natural-sciences",
+      "name": "Natural and Physical Sciences",
+      "accreditor": "HEC",
+      "categories": [
+        { "id": "mathematical-sciences", "name": "Mathematical Sciences", "roots": [
+          { "id": "mathematics", "name": "Mathematics", "hec_verified_recent": true, "sub_roots": ["Calculus and Analysis", "Linear Algebra", "Abstract Algebra", "Real Analysis", "Complex Analysis", "Topology", "ODE", "PDE", "Numerical Analysis", "Discrete Mathematics", "Mathematical Modelling", "Optimisation"] },
+          { "id": "statistics", "name": "Statistics", "hec_verified_recent": true, "sub_roots": ["Probability Theory", "Statistical Inference", "Regression Analysis", "Design of Experiments", "Sampling Techniques", "Time Series", "Multivariate Analysis", "Biostatistics", "Econometrics"] }
+        ]},
+        { "id": "physical-sciences", "name": "Physical Sciences", "roots": [
+          { "id": "physics", "name": "Physics", "hec_verified_recent": true, "sub_roots": ["Mechanics", "Electricity and Magnetism", "Thermodynamics and Statistical Mechanics", "Waves and Oscillations", "Modern Physics", "Quantum Mechanics", "Solid State Physics", "Nuclear Physics", "Electronics", "Computational Physics"] },
+          { "id": "chemistry", "name": "Chemistry", "hec_verified_recent": true, "sub_roots": ["Physical Chemistry", "Organic Chemistry", "Inorganic Chemistry", "Analytical Chemistry", "Biochemistry", "Industrial Chemistry", "Polymer Chemistry", "Spectroscopy"] },
+          { "id": "geology", "name": "Geology", "hec_verified_recent": true, "sub_roots": ["Mineralogy", "Petrology", "Structural Geology", "Stratigraphy", "Palaeontology", "Geophysics", "Hydrogeology", "Economic Geology"] }
+        ]},
+        { "id": "life-sciences", "name": "Life Sciences", "roots": [
+          { "id": "biology", "name": "Biology", "hec_verified_recent": true, "sub_roots": ["Cell Biology", "Genetics", "Ecology", "Evolution", "Physiology", "Molecular Biology"] },
+          { "id": "botany", "name": "Botany", "hec_verified_recent": true, "sub_roots": ["Plant Anatomy", "Plant Physiology", "Plant Taxonomy", "Phycology and Mycology", "Plant Pathology", "Ethnobotany"] },
+          { "id": "zoology", "name": "Zoology", "hec_verified_recent": true, "sub_roots": ["Invertebrate Zoology", "Vertebrate Zoology", "Animal Physiology", "Entomology", "Parasitology", "Wildlife and Fisheries", "Developmental Biology"] },
+          { "id": "biochemistry", "name": "Biochemistry", "hec_verified_recent": true, "cross_listed_in": ["health-medicine"], "sub_roots": ["Enzymology", "Metabolism", "Molecular Biology", "Clinical Biochemistry", "Immunology"] },
+          { "id": "microbiology", "name": "Microbiology", "hec_verified_recent": true, "sub_roots": ["Bacteriology", "Virology", "Mycology", "Industrial Microbiology", "Medical Microbiology", "Immunology"] },
+          { "id": "biotechnology", "name": "Biotechnology", "hec_verified_recent": true, "sub_roots": ["Industrial Biotechnology", "Medical Biotechnology", "Agricultural Biotechnology", "Genetic Engineering", "Bioprocess Technology"] },
+          { "id": "genetics", "name": "Genetics", "sub_roots": ["Molecular Genetics", "Human Genetics", "Population Genetics", "Cytogenetics"] },
+          { "id": "bioinformatics", "name": "Bioinformatics", "hec_verified_recent": true, "cross_listed_in": ["it-computing"], "sub_roots": ["Sequence Analysis", "Structural Bioinformatics", "Genomics", "Biological Databases", "Programming for Biology"] },
+          { "id": "fresh-water-biology", "name": "Fresh Water Biology", "sub_roots": ["Limnology", "Aquatic Ecology", "Fisheries Biology"] }
+        ]},
+        { "id": "environmental-earth", "name": "Environmental and Earth Sciences", "roots": [
+          { "id": "environmental-science", "name": "Environmental Science", "hec_verified_recent": true, "sub_roots": ["Pollution Control", "Environmental Impact Assessment", "Climate Change", "Waste Management", "Environmental Chemistry", "Conservation"] },
+          { "id": "geography", "name": "Geography", "hec_verified_recent": true, "sub_roots": ["Physical Geography", "Human Geography", "Cartography", "Urban Geography", "GIS"] },
+          { "id": "remote-sensing-gis", "name": "Remote Sensing and GIS", "hec_verified_recent": true, "sub_roots": ["Image Processing", "Spatial Analysis", "Photogrammetry", "Geodatabases"] },
+          { "id": "disaster-management", "name": "Disaster Management", "sub_roots": ["Hazard Assessment", "Disaster Risk Reduction", "Emergency Response", "Resilience Planning"] }
+        ]}
+      ]
+    },
+    {
+      "id": "it-computing",
+      "name": "IT and Computing",
+      "accreditor": "HEC / NCEAC",
+      "categories": [
+        { "id": "core-computing", "name": "Core Computing", "roots": [
+          { "id": "computer-science", "name": "Computer Science", "hec_verified_recent": true, "sub_roots": ["Programming Fundamentals", "Object Oriented Programming", "Data Structures and Algorithms", "Discrete Structures", "Computer Organisation and Assembly", "Operating Systems", "Database Systems", "Computer Networks", "Theory of Computation", "Compiler Construction", "Software Engineering", "Artificial Intelligence", "Web Development", "Mobile Development", "Computer Graphics"] },
+          { "id": "software-engineering", "name": "Software Engineering", "sub_roots": ["Requirements Engineering", "Software Design and Architecture", "Software Quality Assurance", "Software Project Management", "DevOps", "Formal Methods", "Human Computer Interaction"] },
+          { "id": "information-technology", "name": "Information Technology", "sub_roots": ["Networking", "System Administration", "IT Infrastructure", "Enterprise Systems", "Web Technologies", "IT Service Management"] },
+          { "id": "cyber-security", "name": "Cyber Security", "hec_verified_recent": true, "sub_roots": ["Cryptography", "Network Security", "Digital Forensics", "Ethical Hacking and Penetration Testing", "Secure Software Development", "Governance Risk and Compliance", "Malware Analysis"] }
+        ]},
+        { "id": "data-ai", "name": "Data and AI", "roots": [
+          { "id": "artificial-intelligence", "name": "Artificial Intelligence", "sub_roots": ["Machine Learning", "Deep Learning", "Natural Language Processing", "Computer Vision", "Knowledge Representation", "Robotics", "Reinforcement Learning"] },
+          { "id": "data-science", "name": "Data Science", "sub_roots": ["Statistics for Data Science", "Data Wrangling", "Data Visualisation", "Big Data Systems", "MLOps", "Business Intelligence"] }
+        ]},
+        { "id": "information-systems", "name": "Information Systems", "roots": [
+          { "id": "mis", "name": "Management Information Systems", "sub_roots": ["ERP Systems", "Systems Analysis and Design", "IS Strategy", "E-Commerce"] },
+          { "id": "library-information-science", "name": "Library and Information Science", "hec_verified_recent": true, "sub_roots": ["Cataloguing and Classification", "Information Retrieval", "Digital Libraries", "Knowledge Management"] }
+        ]}
+      ]
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering and Technology",
+      "accreditor": "PEC",
+      "note": "PEC accreditation Level-I vs Level-II (Washington Accord aligned OBE) is material to employability. Surface it in UI.",
+      "categories": [
+        { "id": "pec-2020", "name": "PEC Curricula 2020", "roots": ["Aerospace Engineering", "Agricultural Engineering", "Automotive Engineering", "Avionics Engineering", "Building and Architectural Engineering", "Computer Engineering", "Geoinformatics Engineering", "Geological Engineering", "Polymer Engineering", "Software Engineering", "Telecommunication Engineering", "Textile Engineering", "Transportation Engineering"] },
+        { "id": "pec-2023", "name": "PEC Curricula 2023", "roots": ["Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Food Engineering", "Information Security Engineering"] },
+        { "id": "pec-2024", "name": "PEC Curricula 2024", "roots": ["Industrial Engineering", "Mechanical Engineering", "Mechatronics Engineering", "Naval Architecture Engineering", "Metallurgy and Materials Engineering", "Mining Engineering", "Petroleum and Gas Engineering"] },
+        { "id": "hec-side-engineering", "name": "HEC-side / allied", "roots": ["Biomedical Engineering", "Environmental Engineering", "Energy System Engineering", "Electronics", "Engineering Technologies (B.Tech)", "Architecture", "City and Regional Planning"] }
+      ],
+      "high_enrolment_sub_roots": {
+        "electrical-engineering": ["Circuit Analysis", "Electronics I", "Electronics II", "Signals and Systems", "Electromagnetic Field Theory", "Electrical Machines", "Power Systems", "Control Systems", "Power Electronics", "Digital Signal Processing", "Instrumentation and Measurement"],
+        "civil-engineering": ["Engineering Mechanics", "Strength of Materials", "Structural Analysis", "Reinforced Concrete Design", "Steel Structures", "Geotechnical Engineering", "Fluid Mechanics", "Hydraulics and Hydrology", "Transportation Engineering", "Surveying", "Construction Project Management", "Environmental Engineering"],
+        "mechanical-engineering": ["Statics", "Dynamics", "Thermodynamics", "Fluid Mechanics", "Heat and Mass Transfer", "Machine Design", "Manufacturing Processes", "Mechanics of Materials", "Internal Combustion Engines", "Refrigeration and Air Conditioning", "Mechanical Vibrations", "CAD CAM"],
+        "computer-engineering": ["Digital Logic Design", "Computer Architecture", "Microprocessors and Interfacing", "Embedded Systems", "Signals and Systems", "Operating Systems", "Computer Networks", "VLSI Design"]
+      }
+    },
+    {
+      "id": "health-medicine",
+      "name": "Health and Medicine",
+      "accreditor": "PM&DC / PNC / PCP",
+      "categories": [
+        { "id": "medicine-dentistry", "name": "Medicine and Dentistry", "roots": [
+          { "id": "mbbs", "name": "MBBS", "years": 5, "entry_test": "MDCAT", "sub_roots": ["Anatomy", "Physiology", "Biochemistry", "Pathology", "Pharmacology", "Forensic Medicine", "Community Medicine", "Medicine", "Surgery", "Obstetrics and Gynaecology", "Paediatrics"] },
+          { "id": "bds", "name": "BDS", "years": 4, "entry_test": "MDCAT", "sub_roots": ["Oral Anatomy", "Dental Materials", "Oral Pathology", "Periodontology", "Prosthodontics", "Orthodontics", "Oral and Maxillofacial Surgery"] }
+        ]},
+        { "id": "pharmacy", "name": "Pharmacy", "roots": [
+          { "id": "pharm-d", "name": "Doctor of Pharmacy (Pharm.D)", "years": 5, "hec_verified_recent": true, "sub_roots": ["Pharmaceutics", "Pharmaceutical Chemistry", "Pharmacology", "Pharmacognosy", "Pharmacy Practice", "Clinical Pharmacy"] }
+        ]},
+        { "id": "nursing-midwifery", "name": "Nursing and Midwifery", "roots": [
+          { "id": "bsn", "name": "BS Nursing / Post-RN BSN", "hec_verified_recent": true, "sub_roots": ["Fundamentals of Nursing", "Medical Surgical Nursing", "Community Health Nursing", "Mental Health Nursing", "Nursing Leadership"] },
+          { "id": "bsm", "name": "BS Midwifery", "hec_verified_recent": true, "sub_roots": ["Antenatal Care", "Intrapartum Care", "Postnatal Care", "Neonatal Care"] },
+          { "id": "paediatric-nursing", "name": "Paediatric Nursing", "hec_verified_recent": true }
+        ]},
+        { "id": "rehabilitation", "name": "Rehabilitation Sciences", "roots": [
+          { "id": "dpt", "name": "Doctor of Physical Therapy", "years": 5, "hec_verified_recent": true, "sub_roots": ["Musculoskeletal Physical Therapy", "Neurological Physical Therapy", "Cardiopulmonary Physical Therapy", "Sports Physical Therapy", "Electrotherapy"] }
+        ]},
+        { "id": "allied-health", "name": "Allied Health Sciences", "roots": [
+          { "id": "allied-health-sciences", "name": "Allied Health Sciences (BS)", "hec_verified_recent": true, "sub_roots": ["Medical Laboratory Technology", "Radiology and Imaging Technology", "Anaesthesia Technology", "Operation Theatre Technology", "Optometry", "Dental Hygiene", "Cardiac Perfusion", "Dialysis Technology", "Emergency and Critical Care"] }
+        ]},
+        { "id": "public-health-nutrition", "name": "Public Health and Nutrition", "roots": [
+          { "id": "public-health", "name": "Public Health", "hec_verified_recent": true, "sub_roots": ["Epidemiology", "Biostatistics", "Health Policy and Management", "Environmental Health", "Health Promotion"] },
+          { "id": "human-nutrition-dietetics", "name": "Human Nutrition and Dietetics", "hec_verified_recent": true, "sub_roots": ["Clinical Nutrition", "Community Nutrition", "Food Service Management", "Therapeutic Diets"] },
+          { "id": "food-science-technology", "name": "Food Science and Technology", "hec_verified_recent": true, "sub_roots": ["Food Chemistry", "Food Microbiology", "Food Processing", "Food Safety and Quality", "Dairy Technology"] }
+        ]},
+        { "id": "alternative-medicine", "name": "Alternative Medicine", "roots": ["Tibb (Eastern Medicine)", "Homoeopathy"] }
+      ]
+    },
+    {
+      "id": "business-accounting",
+      "name": "Business, Commerce and Accounting",
+      "accreditor": "HEC / ICAP / ICMA / ACCA",
+      "categories": [
+        { "id": "management", "name": "Management", "roots": [
+          { "id": "business-management-studies", "name": "Business and Management Studies (BBA/BS)", "hec_verified_recent": true, "sub_roots": ["Principles of Management", "Organisational Behaviour", "Human Resource Management", "Operations Management", "Strategic Management", "Entrepreneurship", "Project Management", "Supply Chain Management"] }
+        ]},
+        { "id": "accounting-finance", "name": "Accounting and Finance", "roots": [
+          { "id": "commerce", "name": "Commerce (B.Com / BS Commerce)", "hec_verified_recent": true, "sub_roots": ["Financial Accounting", "Cost Accounting", "Auditing", "Business Law", "Taxation", "Banking"] },
+          { "id": "accounting-and-finance", "name": "Accounting and Finance (BS)", "sub_roots": ["Financial Reporting (IFRS)", "Management Accounting", "Corporate Finance", "Investment Analysis", "Audit and Assurance", "Taxation"] }
+        ]},
+        { "id": "marketing", "name": "Marketing", "roots": [{ "id": "marketing", "name": "Marketing", "sub_roots": ["Consumer Behaviour", "Brand Management", "Digital Marketing", "Marketing Research", "Integrated Marketing Communication"] }]},
+        { "id": "economics", "name": "Economics", "roots": [{ "id": "economics", "name": "Economics", "cross_listed_in": ["social-sciences"], "sub_roots": ["Microeconomics", "Macroeconomics", "Econometrics", "Development Economics", "International Trade", "Public Finance", "Monetary Economics", "Economy of Pakistan"] }]},
+        { "id": "professional-accounting", "name": "Professional Accounting Qualifications", "roots": ["CA (ICAP)", "ACCA", "CMA (ICMA Pakistan)", "CIMA", "CFA"] },
+        { "id": "hospitality", "name": "Tourism and Hospitality", "roots": [{ "id": "tourism-hospitality", "name": "Tourism and Hospitality Management", "sub_roots": ["Front Office Operations", "Food and Beverage Management", "Tourism Geography", "Event Management"] }]}
+      ]
+    },
+    {
+      "id": "law",
+      "name": "Law and Legal Studies",
+      "accreditor": "Pakistan Bar Council",
+      "categories": [
+        { "id": "professional-law", "name": "Professional Law", "roots": [
+          { "id": "llb", "name": "LLB (4-year from 2025; legacy 5-year)", "years": 4, "reform_note": "Supreme Court of Pakistan reduced LLB from 5 to 4 years in 2025; CLE for foreign graduates abolished; Law-GAT still mandatory. See docs/research/PROBLEMS_LAW.md", "hec_verified_recent": true, "sub_roots": ["Islamic Jurisprudence", "Constitutional Law of Pakistan", "Criminal Law (Pakistan Penal Code)", "Law of Contract", "Law of Torts", "Property Law", "Civil Procedure Code", "Criminal Procedure Code", "Qanun-e-Shahadat (Law of Evidence)", "Company Law", "Labour Law", "Public International Law", "Human Rights Law", "Legal Research and Writing", "Moot Court and Clinical Legal Education"] },
+          { "id": "llm", "name": "LLM", "sub_roots": ["Corporate Law", "Criminal Justice", "International Law", "Human Rights", "Shariah and Law"] }
+        ]},
+        { "id": "law-related", "name": "Law-related", "roots": ["Criminology", "Shariah and Law", "Forensic Science"] }
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education and Teacher Training",
+      "accreditor": "HEC / NACTE",
+      "categories": [
+        { "id": "teacher-education", "name": "Teacher Education", "roots": [
+          { "id": "bed-hons-elementary", "name": "B.Ed (Hons) Elementary", "years": 4, "hec_verified_recent": true },
+          { "id": "bed", "name": "B.Ed (1.5-year / 2.5-year)", "hec_verified_recent": true },
+          { "id": "bs-education", "name": "BS Education", "hec_verified_recent": true },
+          { "id": "ade", "name": "Associate Degree in Education", "nqf_level": 5 },
+          { "id": "med", "name": "M.Ed / MS Education", "nqf_level": 7 },
+          { "id": "physical-education", "name": "Physical Education", "hec_verified_recent": true }
+        ]}
+      ],
+      "hec_2025_specialisations": ["Early Childhood Care and Education", "Educational Research", "Educational Assessment", "Child Rights and Safety Education", "Educational Policy and Planning", "Curriculum Studies", "Educational Leadership and Management", "Educational Psychology", "Guidance and Counselling", "Inclusive Education", "Literacy and Non-Formal Education", "Online and Distance Learning", "Quality Assurance in Education", "Comparative Education", "Teacher Professional Development", "Mathematics Education", "STEM Education", "Islamic Education", "Education for Sustainable Development", "Educational Entrepreneurship", "Educational Technology", "Health and Physical Education", "Artificial Intelligence in Education", "Special Education (Intellectual Impairments)", "Special Education (Visual Impairments)", "Special Education (other impairments)"]
+    },
+    {
+      "id": "social-sciences",
+      "name": "Social Sciences",
+      "accreditor": "HEC",
+      "categories": [
+        { "id": "behavioural", "name": "Behavioural Sciences", "roots": [
+          { "id": "psychology", "name": "Psychology", "hec_verified_recent": true, "sub_roots": ["General Psychology", "Cognitive Psychology", "Developmental Psychology", "Social Psychology", "Abnormal Psychology", "Personality Psychology", "Experimental Psychology and Statistics", "Counselling Psychology", "Industrial and Organisational Psychology", "Neuropsychology"] },
+          { "id": "sociology", "name": "Sociology", "hec_verified_recent": true, "sub_roots": ["Classical Sociological Theory", "Contemporary Sociological Theory", "Social Research Methods", "Social Stratification", "Rural Sociology", "Urban Sociology", "Criminology and Deviance", "Gender and Society", "Social Change"] },
+          { "id": "anthropology", "name": "Anthropology", "sub_roots": ["Social and Cultural Anthropology", "Ethnography", "Physical Anthropology"] },
+          { "id": "social-work", "name": "Social Work", "hec_verified_recent": true, "sub_roots": ["Social Case Work", "Social Group Work", "Community Organisation", "Social Policy", "NGO Management"] }
+        ]},
+        { "id": "political", "name": "Political and International Studies", "roots": [
+          { "id": "political-science", "name": "Political Science", "hec_verified_recent": true, "sub_roots": ["Political Theory", "Comparative Politics", "Public Administration", "Constitutional Development in Pakistan", "Political Economy of Pakistan", "Civil-Military Relations", "Local Government"] },
+          { "id": "international-relations", "name": "International Relations", "hec_verified_recent": true, "sub_roots": ["IR Theory", "Foreign Policy of Pakistan", "Diplomacy", "Strategic and Security Studies", "International Organisations", "International Law", "Regional Studies"] },
+          { "id": "pakistan-studies", "name": "Pakistan Studies", "hec_verified_recent": true, "sub_roots": ["Pakistan Movement", "Constitutional History", "Society and Culture", "Economy of Pakistan", "Foreign Policy"] }
+        ]},
+        { "id": "applied-social", "name": "Applied Social Sciences", "roots": [
+          { "id": "gender-studies", "name": "Gender Studies", "sub_roots": ["Feminist Theory", "Gender and Development", "Gender and Law"] },
+          { "id": "criminology", "name": "Criminology", "sub_roots": ["Theories of Crime", "Criminal Justice System of Pakistan", "Policing", "Penology"] },
+          { "id": "home-economics", "name": "Home Economics", "hec_verified_recent": true, "sub_roots": ["Food and Nutrition", "Textiles and Clothing", "Human Development and Family Studies", "Interior Design", "Resource Management"] }
+        ]}
+      ]
+    },
+    {
+      "id": "arts-humanities",
+      "name": "Arts, Humanities and Languages",
+      "accreditor": "HEC",
+      "categories": [
+        { "id": "languages-literature", "name": "Languages and Literature", "roots": [
+          { "id": "english", "name": "English", "hec_verified_recent": true, "sub_roots": ["English Poetry", "Drama", "Novel", "Linguistics", "Phonetics and Phonology", "Syntax", "Sociolinguistics", "ELT and TESOL", "Literary Criticism", "World Literature"] },
+          { "id": "urdu", "name": "Urdu", "sub_roots": ["Urdu Nazm", "Urdu Ghazal", "Urdu Afsana", "Tareekh-e-Urdu Zaban", "Tanqeed", "Iqbaliyat", "Lisaniyat"] },
+          { "id": "regional-languages", "name": "Regional Languages", "sub_roots": ["Punjabi", "Sindhi", "Pashto", "Balochi", "Saraiki", "Kashmiri"] },
+          { "id": "classical-foreign-languages", "name": "Classical and Foreign Languages", "sub_roots": ["Arabic", "Persian", "Chinese", "French", "German", "Turkish"] }
+        ]},
+        { "id": "religious-philosophical", "name": "Religious and Philosophical Studies", "roots": [
+          { "id": "islamic-studies", "name": "Islamic Studies", "hec_verified_recent": true, "sub_roots": ["Quranic Studies (Tafsir)", "Hadith and Usul al-Hadith", "Fiqh and Usul al-Fiqh", "Seerah", "Islamic History", "Comparative Religion", "Islamic Economics"] },
+          { "id": "philosophy", "name": "Philosophy", "sub_roots": ["Logic", "Ethics", "Epistemology", "Muslim Philosophy", "Western Philosophy"] }
+        ]},
+        { "id": "historical", "name": "Historical Studies", "roots": [
+          { "id": "history", "name": "History", "hec_verified_recent": true, "sub_roots": ["History of Pakistan and India", "Islamic History", "World History", "Historiography"] },
+          { "id": "archaeology", "name": "Archaeology", "sub_roots": ["Prehistory", "Field Methods", "Museology", "Gandhara Studies"] }
+        ]},
+        { "id": "fine-arts", "name": "Fine Arts", "roots": [
+          { "id": "fine-arts", "name": "Fine Arts (AD/BFA/MFA)", "hec_verified_recent": true, "sub_roots": ["Painting", "Sculpture", "Printmaking", "Miniature Painting", "Calligraphy", "Art History"] }
+        ]}
+      ]
+    },
+    {
+      "id": "agriculture-vet",
+      "name": "Agriculture and Veterinary Sciences",
+      "accreditor": "HEC / PVMC",
+      "categories": [
+        { "id": "crop-sciences", "name": "Crop and Plant Sciences", "roots": [
+          { "id": "agriculture", "name": "Agriculture (BS Hons)", "hec_verified_recent": true, "sub_roots": ["Agronomy", "Horticulture", "Soil Science", "Plant Breeding and Genetics", "Plant Pathology", "Entomology", "Agricultural Extension", "Agricultural Economics", "Forestry and Range Management", "Water Management"] },
+          { "id": "agronomy-crop-physiology", "name": "Agronomy / Crop Physiology", "sub_roots": ["Crop Production", "Weed Science", "Cropping Systems", "Seed Technology"] }
+        ]},
+        { "id": "animal-sciences", "name": "Animal Sciences", "roots": [
+          { "id": "animal-husbandry", "name": "Animal Sciences / Animal Husbandry", "sub_roots": ["Animal Nutrition", "Animal Breeding and Genetics", "Poultry Science", "Dairy Technology", "Meat Science"] },
+          { "id": "dvm", "name": "Doctor of Veterinary Medicine", "sub_roots": ["Veterinary Anatomy", "Veterinary Physiology", "Veterinary Pathology", "Veterinary Surgery", "Theriogenology", "Veterinary Microbiology", "Livestock Management"] },
+          { "id": "fisheries", "name": "Fisheries and Aquaculture", "sub_roots": ["Fish Biology", "Aquaculture Systems", "Fish Processing"] }
+        ]},
+        { "id": "agri-engineering", "name": "Agricultural Engineering and Food", "roots": [
+          { "id": "agricultural-engineering", "name": "Agricultural Engineering", "cross_listed_in": ["engineering"], "sub_roots": ["Farm Machinery", "Irrigation and Drainage", "Post-Harvest Engineering"] },
+          { "id": "food-engineering", "name": "Food Engineering", "cross_listed_in": ["engineering"] }
+        ]}
+      ]
+    },
+    {
+      "id": "media-communication",
+      "name": "Media, Communication and Design",
+      "accreditor": "HEC",
+      "categories": [
+        { "id": "media-studies", "name": "Media Studies", "roots": [
+          { "id": "media-communication-studies", "name": "Media and Communication Studies", "hec_verified_recent": true, "sub_roots": ["Print Journalism", "Broadcast Journalism", "Digital Journalism", "Media Theory", "Development Communication", "Public Relations", "Advertising", "Media Law and Ethics", "Film and TV Production", "Radio Production", "New Media and Social Media", "Media Research"] },
+          { "id": "film-television", "name": "Film and Television", "sub_roots": ["Screenwriting", "Cinematography", "Editing", "Sound Design"] }
+        ]},
+        { "id": "design", "name": "Design", "roots": [
+          { "id": "graphic-design", "name": "Graphic / Communication Design", "sub_roots": ["Typography", "Branding", "UI UX Design", "Motion Graphics", "Illustration"] },
+          { "id": "textile-fashion-design", "name": "Textile and Fashion Design", "sub_roots": ["Surface Design", "Weaving", "Fashion Illustration", "Pattern Making"] },
+          { "id": "architecture", "name": "Architecture", "hec_verified_recent": true, "cross_listed_in": ["engineering"], "sub_roots": ["Design Studio", "Building Construction", "History of Architecture", "Urban Design"] }
+        ]}
+      ]
+    }
+  ]
+}
