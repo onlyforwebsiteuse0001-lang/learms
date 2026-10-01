@@ -96,3 +96,21 @@ the number is the only honest option (RULE 5).
 `vite.config.ts` fails the run below 80% statements / 80% branches / 70% functions / 80% lines, and
 excludes the test files themselves, type-only modules and `main.tsx` from the measurement. Counting
 tests as covered code inflates the number and measures nothing.
+
+## D-016 — `origin/main` merged into this branch; `frontend/**` resolved to Agent 2
+Agent 1's PR #1 landed on `main` mid-session. Rather than leave a conflicted PR for a human, I merged
+`origin/main` into this branch and resolved the 10 `add/add` conflicts myself. All of them existed only
+because both agents scaffolded `frontend/` from the same empty base commit, so every conflicting file
+is a scaffold file, not real work.
+
+`frontend/**` resolved to **ours** per D-002, agreed at the start of the session. Root `.gitignore`
+resolved to **theirs** because Agent 1's version is a strict superset of mine. `frontend/src/styles.css`
+(Agent 1, 1 line, imported nowhere) was deleted — `src/styles/{tokens,rtl,global}.css` supersedes it.
+Everything Agent 1 owns was taken unchanged.
+
+Verified after merging, not before: `tsc --noEmit` clean, 297/297 frontend tests, 36/36 content tests,
+`validate_content.py` exit 0, production build OK. `git merge-tree --write-tree origin/main HEAD` now
+exits 0, i.e. `main` can take this branch with zero conflicts.
+
+The alternative — pushing the merge straight to `main` myself — was declined: this session is pinned to
+`arena/01a0f445-learms`, and the brief's own RULE 10 says create a PR and do not merge.

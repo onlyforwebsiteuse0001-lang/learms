@@ -34,3 +34,26 @@
   coherent app.
 - Need: further turns to finish anything listed as NOT DONE in MORNING_REPORT-2.md.
 - Impact: see the honest scope list in the morning report.
+
+## B-005 — GitHub push authentication expired mid-session (RESOLVED)
+- Blocker: `git push` failed twice with
+  `fatal: could not read Username for 'https://github.com': terminal prompts disabled`.
+  Three commits sat locally, unpushed.
+- Tried: re-running the push; checking `gh auth status`. Did not, and would not, ask the user for a
+  token — credentials never belong in chat.
+- Resolved: the token was refreshed out of band. All commits are now on
+  `origin/arena/01a0f445-learms`.
+- Impact: none on the deliverable. The RULE 2 checkpoint cadence was broken for one step.
+
+## B-006 — Sandbox re-cloned mid-session (RESOLVED)
+- Blocker: the workspace was re-provisioned. Local git history reset to the base commit
+  `6821a7f`, every tracked file reverted to untracked, and `node_modules` was deleted
+  (it is excluded from workspace snapshots).
+- Tried: nothing was lost — the working tree survived intact, only git's view of it was reset.
+- Resolved: `git reset origin/arena/01a0f445-learms` restored history onto the pushed remote tip, the
+  outstanding work was re-committed, and `npm install` restored 548 packages.
+- Gotcha worth recording: the fresh clone was **shallow**, so `git merge-base origin/main HEAD` returned
+  nothing and `git merge-tree` reported `refusing to merge unrelated histories`. This is a local
+  artefact, not repository damage. `git fetch --unshallow origin` fixed it and the true merge base
+  (`6821a7f`) reappeared.
+- Impact: none on the deliverable.

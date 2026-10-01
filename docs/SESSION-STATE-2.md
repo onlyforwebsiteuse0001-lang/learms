@@ -44,3 +44,22 @@ BLOCKERS:
 - 36 Python tests in `tests/content/test_content_library.py` — library consistency,
   builder determinism, generator refusal-without-key.
 - `npm run build` and `tsc --noEmit` both clean.
+
+## Step 5 — merge with main, final docs, PR (FINAL)
+PHASE: complete.
+
+- `origin/main` gained Agent 1's PR #1 mid-session. Merged `origin/main` into this branch and
+  resolved 10 `add/add` conflicts (all `frontend/` scaffold files + root `.gitignore`); see D-016.
+  `git merge-tree --write-tree origin/main HEAD` now exits 0 — `main` can take this branch cleanly.
+- Full suite re-run AFTER the merge: `tsc --noEmit` clean · 297/297 frontend tests ·
+  92.92% stmts / 85.86% branch / 84% func · 36/36 content tests · `validate_content.py` exit 0 ·
+  build 317.04 kB JS (96.53 kB gzip), PWA 11 precache entries.
+- `docs/frontend/MORNING_REPORT-2.md` written — honest what-works / what-doesn't, §3.2 flags that
+  the app has still never been run against the real backend.
+- B-005 (push auth expired) and B-006 (sandbox re-cloned, shallow clone faking "unrelated
+  histories") recorded as resolved.
+
+DONE: everything in the Agent 2 brief except the items listed as NOT DONE in MORNING_REPORT-2.md §3.
+NEXT (for whoever picks this up): MORNING_REPORT-2.md §8, in that order. Item 1 — run the frontend
+against Agent 1's real backend — is the only one that changes what we *know* rather than what we have.
+BLOCKERS: B-003 (no LLM key) remains open by design. B-001 remains open by design.
